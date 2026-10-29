@@ -1,0 +1,32 @@
+{
+  "theme_title": "Jungle Animals",
+  "story_title": "The Great Jungle Banana Parade",
+  "mood": "jungle",
+  "output_mp4_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/videos/jungle_story_short.mp4",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Scene 1: Treetop Treasure",
+      "caption": "Playful Monkey and cozy Sloth spot a big golden bunch of bananas in the canopy!",
+      "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/color_keyframes/jungle_scene_1_color.png",
+      "camera_move": "zoom_in",
+      "duration_sec": 6.0
+    },
+    {
+      "scene_number": 2,
+      "title": "Scene 2: Parade Through the Palms",
+      "caption": "Tiger and Lion march proudly down the jungle trail carrying the banana feast!",
+      "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/color_keyframes/jungle_scene_2_color.png",
+      "camera_move": "pan_right",
+      "duration_sec": 6.0
+    },
+    {
+      "scene_number": 3,
+      "title": "Scene 3: Waterfall Jungle Party",
+      "caption": "Snake and Frog welcome Tiger and Lion to the waterfall for a happy jungle party!",
+      "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/color_keyframes/jungle_scene_3_color.png",
+      "camera_move": "zoom_out",
+      "duration_sec": 6.0
+    }
+  ]
+}

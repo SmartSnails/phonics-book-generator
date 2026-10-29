@@ -1,0 +1,32 @@
+{
+  "theme_title": "Farm Animals",
+  "story_title": "The Big Farm Apple Picnic",
+  "mood": "farm",
+  "output_mp4_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/videos/farm_story_short.mp4",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Scene 1: Morning in the Meadow",
+      "caption": "Cow and Horse discover a big woven basket of red apples beside the barn fence!",
+      "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/color_keyframes/farm_scene_1_color.png",
+      "camera_move": "zoom_in",
+      "duration_sec": 6.0
+    },
+    {
+      "scene_number": 2,
+      "title": "Scene 2: Helping Along the Trail",
+      "caption": "Fluffy Sheep and playful Goat help carry the apple basket down the farm lane!",
+      "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/color_keyframes/farm_scene_2_color.png",
+      "camera_move": "pan_right",
+      "duration_sec": 6.0
+    },
+    {
+      "scene_number": 3,
+      "title": "Scene 3: The Barnyard Pond Picnic",
+      "caption": "Pig and Duck join Cow and Sheep for a happy apple picnic by the pond!",
+      "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/color_keyframes/farm_scene_3_color.png",
+      "camera_move": "zoom_out",
+      "duration_sec": 6.0
+    }
+  ]
+}

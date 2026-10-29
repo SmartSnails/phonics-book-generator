@@ -1,0 +1,155 @@
+{
+  "book_title": "Farm & Jungle Phonics Coloring Book",
+  "book_subtitle": "Animal Words, Name Tracing, Word Finds & 3-Part Story Adventures (Ages 4–6)",
+  "output_pdf_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/book/Farm_and_Jungle_Phonics_Coloring_Book.pdf",
+  "themes": [
+    {
+      "theme_key": "farm",
+      "theme_title": "Theme 1: Farm Animals",
+      "subtitle": "Meet the friendly farm animals, trace and write their names, find them in the grid, and color their 3-part story!",
+      "animal_pair_pages": [
+        {
+          "pair_title": "Meadow Grazers (Cow & Horse)",
+          "top_animal": {
+            "word": "cow",
+            "word_upper": "COW",
+            "pair_group": "Meadow Grazers",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/cow.png"
+          },
+          "bottom_animal": {
+            "word": "horse",
+            "word_upper": "HORSE",
+            "pair_group": "Meadow Grazers",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/horse.png"
+          }
+        },
+        {
+          "pair_title": "Woolly & Meadow Friends (Sheep & Goat)",
+          "top_animal": {
+            "word": "sheep",
+            "word_upper": "SHEEP",
+            "pair_group": "Woolly & Meadow Friends",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/sheep.png"
+          },
+          "bottom_animal": {
+            "word": "goat",
+            "word_upper": "GOAT",
+            "pair_group": "Woolly & Meadow Friends",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/goat.png"
+          }
+        },
+        {
+          "pair_title": "Barnyard & Pond Pals (Pig & Duck)",
+          "top_animal": {
+            "word": "pig",
+            "word_upper": "PIG",
+            "pair_group": "Barnyard & Pond Pals",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/pig.png"
+          },
+          "bottom_animal": {
+            "word": "duck",
+            "word_upper": "DUCK",
+            "pair_group": "Barnyard & Pond Pals",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/duck.png"
+          }
+        }
+      ],
+      "word_find_matrix_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/word_finds/farm_word_find_matrix.json",
+      "story_title": "The Big Farm Apple Picnic",
+      "story_scenes": [
+        {
+          "scene_number": 1,
+          "title": "Act 1: Morning in the Meadow",
+          "caption": "Cow and Horse discover a big woven basket of apples beside the wooden barn fence!",
+          "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/full_page_scenes/farm_scene_1_bw.png"
+        },
+        {
+          "scene_number": 2,
+          "title": "Act 2: Helping Along the Trail",
+          "caption": "Fluffy Sheep and playful Goat help carry the apple basket down the sunny farm lane.",
+          "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/full_page_scenes/farm_scene_2_bw.png"
+        },
+        {
+          "scene_number": 3,
+          "title": "Act 3: The Barnyard Pond Picnic",
+          "caption": "Pig and Duck join Cow and Sheep for a happy apple picnic by the farm pond!",
+          "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/full_page_scenes/farm_scene_3_bw.png"
+        }
+      ]
+    },
+    {
+      "theme_key": "jungle",
+      "theme_title": "Theme 2: Jungle Animals",
+      "subtitle": "Explore the jungle canopy, trace and write each animal's name, solve the Word Find, and color the 3-part jungle parade!",
+      "animal_pair_pages": [
+        {
+          "pair_title": "Jungle Big Cats (Tiger & Lion)",
+          "top_animal": {
+            "word": "tiger",
+            "word_upper": "TIGER",
+            "pair_group": "Jungle Big Cats",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/tiger.png"
+          },
+          "bottom_animal": {
+            "word": "lion",
+            "word_upper": "LION",
+            "pair_group": "Jungle Big Cats",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/lion.png"
+          }
+        },
+        {
+          "pair_title": "Treetop Climbers (Monkey & Sloth)",
+          "top_animal": {
+            "word": "monkey",
+            "word_upper": "MONKEY",
+            "pair_group": "Treetop Climbers",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/monkey.png"
+          },
+          "bottom_animal": {
+            "word": "sloth",
+            "word_upper": "SLOTH",
+            "pair_group": "Treetop Climbers",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/sloth.png"
+          }
+        },
+        {
+          "pair_title": "Jungle Explorers (Snake & Frog)",
+          "top_animal": {
+            "word": "snake",
+            "word_upper": "SNAKE",
+            "pair_group": "Jungle Explorers",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/snake.png"
+          },
+          "bottom_animal": {
+            "word": "frog",
+            "word_upper": "FROG",
+            "pair_group": "Jungle Explorers",
+            "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/atomic_animals/frog.png"
+          }
+        }
+      ],
+      "word_find_matrix_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/word_finds/jungle_word_find_matrix.json",
+      "story_title": "The Great Jungle Banana Parade",
+      "story_scenes": [
+        {
+          "scene_number": 1,
+          "title": "Act 1: Treetop Treasure",
+          "caption": "Playful Monkey and cozy Sloth spot a big bunch of bananas up in the jungle canopy!",
+          "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/full_page_scenes/jungle_scene_1_bw.png"
+        },
+        {
+          "scene_number": 2,
+          "title": "Act 2: Parade Through the Palms",
+          "caption": "Tiger and Lion march proudly down the jungle trail carrying the banana feast!",
+          "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/full_page_scenes/jungle_scene_2_bw.png"
+        },
+        {
+          "scene_number": 3,
+          "title": "Act 3: Waterfall Jungle Party",
+          "caption": "Snake and Frog welcome Tiger and Lion to the waterfall for a happy jungle party!",
+          "image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/full_page_scenes/jungle_scene_3_bw.png"
+        }
+      ]
+    }
+  ]
+}

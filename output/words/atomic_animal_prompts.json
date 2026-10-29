@@ -1,0 +1,93 @@
+{
+  "age_band": "4 to 6",
+  "themes": {
+    "farm": [
+      {
+        "word": "cow",
+        "theme": "farm",
+        "pair_group": "Meadow Grazers",
+        "subject": "A friendly, cute cartoon farm cow standing happily, featuring large, simple rounded patches on its body, soft floppy ears, two small rounded horns, a big cheerful snout, and a simple farm bell on a collar around its neck",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201ccow\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA friendly, cute cartoon farm cow standing happily, featuring large, simple rounded patches on its body, soft floppy ears, two small rounded horns, a big cheerful snout, and a simple farm bell on a collar around its neck. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "horse",
+        "theme": "farm",
+        "pair_group": "Meadow Grazers",
+        "subject": "A cheerful, friendly cartoon farm horse trotting happily with a flowing, thick-lined mane, a bushy tail, big expressive eyes, and sturdy hooves",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201chorse\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA cheerful, friendly cartoon farm horse trotting happily with a flowing, thick-lined mane, a bushy tail, big expressive eyes, and sturdy hooves. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "sheep",
+        "theme": "farm",
+        "pair_group": "Woolly & Meadow Friends",
+        "subject": "A cute, fluffy cartoon farm sheep standing happily with a cloud-like scalloped woolly coat, a sweet smiling face, floppy ears, and cuatro sturdy little legs",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201csheep\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA cute, fluffy cartoon farm sheep standing happily with a cloud-like scalloped woolly coat, a sweet smiling face, floppy ears, and cuatro sturdy little legs. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "goat",
+        "theme": "farm",
+        "pair_group": "Woolly & Meadow Friends",
+        "subject": "A playful, friendly cartoon farm goat standing cheerfully with two short curved ridged horns, a cute little chin tuft beard, floppy ears, and a happy upright tail",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201cgoat\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA playful, friendly cartoon farm goat standing cheerfully with two short curved ridged horns, a cute little chin tuft beard, floppy ears, and a happy upright tail. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "pig",
+        "theme": "farm",
+        "pair_group": "Barnyard & Pond Pals",
+        "subject": "A plump, joyful cartoon farm pig sitting happily with a big oval button snout, floppy ears, chubby cheeks, a cute curly tail, and a wide friendly grin",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201cpig\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA plump, joyful cartoon farm pig sitting happily with a big oval button snout, floppy ears, chubby cheeks, a cute curly tail, and a wide friendly grin. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "duck",
+        "theme": "farm",
+        "pair_group": "Barnyard & Pond Pals",
+        "subject": "A cute, cheerful cartoon farm duck waddling happily with a smooth rounded bill, big friendly eyes, simple folded wing feathers, and webbed feet",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201cduck\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA cute, cheerful cartoon farm duck waddling happily with a smooth rounded bill, big friendly eyes, simple folded wing feathers, and webbed feet. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      }
+    ],
+    "jungle": [
+      {
+        "word": "tiger",
+        "theme": "jungle",
+        "pair_group": "Jungle Big Cats",
+        "subject": "A cute, friendly cartoon jungle tiger cub sitting happily with bold, simple black tiger stripes on its body and cheeks, rounded ears, a long striped tail, and a big cheerful smile",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201ctiger\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA cute, friendly cartoon jungle tiger cub sitting happily with bold, simple black tiger stripes on its body and cheeks, rounded ears, a long striped tail, and a big cheerful smile. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "lion",
+        "theme": "jungle",
+        "pair_group": "Jungle Big Cats",
+        "subject": "A cheerful, friendly cartoon lion cub sitting proudly with a big, fluffy scalloped mane framing its smiling face, rounded ears, and a tufted tail",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201clion\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA cheerful, friendly cartoon lion cub sitting proudly with a big, fluffy scalloped mane framing its smiling face, rounded ears, and a tufted tail. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "monkey",
+        "theme": "jungle",
+        "pair_group": "Treetop Climbers",
+        "subject": "A playful, cute cartoon jungle monkey waving happily with big round ears, a sweet smiling face, and a long, bouncy curled tail",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201cmonkey\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA playful, cute cartoon jungle monkey waving happily with big round ears, a sweet smiling face, and a long, bouncy curled tail. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "sloth",
+        "theme": "jungle",
+        "pair_group": "Treetop Climbers",
+        "subject": "A peaceful, cute cartoon jungle sloth hanging happily from a simple thick tree branch with long curved arms, big gentle eyes with cute eye-patches, and a warm relaxed smile",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201csloth\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA peaceful, cute cartoon jungle sloth hanging happily from a simple thick tree branch with long curved arms, big gentle eyes with cute eye-patches, and a warm relaxed smile. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "snake",
+        "theme": "jungle",
+        "pair_group": "Jungle Explorers",
+        "subject": "A friendly, cute cartoon jungle snake coiled neatly in a smooth S-curve with big cheerful eyes, simple rounded decorative belly bands, and a happy smile",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201csnake\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA friendly, cute cartoon jungle snake coiled neatly in a smooth S-curve with big cheerful eyes, simple rounded decorative belly bands, and a happy smile. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      },
+      {
+        "word": "frog",
+        "theme": "jungle",
+        "pair_group": "Jungle Explorers",
+        "subject": "A cheerful, cute cartoon jungle tree frog sitting on a wide lily pad leaf with big round popping eyes, a wide happy smile, and large webbed toes",
+        "prompt": "Please generate exactly 1 image to illustrate for teaching word \u201cfrog\u201d in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes \u2014 minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA cheerful, cute cartoon jungle tree frog sitting on a wide lily pad leaf with big round popping eyes, a wide happy smile, and large webbed toes. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+      }
+    ]
+  }
+}

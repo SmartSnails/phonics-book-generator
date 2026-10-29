@@ -1,0 +1,80 @@
+{
+  "farm": {
+    "story_title": "The Big Farm Apple Picnic",
+    "recurring_prop": "a big woven wicker picnic basket filled with shiny round apples",
+    "setting_anchor": "a sunny farm meadow with a classic wooden barn, a wooden split-rail fence, and two small fluffy clouds in the upper sky",
+    "cast": {
+      "cow": "friendly cartoon cow with rounded spots, floppy ears, small horns, and a neck bell",
+      "horse": "cheerful cartoon horse with a thick flowing mane and bushy tail",
+      "sheep": "cute fluffy cartoon sheep with a cloud-like scalloped woolly coat",
+      "goat": "playful cartoon goat with two short curved ridged horns and a tiny chin beard",
+      "pig": "plump joyful cartoon pig with a button snout and curly tail",
+      "duck": "cute cartoon duck with a smooth rounded bill and webbed feet"
+    },
+    "scenes": [
+      {
+        "scene_number": 1,
+        "id": "farm_scene_1",
+        "title": "Act 1: Morning in the Meadow",
+        "caption": "Cow and Horse discover a big woven basket of apples beside the wooden barn fence!",
+        "bw_prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or titles. In the foreground meadow, a friendly cartoon cow (with rounded spots, floppy ears, small horns, and a neck bell) and a cheerful cartoon horse (with a flowing mane and bushy tail) stand happily together beside a big woven wicker picnic basket filled with round apples. In the background top third sits a simple wooden farm barn, a wooden split-rail fence, and two small fluffy clouds in an open white sky.",
+        "color_prompt": "Vibrant 2D children's storybook cartoon illustration in a 3:4 vertical portrait frame with bold black ink outlines and rich, cheerful colors. No text, no titles, no words. In a lush green sunny farm meadow, a friendly black-and-white spotted cow wearing a golden neck bell and a cheerful warm chestnut-brown horse with a cream mane stand happily together beside a woven tan wicker picnic basket filled with shiny bright red apples. In the background stands a classic red wooden farm barn with white trim, a rustic wooden fence, and a pastel blue sky with two fluffy white clouds."
+      },
+      {
+        "scene_number": 2,
+        "id": "farm_scene_2",
+        "title": "Act 2: Helping Along the Trail",
+        "caption": "Fluffy Sheep and playful Goat help carry the apple basket down the sunny farm lane.",
+        "bw_prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or titles. In the foreground along a simple farm path, a cute fluffy cartoon sheep (with a cloud-like scalloped wool coat) and a playful cartoon goat (with short curved horns and a tiny chin beard) walk happily side by side next to the same woven wicker picnic basket filled with round apples, while the friendly spotted cow waves cheerfully behind them. In the background are the wooden split-rail fence and two small fluffy clouds.",
+        "color_prompt": "Vibrant 2D children's storybook cartoon illustration in a 3:4 vertical portrait frame with bold black ink outlines and rich, cheerful colors. No text, no titles, no words. Along a golden dirt farm path bordered by green grass, a fluffy cream-white sheep and a playful light-tan goat with curved horns walk happily beside the woven wicker picnic basket filled with shiny red apples, while the friendly spotted cow with her golden bell waves behind them. A wooden split-rail fence and a bright blue sky with two fluffy white clouds frame the background."
+      },
+      {
+        "scene_number": 3,
+        "id": "farm_scene_3",
+        "title": "Act 3: The Barnyard Pond Picnic",
+        "caption": "Pig and Duck join Cow, Horse, Sheep, and Goat for a happy apple picnic by the pond!",
+        "bw_prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or titles. In the foreground beside a small calm farm pond, a plump joyful cartoon pig (with a button snout and curly tail) and a cute cartoon duck (with a rounded bill and webbed feet) celebrate happily with the friendly spotted cow and fluffy sheep around the woven wicker picnic basket of apples on a simple checkered picnic blanket. In the background are the wooden barn and two small fluffy clouds.",
+        "color_prompt": "Vibrant 2D children's storybook cartoon illustration in a 3:4 vertical portrait frame with bold black ink outlines and rich, cheerful colors. No text, no titles, no words. Beside a sparkling blue farm pond on lush green grass, a rosy pink cartoon pig and a bright yellow cartoon duck celebrate happily with the spotted cow and fluffy white sheep around the woven picnic basket of shiny red apples resting on a red-and-white picnic blanket. In the background sit the red wooden farm barn and a sunny blue sky with two fluffy white clouds."
+      }
+    ]
+  },
+  "jungle": {
+    "story_title": "The Great Jungle Banana Parade",
+    "recurring_prop": "a big golden bunch of bananas resting on a broad tropical leaf tray",
+    "setting_anchor": "a bright jungle clearing with tall palm and banyan trees, large tropical monstera leaves, and a gentle sparkling waterfall",
+    "cast": {
+      "tiger": "cute cartoon tiger cub with bold black stripes and rounded ears",
+      "lion": "cheerful cartoon lion cub with a big fluffy scalloped mane",
+      "monkey": "playful cartoon monkey with big round ears and a long curled tail",
+      "sloth": "peaceful cartoon sloth with long curved arms and cute eye patches",
+      "snake": "friendly cartoon snake coiled in a smooth S-curve with belly bands",
+      "frog": "cheerful cartoon tree frog with big round popping eyes on a lily pad"
+    },
+    "scenes": [
+      {
+        "scene_number": 1,
+        "id": "jungle_scene_1",
+        "title": "Act 1: Treetop Treasure",
+        "caption": "Playful Monkey and cozy Sloth spot a big bunch of bananas up in the jungle canopy!",
+        "bw_prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or titles. In the foreground among sturdy jungle tree branches, a playful cartoon monkey (with big round ears and a curled tail) and a peaceful cartoon sloth (hanging happily from a branch with cute eye patches) smile excitedly at a big bunch of bananas resting on a wide tropical leaf. Simple big tropical palm leaves frame the background.",
+        "color_prompt": "Vibrant 2D children's storybook cartoon illustration in a 3:4 vertical portrait frame with bold black ink outlines and rich tropical colors. No text, no titles, no words. High in the sunlit emerald-green jungle tree branches, a cheerful warm-brown cartoon monkey with a curled tail and a cozy tan sloth with darker brown eye-patches hanging from a branch smile excitedly at a big golden-yellow bunch of bananas resting on a broad tropical leaf. Lush palm fronds and bright sky frame the background."
+      },
+      {
+        "scene_number": 2,
+        "id": "jungle_scene_2",
+        "title": "Act 2: Parade Through the Palms",
+        "caption": "Tiger and Lion march proudly down the jungle trail carrying the banana feast!",
+        "bw_prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or titles. In the foreground on a wide jungle path, a cute cartoon tiger cub (with bold stripes) and a cheerful cartoon lion cub (with a fluffy scalloped mane) walk happily side by side beside the big bunch of bananas on a broad leaf tray, while the playful monkey waves from a low branch above. Simple palm trees and large tropical leaves frame the background.",
+        "color_prompt": "Vibrant 2D children's storybook cartoon illustration in a 3:4 vertical portrait frame with bold black ink outlines and rich tropical colors. No text, no titles, no words. On a sunlit golden jungle trail, a cute orange tiger cub with black stripes and a cheerful golden-yellow lion cub with a fluffy amber mane walk happily beside the big bunch of golden bananas on a broad green leaf tray, while the brown monkey waves cheerfully from a branch overhead. Lush green palm trees and vibrant tropical leaves fill the background."
+      },
+      {
+        "scene_number": 3,
+        "id": "jungle_scene_3",
+        "title": "Act 3: Waterfall Jungle Party",
+        "caption": "Snake and Frog welcome Tiger, Lion, and Monkey to the waterfall for a happy jungle party!",
+        "bw_prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or titles. In the foreground beside a gentle jungle waterfall pool, a cheerful cartoon tree frog (sitting on a wide lily pad) and a friendly coiled cartoon snake smile happily alongside the striped tiger cub, fluffy-maned lion cub, and playful monkey gathered around the big bunch of bananas. Simple tropical leaves and a small waterfall frame the background.",
+        "color_prompt": "Vibrant 2D children's storybook cartoon illustration in a 3:4 vertical portrait frame with bold black ink outlines and rich tropical colors. No text, no titles, no words. Beside a sparkling turquoise jungle waterfall pool, a bright green tree frog on a lily pad and a friendly lime-and-yellow coiled cartoon snake celebrate happily with the orange striped tiger cub, golden lion cub, and brown monkey around the big golden bunch of bananas. Lush tropical leaves and a gentle waterfall glow in the background."
+      }
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "difficulty": "medium",
+  "age_band": "4 to 6",
+  "count_per_theme": 6,
+  "themes": {
+    "farm": {
+      "theme": "farm",
+      "theme_title": "Farm Animals",
+      "word_count": 6,
+      "word_list": [
+        "cow",
+        "horse",
+        "sheep",
+        "goat",
+        "pig",
+        "duck"
+      ],
+      "words": [
+        {
+          "word": "cow",
+          "word_upper": "COW",
+          "length": 3,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Meadow Grazers",
+          "subject": "A friendly, cute cartoon farm cow standing happily, featuring large, simple rounded patches on its body, soft floppy ears, two small rounded horns, a big cheerful snout, and a simple farm bell on a collar around its neck"
+        },
+        {
+          "word": "horse",
+          "word_upper": "HORSE",
+          "length": 5,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Meadow Grazers",
+          "subject": "A cheerful, friendly cartoon farm horse trotting happily with a flowing, thick-lined mane, a bushy tail, big expressive eyes, and sturdy hooves"
+        },
+        {
+          "word": "sheep",
+          "word_upper": "SHEEP",
+          "length": 5,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Woolly & Meadow Friends",
+          "subject": "A cute, fluffy cartoon farm sheep standing happily with a cloud-like scalloped woolly coat, a sweet smiling face, floppy ears, and cuatro sturdy little legs"
+        },
+        {
+          "word": "goat",
+          "word_upper": "GOAT",
+          "length": 4,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Woolly & Meadow Friends",
+          "subject": "A playful, friendly cartoon farm goat standing cheerfully with two short curved ridged horns, a cute little chin tuft beard, floppy ears, and a happy upright tail"
+        },
+        {
+          "word": "pig",
+          "word_upper": "PIG",
+          "length": 3,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Barnyard & Pond Pals",
+          "subject": "A plump, joyful cartoon farm pig sitting happily with a big oval button snout, floppy ears, chubby cheeks, a cute curly tail, and a wide friendly grin"
+        },
+        {
+          "word": "duck",
+          "word_upper": "DUCK",
+          "length": 4,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Barnyard & Pond Pals",
+          "subject": "A cute, cheerful cartoon farm duck waddling happily with a smooth rounded bill, big friendly eyes, simple folded wing feathers, and webbed feet"
+        }
+      ],
+      "pairs": [
+        {
+          "pair_index": 1,
+          "pair_title": "Meadow Grazers",
+          "words": [
+            "cow",
+            "horse"
+          ],
+          "items": [
+            {
+              "word": "cow",
+              "word_upper": "COW",
+              "length": 3,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Meadow Grazers",
+              "subject": "A friendly, cute cartoon farm cow standing happily, featuring large, simple rounded patches on its body, soft floppy ears, two small rounded horns, a big cheerful snout, and a simple farm bell on a collar around its neck"
+            },
+            {
+              "word": "horse",
+              "word_upper": "HORSE",
+              "length": 5,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Meadow Grazers",
+              "subject": "A cheerful, friendly cartoon farm horse trotting happily with a flowing, thick-lined mane, a bushy tail, big expressive eyes, and sturdy hooves"
+            }
+          ]
+        },
+        {
+          "pair_index": 2,
+          "pair_title": "Woolly & Meadow Friends",
+          "words": [
+            "sheep",
+            "goat"
+          ],
+          "items": [
+            {
+              "word": "sheep",
+              "word_upper": "SHEEP",
+              "length": 5,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Woolly & Meadow Friends",
+              "subject": "A cute, fluffy cartoon farm sheep standing happily with a cloud-like scalloped woolly coat, a sweet smiling face, floppy ears, and cuatro sturdy little legs"
+            },
+            {
+              "word": "goat",
+              "word_upper": "GOAT",
+              "length": 4,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Woolly & Meadow Friends",
+              "subject": "A playful, friendly cartoon farm goat standing cheerfully with two short curved ridged horns, a cute little chin tuft beard, floppy ears, and a happy upright tail"
+            }
+          ]
+        },
+        {
+          "pair_index": 3,
+          "pair_title": "Barnyard & Pond Pals",
+          "words": [
+            "pig",
+            "duck"
+          ],
+          "items": [
+            {
+              "word": "pig",
+              "word_upper": "PIG",
+              "length": 3,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Barnyard & Pond Pals",
+              "subject": "A plump, joyful cartoon farm pig sitting happily with a big oval button snout, floppy ears, chubby cheeks, a cute curly tail, and a wide friendly grin"
+            },
+            {
+              "word": "duck",
+              "word_upper": "DUCK",
+              "length": 4,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Barnyard & Pond Pals",
+              "subject": "A cute, cheerful cartoon farm duck waddling happily with a smooth rounded bill, big friendly eyes, simple folded wing feathers, and webbed feet"
+            }
+          ]
+        }
+      ]
+    },
+    "jungle": {
+      "theme": "jungle",
+      "theme_title": "Jungle Animals",
+      "word_count": 6,
+      "word_list": [
+        "tiger",
+        "lion",
+        "monkey",
+        "sloth",
+        "snake",
+        "frog"
+      ],
+      "words": [
+        {
+          "word": "tiger",
+          "word_upper": "TIGER",
+          "length": 5,
+          "syllables": 2,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Jungle Big Cats",
+          "subject": "A cute, friendly cartoon jungle tiger cub sitting happily with bold, simple black tiger stripes on its body and cheeks, rounded ears, a long striped tail, and a big cheerful smile"
+        },
+        {
+          "word": "lion",
+          "word_upper": "LION",
+          "length": 4,
+          "syllables": 2,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Jungle Big Cats",
+          "subject": "A cheerful, friendly cartoon lion cub sitting proudly with a big, fluffy scalloped mane framing its smiling face, rounded ears, and a tufted tail"
+        },
+        {
+          "word": "monkey",
+          "word_upper": "MONKEY",
+          "length": 6,
+          "syllables": 2,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Treetop Climbers",
+          "subject": "A playful, cute cartoon jungle monkey waving happily with big round ears, a sweet smiling face, and a long, bouncy curled tail"
+        },
+        {
+          "word": "sloth",
+          "word_upper": "SLOTH",
+          "length": 5,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Treetop Climbers",
+          "subject": "A peaceful, cute cartoon jungle sloth hanging happily from a simple thick tree branch with long curved arms, big gentle eyes with cute eye-patches, and a warm relaxed smile"
+        },
+        {
+          "word": "snake",
+          "word_upper": "SNAKE",
+          "length": 5,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Jungle Explorers",
+          "subject": "A friendly, cute cartoon jungle snake coiled neatly in a smooth S-curve with big cheerful eyes, simple rounded decorative belly bands, and a happy smile"
+        },
+        {
+          "word": "frog",
+          "word_upper": "FROG",
+          "length": 4,
+          "syllables": 1,
+          "difficulty": "medium",
+          "age_band": "4 to 6",
+          "pair_group": "Jungle Explorers",
+          "subject": "A cheerful, cute cartoon jungle tree frog sitting on a wide lily pad leaf with big round popping eyes, a wide happy smile, and large webbed toes"
+        }
+      ],
+      "pairs": [
+        {
+          "pair_index": 1,
+          "pair_title": "Jungle Big Cats",
+          "words": [
+            "tiger",
+            "lion"
+          ],
+          "items": [
+            {
+              "word": "tiger",
+              "word_upper": "TIGER",
+              "length": 5,
+              "syllables": 2,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Jungle Big Cats",
+              "subject": "A cute, friendly cartoon jungle tiger cub sitting happily with bold, simple black tiger stripes on its body and cheeks, rounded ears, a long striped tail, and a big cheerful smile"
+            },
+            {
+              "word": "lion",
+              "word_upper": "LION",
+              "length": 4,
+              "syllables": 2,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Jungle Big Cats",
+              "subject": "A cheerful, friendly cartoon lion cub sitting proudly with a big, fluffy scalloped mane framing its smiling face, rounded ears, and a tufted tail"
+            }
+          ]
+        },
+        {
+          "pair_index": 2,
+          "pair_title": "Treetop Climbers",
+          "words": [
+            "monkey",
+            "sloth"
+          ],
+          "items": [
+            {
+              "word": "monkey",
+              "word_upper": "MONKEY",
+              "length": 6,
+              "syllables": 2,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Treetop Climbers",
+              "subject": "A playful, cute cartoon jungle monkey waving happily with big round ears, a sweet smiling face, and a long, bouncy curled tail"
+            },
+            {
+              "word": "sloth",
+              "word_upper": "SLOTH",
+              "length": 5,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Treetop Climbers",
+              "subject": "A peaceful, cute cartoon jungle sloth hanging happily from a simple thick tree branch with long curved arms, big gentle eyes with cute eye-patches, and a warm relaxed smile"
+            }
+          ]
+        },
+        {
+          "pair_index": 3,
+          "pair_title": "Jungle Explorers",
+          "words": [
+            "snake",
+            "frog"
+          ],
+          "items": [
+            {
+              "word": "snake",
+              "word_upper": "SNAKE",
+              "length": 5,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Jungle Explorers",
+              "subject": "A friendly, cute cartoon jungle snake coiled neatly in a smooth S-curve with big cheerful eyes, simple rounded decorative belly bands, and a happy smile"
+            },
+            {
+              "word": "frog",
+              "word_upper": "FROG",
+              "length": 4,
+              "syllables": 1,
+              "difficulty": "medium",
+              "age_band": "4 to 6",
+              "pair_group": "Jungle Explorers",
+              "subject": "A cheerful, cute cartoon jungle tree frog sitting on a wide lily pad leaf with big round popping eyes, a wide happy smile, and large webbed toes"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
