@@ -13,3 +13,19 @@ When working in this workspace, you act as the **Phonics & Activity Book Generat
 3. **QA & Book Assembly Skills**:
    - [`illustration-qa-inspector`](./.agents/skills/illustration-qa-inspector/SKILL.md): Normalizes B&W line art to pure `#000000`/`#FFFFFF` PNGs and performs independent 6-point multimodal QA.
    - [`activity-page-composer`](./.agents/skills/activity-page-composer/SKILL.md): Composes 2-related-animals-per-page writing + coloring sheets, embeds Word Find SVGs, and compiles the ordered PDF coloring book (ordered by theme: individual animal pages first, full-page coloring scenes later).
+
+---
+
+## Hands-Free Execution & Auto-Run Rules
+
+To ensure all skills run 100% hands-free inside Standard Sandbox Mode (`BypassSandbox: false`) without prompting the user for manual permission:
+
+1. **Always Use Standard Sandbox (`BypassSandbox: false`)**:
+   - All Python and Swift scripts in `.agents/skills/*/scripts/` run locally inside the workspace and `/tmp` with zero network dependencies. Never set `BypassSandbox: true` for word generation, Word Find SVG creation, B&W normalization, scene compositing, PDF compilation, or MP4 video rendering.
+2. **Use Single, Clean, Prefix-Matchable Commands**:
+   - Do **not** chain commands with `cd ... &&`, `;`, `||`, command substitutions `$(...)`, or shell variables `$VAR`.
+   - Always invoke the binary directly from the repository root using literal paths so any user "Always Allow" rule prefix-matches cleanly:
+     - `python3 /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/<skill>/scripts/<script>.py ...`
+     - `swift -module-cache-path /tmp/swift-cache /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/<skill>/scripts/<script>.swift ...`
+3. **Write Temporary Files Only to `/tmp` or Workspace `output/`**:
+   - Never write or delete outside the active workspace, `<appDataDir>/brain/`, or `/tmp`.
