@@ -1,0 +1,70 @@
+{
+  "title": "Act 1: In the Garden — Clem & Plum Discover the Crop and Spuds",
+  "act": "Act 1 - In the Garden",
+  "theme": "Animals & Nature — In the Garden (Beginning & Ending Blends: crop, spud, grub, snag)",
+  "target_age_band": "4-6",
+  "target_duration_sec": 10.0,
+  "aspect_ratio": "1:1",
+  "target_phonics_words": ["crop", "spud"],
+  "secondary_phonics_words": ["grub", "snag"],
+  "backdrop": {
+    "setting": "A sunny, vibrant home vegetable garden in the warm afternoon light",
+    "required_landmarks": ["cottage", "fence", "crop", "spuds"],
+    "background_top_third": "A cozy cream-white country cottage with a terracotta roof in a plowed field, flanked by two leafy green shade trees (one on each side), a bright golden sun, and two fluffy white clouds drifting across a pastel-blue sky, bordered at the one-third line by a rustic wooden garden fence and gate.",
+    "midground": "Lush, neat rows of emerald-green spinach crop plants and 10 to 12 leafy potato plants swaying gently in the warm breeze.",
+    "foreground": "Rich, soft brown garden soil along a pebble-lined garden path where a cluster of round golden-tan potatoes (spuds) and a cute smiling little pink garden grub peek out from the earth."
+  },
+  "characters": [
+    {
+      "name": "Clem",
+      "visual_anchor": "Clem (a cheerful little cartoon garden explorer with neat black hair, big warm brown eyes, light skin, a white long-sleeve button-down shirt, blue denim overalls, and brown boots)",
+      "personality_traits": ["curious", "joyful", "hands-on doer", "adventurous", "eager learner"],
+      "trait_to_action_mapping": "Because Clem is a curious hands-on doer, he eagerly walks along the garden rows, kneels down in the soft soil, tugs his sleeve free with a laugh when it catches a tiny twig snag, and uses both hands to pull up a leafy potato plant revealing round dusty spuds."
+    },
+    {
+      "name": "Plum",
+      "visual_anchor": "Plum (a cute, calm, slightly wiser small round sky-blue bird with soft speckled breast feathers, expressive eyes, and stubby wings)",
+      "personality_traits": ["calm", "observant", "gentle guide", "notices things first", "encouraging"],
+      "trait_to_action_mapping": "Because Plum is a calm, observant guide who notices things first, she flutters onto the rustic wooden fencepost, tilts her head, points her wing across the matching rows of green spinach crop, and hops down beside Clem to chirp happily at the unearthed spuds and shy little grub."
+    }
+  ],
+  "beats": [
+    {
+      "beat_number": 1,
+      "beat_title": "Establish & Hook — The Matching Green Crop",
+      "start_sec": 0.0,
+      "end_sec": 3.2,
+      "character_motion": "Plum flutters her blue wings and perches on the rustic wooden garden fence in front of the cozy cottage, tilting her head and pointing a wing toward the neat rows of green spinach crop as Clem walks happily down the garden path looking around in wonder.",
+      "facial_expression": "Plum smiles warmly and chirps; Clem's big brown eyes blink and widen with curious excitement.",
+      "backdrop_motion": "Rows of emerald-green spinach crop leaves sway gently in the afternoon breeze while fluffy white clouds drift across the sunny sky.",
+      "camera_motion": "Gentle establishing push-in across the swaying garden rows toward Clem and Plum.",
+      "narration_or_dialogue": "\"See this matching green crop?\" chirped Plum.",
+      "sfx_and_music": "Cheerful bluebird chirp, soft rustling garden leaves, gentle footsteps on soil, and a warm acoustic guitar and marimba storybook melody."
+    },
+    {
+      "beat_number": 2,
+      "beat_title": "Core Discovery Action — Digging Up a Spud",
+      "start_sec": 3.2,
+      "end_sec": 7.0,
+      "character_motion": "Plum hops down beside the potato patch and nudges a leafy stem; Clem kneels in the soft soil, gently tugs his sleeve free from a tiny branch snag, and pulls up a lush potato plant to reveal three round, dusty spuds clinging to the roots.",
+      "facial_expression": "Clem grins with hands-on discovery as his mouth opens in an excited smile; Plum nods proudly.",
+      "backdrop_motion": "Golden sunbeams shimmer through the cottage trees as tiny specks of garden soil and leaves rustle softly in the breeze.",
+      "camera_motion": "Smooth downward tilt and medium close-up focusing on Clem's hands lifting the freshly dug spuds beside Plum.",
+      "narration_or_dialogue": "Clem dug in the dirt. \"Found a round spud!\"",
+      "sfx_and_music": "Soft earthy pop as the spuds lift from the soil, playful marimba plink, and upbeat storybook strings."
+    },
+    {
+      "beat_number": 3,
+      "beat_title": "Joyful Reaction & Payoff — Garden Friends",
+      "start_sec": 7.0,
+      "end_sec": 10.0,
+      "character_motion": "A tiny cute smiling garden grub wiggles shyly out of the hole; Plum bounces and waves her wings in a happy little dance while Clem holds up the golden spuds and waves gently.",
+      "facial_expression": "Both Clem and Plum laugh and smile with warm eye contact.",
+      "backdrop_motion": "The green garden crop leaves sway in harmony and fluffy clouds drift past the cottage roof.",
+      "camera_motion": "Gentle pull-back framing Clem, Plum, the spuds, and the sunny cottage garden in a warm storybook finish.",
+      "narration_or_dialogue": "A tiny grub wiggled hello as they cheered!",
+      "sfx_and_music": "Cute comical wiggle chime, two melodic bird chirps, Clem's happy giggle, and a warm resolving acoustic chord."
+    }
+  ],
+  "google_flow_prompt": "Vibrant full-color 2D animated storybook cartoon movie in square framing with bold black ink outlines and warm golden afternoon sunlight. In a sunny garden before a cozy cottage, shade trees, and a rustic wooden fence, Plum, a cute round sky-blue bird, flutters onto a fencepost and points her wing at swaying rows of green spinach crop as Clem, a cheerful cartoon garden explorer in blue overalls, walks down the path. Next, the camera pans gently as Clem kneels in the soil while Plum hops closer, and Clem pulls up a potato plant revealing three round golden spuds as a cute smiling pink grub wiggles from the hole. Both friends bounce and grin as fluffy clouds drift overhead. Audio: Warm acoustic guitar and marimba music, gentle breeze, bird chirps, a soft pop as the spud lifts, and happy giggles."
+}

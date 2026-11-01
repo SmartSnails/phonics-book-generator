@@ -1,0 +1,134 @@
+{
+  "section_id": "section_1_in_the_garden",
+  "section_title": "Act 1 — In the Garden",
+  "age_band": "4 to 6",
+  "target_blends": ["cl-", "pl-", "cr-", "sp-", "gr-", "sn-"],
+  "target_words": ["clem", "plum", "crop", "spud", "grub", "snag"],
+  "continuity_bible": {
+    "cast_visual_anchors": {
+      "clem": "curious, cheerful 5-year-old boy with short tousled hair, big friendly eyes, a button nose, wearing classic bib overalls with two shoulder straps and a front chest pocket over a simple short-sleeved white shirt, and sturdy rounded ankle boots",
+      "plum": "cute, small, plump round bluebird with big expressive eyes, a short triangular beak, soft rounded wings, and a short notched tail",
+      "mr_spud": "three plump, rounded oval potatoes dangling from the roots of an uprooted leafy potato plant, with the largest center potato sporting a cute friendly smiling cartoon face",
+      "little_grub": "tiny, chubby, segmented C-curled baby beetle grub with big gentle cartoon eyes, two tiny antennae nubs, and a shy sweet smile"
+    },
+    "setting_anchors": {
+      "garden_fence": "classic low wooden picket/split-rail garden fence",
+      "crop_rows": "neat parallel rows of matching leafy cabbage and spinach plants growing in garden soil",
+      "potato_patch": "lush leafy potato plants with round potatoes attached to underground roots",
+      "dirt_hole": "small rounded hollow scooped in the garden soil where the potato plant was pulled up",
+      "rose_bush": "rounded garden rose bush with simple blooming roses, leaves, and a few distinct curved thorns on its stems"
+    }
+  },
+  "atomic_illustrations": [
+    {
+      "id": "clem",
+      "word": "clem",
+      "blend": "cl + em",
+      "used_on_pages": [2, 8],
+      "aspect_ratio": "1:1",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/clem.png",
+      "prompt": "Please generate exactly 1 image to illustrate “clem” (a cheerful 5-year-old boy character named Clem) in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes — minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nFull-body portrait of Clem, a curious and cheerful 5-year-old boy with short tousled hair and a big warm smile, wearing classic bib overalls with two shoulder straps and a front pocket over a simple short-sleeved shirt, and sturdy rounded boots, waving one hand happily. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+    },
+    {
+      "id": "plum",
+      "word": "plum",
+      "blend": "pl + um",
+      "used_on_pages": [2, 8],
+      "aspect_ratio": "1:1",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/plum.png",
+      "prompt": "Please generate exactly 1 image to illustrate “plum” (a cute small round bluebird character named Plum) in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes — minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nSingle cute, plump, round little songbird (Plum the bluebird) with big friendly cartoon eyes, a small beak, a round belly patch, and one rounded wing slightly raised in a gentle wave, hopping cheerfully. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+    },
+    {
+      "id": "crop",
+      "word": "crop",
+      "blend": "cr + op",
+      "used_on_pages": [9],
+      "aspect_ratio": "1:1",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/crop.png",
+      "prompt": "Please generate exactly 1 image to illustrate “crop” in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes — minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nTwo neat, matching garden rows of plump, round leafy cabbage heads and spinach plants growing side by side in simple mounds of garden soil to clearly show a farm vegetable crop. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+    },
+    {
+      "id": "spud",
+      "word": "spud",
+      "blend": "sp + ud",
+      "used_on_pages": [3, 9],
+      "aspect_ratio": "1:1",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/spud.png",
+      "prompt": "Please generate exactly 1 image to illustrate “spud” (a friendly potato pulled up on its plant roots) in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes — minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA freshly pulled potato plant with simple leafy stems at the top and three plump, smooth oval potatoes (spuds) dangling from simple root lines at the bottom, with the big center potato having a cute, friendly smiling cartoon face (Mr. Spud). Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+    },
+    {
+      "id": "grub",
+      "word": "grub",
+      "blend": "gr + ub",
+      "used_on_pages": [3, 10],
+      "aspect_ratio": "1:1",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/grub.png",
+      "prompt": "Please generate exactly 1 image to illustrate “grub” (a cute baby beetle bug in the dirt) in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes — minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nA single cute, chubby, friendly baby beetle grub with five smooth rounded body segments, six tiny stubby legs near the front, big gentle cartoon eyes, and a shy sweet smile, nestled inside a simple scooped hollow of garden soil. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+    },
+    {
+      "id": "snag",
+      "word": "snag",
+      "blend": "sn + ag",
+      "used_on_pages": [10],
+      "aspect_ratio": "1:1",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/snag.png",
+      "prompt": "Please generate exactly 1 image to illustrate “snag” (a shirt sleeve caught on a rose bush thorn) in a coloring book for children aged 4 to 6.\n\nBlack and white line art coloring page for young children, ages 4 to 6. Bold, easily recognizable, friendly, thick, uniform black outlines (no thin or wavy lines), no shading, no gray tones, no cross-hatching, no color fill. Flat white background. Simple, large, clearly separated shapes — minimal fine detail. Cute, friendly, rounded cartoon style. At this age, kids learn best through clear, engaging, visual contrasts and relatable examples.\n\nClose-up visual of a child's shirt sleeve cuff where one sharp curved thorn on a leafy rose stem has caught and pulled out a single distinct loop of thread (a snag) from the fabric. Centered, 1:1 square composition, flat #FFFFFF white background, no text, no letters, no watermark, no outer border, no box, no frame. Pure black line art on solid pure white background."
+    }
+  ],
+  "scene_illustrations": [
+    {
+      "id": "cover_clem_plum",
+      "page_number": 1,
+      "title": "Cover: Clem and Plum: A Day by the Garden, Woods, and Pond",
+      "template": "full_page",
+      "aspect_ratio": "3:4",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/cover_clem_plum.png",
+      "prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text, no letters, and no titles. In the center foreground, Clem (a cheerful 5-year-old boy with short tousled hair wearing bib overalls over a short-sleeved shirt and sturdy boots) smiles and waves while his friend Plum (a cute, small, plump round songbird) perches happily on his outstretched hand. Around them is a welcoming path showing a low wooden garden fence with leafy cabbages on the left, tall woodland trees in the upper background, and a calm pond edge with a lily pad on the right."
+    },
+    {
+      "id": "scene_1a_crop",
+      "page_number": 4,
+      "title": "Act 1, Beat 1: The Leafy Green Crop",
+      "template": "half_page_bottom_scene",
+      "aspect_ratio": "4:3",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1a_crop.png",
+      "prompt": "Simple bold-line coloring book scene illustration in a 4:3 horizontal rectangular frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or speech bubbles. In a sunny vegetable garden, Plum (a cute, small, plump round bluebird) perches on a low wooden garden fence pointing one wing toward long, neat rows of matching leafy cabbage and spinach plants (a crop), while Clem (a curious 5-year-old boy in bib overalls and boots) stands beside the fence tilting his head and grinning happily."
+    },
+    {
+      "id": "scene_1b_spud",
+      "page_number": 5,
+      "title": "Act 1, Beat 2: Hello, Mr. Spud!",
+      "template": "half_page_bottom_scene",
+      "aspect_ratio": "4:3",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1b_spud.png",
+      "prompt": "Simple bold-line coloring book scene illustration in a 4:3 horizontal rectangular frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or speech bubbles. In the garden potato patch, Clem (a cheerful 5-year-old boy wearing bib overalls and boots) kneels on the ground holding up a freshly pulled leafy potato plant with three plump round potatoes (spuds) dangling from its roots and giggling, while Plum (a cute, small, plump round bluebird) hops cheerfully on the ground right beside him."
+    },
+    {
+      "id": "scene_1c_grub",
+      "page_number": 6,
+      "title": "Act 1, Beat 3: The Shy Little Grub",
+      "template": "half_page_bottom_scene",
+      "aspect_ratio": "4:3",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1c_grub.png",
+      "prompt": "Simple bold-line coloring book scene illustration in a 4:3 horizontal rectangular frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or speech bubbles. In the garden dirt, Clem (a curious 5-year-old boy in bib overalls and boots) leans down on his hands and knees with wide, gentle eyes, smiling softly at a cute, tiny, chubby curled baby beetle grub wiggling inside a small scooped dirt hole, while Plum (a small, plump round bluebird) peeks closely into the hole beside him."
+    },
+    {
+      "id": "scene_1d_snag",
+      "page_number": 7,
+      "title": "Act 1, Beat 4: Caught on a Rose Bush Snag",
+      "template": "half_page_bottom_scene",
+      "aspect_ratio": "4:3",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1d_snag.png",
+      "prompt": "Simple bold-line coloring book scene illustration in a 4:3 horizontal rectangular frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text or speech bubbles. Beside a rounded garden rose bush with simple blooming roses, Clem (a cheerful 5-year-old boy in bib overalls over a short-sleeved shirt) looks at his arm where a thorny rose branch has caught and pulled a small loop of thread (a snag) on his shirt sleeve, while Plum (a cute, small, plump round bluebird) perches on the garden fence pointing her beak toward the snag."
+    },
+    {
+      "id": "scene_1_conclusion",
+      "page_number": 12,
+      "title": "Section 1 Conclusion: Laughing in the Garden, Off to the Woods!",
+      "template": "full_page",
+      "aspect_ratio": "3:4",
+      "output_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1_conclusion.png",
+      "prompt": "Simple bold-line coloring book page illustration in a 3:4 vertical portrait frame, enclosed inside a clean medium-thick black rectangular outer border with even white margins. Pure black-and-white line art only (#000000 ink lines on a pure solid #FFFFFF white background), with extra-bold outer character outlines, medium-bold uniform environment outlines, and large open white spaces easy for young children ages 4 to 6 to color inside, with zero shading, zero grayscale, and no text, no letters, and no titles. Joyful finale scene of Act 1 in the garden: Clem (a cheerful 5-year-old boy in bib overalls and boots) laughs and waves goodbye to the rose bush, the rows of leafy cabbage crops, the uprooted potato spuds, and the tiny smiling grub peeking from its dirt hole in the foreground, while Plum (a small, plump round bluebird) flutters happily in the upper sky leading the way along a path toward sunlit woodland trees in the background."
+    }
+  ]
+}

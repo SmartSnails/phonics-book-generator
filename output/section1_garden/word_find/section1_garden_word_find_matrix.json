@@ -1,0 +1,184 @@
+{
+  "rows": 8,
+  "cols": 8,
+  "difficulty": "medium",
+  "allow_reverse": false,
+  "letter_case": "UPPER",
+  "seed": 101,
+  "words": [
+    "CLEM",
+    "PLUM",
+    "CROP",
+    "SPUD",
+    "GRUB",
+    "SNAG"
+  ],
+  "placements": [
+    {
+      "word": "CLEM",
+      "start": [
+        7,
+        2
+      ],
+      "end": [
+        7,
+        5
+      ],
+      "direction": "across",
+      "dr": 0,
+      "dc": 1
+    },
+    {
+      "word": "PLUM",
+      "start": [
+        1,
+        4
+      ],
+      "end": [
+        4,
+        4
+      ],
+      "direction": "down",
+      "dr": 1,
+      "dc": 0
+    },
+    {
+      "word": "CROP",
+      "start": [
+        6,
+        2
+      ],
+      "end": [
+        6,
+        5
+      ],
+      "direction": "across",
+      "dr": 0,
+      "dc": 1
+    },
+    {
+      "word": "SPUD",
+      "start": [
+        1,
+        5
+      ],
+      "end": [
+        4,
+        5
+      ],
+      "direction": "down",
+      "dr": 1,
+      "dc": 0
+    },
+    {
+      "word": "GRUB",
+      "start": [
+        3,
+        0
+      ],
+      "end": [
+        3,
+        3
+      ],
+      "direction": "across",
+      "dr": 0,
+      "dc": 1
+    },
+    {
+      "word": "SNAG",
+      "start": [
+        0,
+        0
+      ],
+      "end": [
+        3,
+        0
+      ],
+      "direction": "down",
+      "dr": 1,
+      "dc": 0
+    }
+  ],
+  "matrix": [
+    [
+      "S",
+      "V",
+      "Q",
+      "G",
+      "T",
+      "H",
+      "J",
+      "P"
+    ],
+    [
+      "N",
+      "W",
+      "Z",
+      "G",
+      "P",
+      "S",
+      "K",
+      "O"
+    ],
+    [
+      "A",
+      "C",
+      "I",
+      "G",
+      "L",
+      "P",
+      "F",
+      "C"
+    ],
+    [
+      "G",
+      "R",
+      "U",
+      "B",
+      "U",
+      "U",
+      "O",
+      "Y"
+    ],
+    [
+      "R",
+      "L",
+      "G",
+      "P",
+      "M",
+      "D",
+      "Z",
+      "K"
+    ],
+    [
+      "H",
+      "U",
+      "Z",
+      "M",
+      "N",
+      "G",
+      "C",
+      "N"
+    ],
+    [
+      "O",
+      "J",
+      "C",
+      "R",
+      "O",
+      "P",
+      "G",
+      "D"
+    ],
+    [
+      "U",
+      "T",
+      "C",
+      "L",
+      "E",
+      "M",
+      "V",
+      "K"
+    ]
+  ]
+}
