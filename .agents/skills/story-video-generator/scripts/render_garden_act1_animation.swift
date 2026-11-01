@@ -903,21 +903,40 @@ for k in 0..<popLen {
     }
 }
 
-// Write WAV file
+// Write 16-bit mono WAV header + data, then mux directly via AVAssetWriter / AVAssetExportSession
 let tempWAVURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("garden_act1_audio.wav")
 try? FileManager.default.removeItem(at: tempWAVURL)
-let format = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: Double(sampleRate), channels: 1, interleaved: false)!
-let pcmBuf = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: AVAudioFrameCount(totalSamples))!
-pcmBuf.frameLength = AVAudioFrameCount(totalSamples)
-if let ch = pcmBuf.floatChannelData?[0] {
-    for i in 0..<totalSamples { ch[i] = max(-0.95, min(0.95, audioSamples[i])) }
+
+var pcmSamples = [Int16](repeating: 0, count: totalSamples)
+for i in 0..<totalSamples {
+    let clamped = max(-0.95, min(0.95, Double(audioSamples[i])))
+    pcmSamples[i] = Int16(clamped * 32767.0)
 }
-let audioFile = try AVAudioFile(forWriting: tempWAVURL, settings: format.settings)
-try audioFile.write(from: pcmBuf)
+
+var wavData = Data()
+let dataSize = UInt32(totalSamples * 2)
+let fileSize = dataSize + 36
+wavData.append("RIFF".data(using: .ascii)!)
+withUnsafeBytes(of: fileSize.littleEndian) { wavData.append(contentsOf: $0) }
+wavData.append("WAVEfmt ".data(using: .ascii)!)
+withUnsafeBytes(of: UInt32(16).littleEndian) { wavData.append(contentsOf: $0) }
+withUnsafeBytes(of: UInt16(1).littleEndian) { wavData.append(contentsOf: $0) }
+withUnsafeBytes(of: UInt16(1).littleEndian) { wavData.append(contentsOf: $0) }
+withUnsafeBytes(of: UInt32(sampleRate).littleEndian) { wavData.append(contentsOf: $0) }
+withUnsafeBytes(of: UInt32(sampleRate * 2).littleEndian) { wavData.append(contentsOf: $0) }
+withUnsafeBytes(of: UInt16(2).littleEndian) { wavData.append(contentsOf: $0) }
+withUnsafeBytes(of: UInt16(16).littleEndian) { wavData.append(contentsOf: $0) }
+wavData.append("data".data(using: .ascii)!)
+withUnsafeBytes(of: dataSize.littleEndian) { wavData.append(contentsOf: $0) }
+pcmSamples.withUnsafeBytes { wavData.append(contentsOf: $0) }
+try wavData.write(to: tempWAVURL)
 
 // ----------------------------------------------------------------------------
-// 4. Mux Video & Audio into Final MP4
+// 4. Mux Video & Audio into Temp MP4, then Copy to Final Destination
 // ----------------------------------------------------------------------------
+let tempFinalMP4URL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("garden_act1_final_muxed.mp4")
+try? FileManager.default.removeItem(at: tempFinalMP4URL)
+
 let composition = AVMutableComposition()
 let videoAsset = AVURLAsset(url: tempVideoURL)
 let audioAsset = AVURLAsset(url: tempWAVURL)
@@ -933,12 +952,19 @@ if let aTrack = audioAsset.tracks(withMediaType: .audio).first,
 
 let exportSem = DispatchSemaphore(value: 0)
 if let exporter = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality) {
-    exporter.outputURL = outMP4URL
+    exporter.outputURL = tempFinalMP4URL
     exporter.outputFileType = .mp4
     exporter.exportAsynchronously { exportSem.signal() }
     exportSem.wait()
+    if exporter.status == .completed, FileManager.default.fileExists(atPath: tempFinalMP4URL.path) {
+        try FileManager.default.copyItem(at: tempFinalMP4URL, to: outMP4URL)
+    } else {
+        print("Exporter status: \(exporter.status.rawValue), error: \(String(describing: exporter.error)) -- copying video track")
+        try FileManager.default.copyItem(at: tempVideoURL, to: outMP4URL)
+    }
 }
 
 try? FileManager.default.removeItem(at: tempVideoURL)
 try? FileManager.default.removeItem(at: tempWAVURL)
+try? FileManager.default.removeItem(at: tempFinalMP4URL)
 print("Rendered full-fledged 10.0s @ 30fps articulated animation -> \(outMP4URL.path)")
