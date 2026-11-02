@@ -189,67 +189,87 @@ async def synthesize_utterance(
     return get_wav_duration(wav_path)
 
 
-async def run_synthesis(screenplay_path: Path, out_dir: Path) -> None:
-    import importlib
-    import time
-    import urllib.request
-    from datetime import datetime as dt, timezone as tz
-    from email.utils import parsedate_to_datetime
-
-    Path("/tmp/edge_tts_pkg").mkdir(parents=True, exist_ok=True)
-    if "/tmp/edge_tts_pkg" not in sys.path:
-        sys.path.insert(0, "/tmp/edge_tts_pkg")
-    importlib.invalidate_caches()
-    try:
-        import edge_tts
-        import edge_tts.communicate
-        from edge_tts.drm import DRM
-    except ImportError:
-        subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "pip",
-                "install",
-                "--quiet",
-                "--target",
-                "/tmp/edge_tts_pkg",
-                "edge-tts",
-            ],
-            check=True,
-        )
-        importlib.invalidate_caches()
-        import edge_tts
-        import edge_tts.communicate
-        from edge_tts.drm import DRM
-
-    # Calibrate clock skew against real server UTC Date header (since local clock may be in Nov 2026)
-    for url in ("https://www.microsoft.com", "https://www.bing.com", "https://www.google.com"):
-        try:
-            req = urllib.request.Request(url, method="HEAD")
-            with urllib.request.urlopen(req, timeout=5) as resp:
-                date_hdr = resp.headers.get("Date")
-                if date_hdr:
-                    server_ts = parsedate_to_datetime(date_hdr).timestamp()
-                    local_ts = dt.now(tz.utc).timestamp()
-                    DRM.clock_skew_seconds = server_ts - local_ts
-                    print(f"Calibrated clock skew: {DRM.clock_skew_seconds:.1f}s (server Date: {date_hdr})")
-                    break
-        except Exception:
-            continue
-
-    def _skewed_date_to_string() -> str:
-        return time.strftime(
-            "%a %b %d %Y %H:%M:%S GMT+0000 (Coordinated Universal Time)",
-            time.gmtime(DRM.get_unix_timestamp()),
-        )
-
-    edge_tts.communicate.date_to_string = _skewed_date_to_string
-
+async def run_synthesis(screenplay_path: Path, out_dir: Path, force: bool = False) -> None:
     with open(screenplay_path, "r", encoding="utf-8") as f:
         screenplay = json.load(f)
 
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    # Check whether any WAV file needs synthesis before touching network / edge-tts
+    needs_network = force
+    if not needs_network:
+        for beat in screenplay.get("beats", []):
+            bnum = int(beat["beat_number"])
+            utterances = beat.get("utterances") or ACT1_SCENE_UTTERANCES.get(bnum, [])
+            if not utterances:
+                utterances = [{"speaker": "Narrator", "text": beat.get("verbatim_storyline_script", "")}]
+            for idx, u in enumerate(utterances, start=1):
+                speaker = u["speaker"]
+                wav_path = out_dir / f"scene{bnum}_{idx:02d}_{speaker.lower()}.wav"
+                if not wav_path.exists() or wav_path.stat().st_size <= 1000:
+                    needs_network = True
+                    break
+
+    edge_tts = None
+    if needs_network:
+        import importlib
+        import time
+        import urllib.request
+        from datetime import datetime as dt, timezone as tz
+        from email.utils import parsedate_to_datetime
+
+        Path("/tmp/edge_tts_pkg").mkdir(parents=True, exist_ok=True)
+        if "/tmp/edge_tts_pkg" not in sys.path:
+            sys.path.insert(0, "/tmp/edge_tts_pkg")
+        importlib.invalidate_caches()
+        try:
+            import edge_tts as _edge_tts
+            import edge_tts.communicate
+            from edge_tts.drm import DRM
+            edge_tts = _edge_tts
+        except ImportError:
+            subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "pip",
+                    "install",
+                    "--quiet",
+                    "--target",
+                    "/tmp/edge_tts_pkg",
+                    "edge-tts",
+                ],
+                check=True,
+            )
+            importlib.invalidate_caches()
+            import edge_tts as _edge_tts
+            import edge_tts.communicate
+            from edge_tts.drm import DRM
+            edge_tts = _edge_tts
+
+        # Calibrate clock skew against real server UTC Date header (since local clock may be in Nov 2026)
+        for url in ("https://www.microsoft.com", "https://www.bing.com", "https://www.google.com"):
+            try:
+                req = urllib.request.Request(url, method="HEAD")
+                with urllib.request.urlopen(req, timeout=5) as resp:
+                    date_hdr = resp.headers.get("Date")
+                    if date_hdr:
+                        server_ts = parsedate_to_datetime(date_hdr).timestamp()
+                        local_ts = dt.now(tz.utc).timestamp()
+                        DRM.clock_skew_seconds = server_ts - local_ts
+                        print(f"Calibrated clock skew: {DRM.clock_skew_seconds:.1f}s (server Date: {date_hdr})")
+                        break
+            except Exception:
+                continue
+
+        def _skewed_date_to_string() -> str:
+            return time.strftime(
+                "%a %b %d %Y %H:%M:%S GMT+0000 (Coordinated Universal Time)",
+                time.gmtime(DRM.get_unix_timestamp()),
+            )
+
+        edge_tts.communicate.date_to_string = _skewed_date_to_string
+
     scenes_manifest = []
     global_cursor = 0.0
 
@@ -276,7 +296,10 @@ async def run_synthesis(screenplay_path: Path, out_dir: Path) -> None:
             text = u["text"]
             mp3_path = out_dir / f"scene{bnum}_{idx:02d}_{speaker.lower()}.mp3"
             wav_path = out_dir / f"scene{bnum}_{idx:02d}_{speaker.lower()}.wav"
-            dur = await synthesize_utterance(edge_tts, text, speaker, mp3_path, wav_path)
+            if not force and wav_path.exists() and wav_path.stat().st_size > 1000:
+                dur = get_wav_duration(wav_path)
+            else:
+                dur = await synthesize_utterance(edge_tts, text, speaker, mp3_path, wav_path)
             item = {
                 "index": idx,
                 "speaker": speaker,

@@ -76,46 +76,37 @@ Converts a **Human-Approved Screenplay** (`.txt` in `output/Blends/` + `.json` m
 ## 3. End-to-End Execution Pipeline
 
 ### Step 2A: Prepare & Colorize the Exact Google Flow Storyline Keyframes
-Run [`scripts/colorize_flow_act1_scenes.swift`](scripts/colorize_flow_act1_scenes.swift) so each beat in the screenplay has both:
-1. `source_scene_image_path`: Clean `1080x1080` B&W storyline coloring page (`output/Blends/illustrations/act1_scene<N>_<word>_flow_bw.png`).
-2. `colored_scene_image_path`: `1080x1080` storybook-colored keyframe (`output/Blends/illustrations/act1_scene<N>_<word>_flow_color.png`) painted via connected-component flood-fill inside the exact black ink outlines of `source_scene_image_path` using the locked Google Flow Character DNA palette.
+Run [`scripts/prepare_storyline_keyframes.swift`](scripts/prepare_storyline_keyframes.swift) (for any newly generated B&W storyline page in Act 2 / Act 3) or [`scripts/colorize_flow_act1_scenes.swift`](scripts/colorize_flow_act1_scenes.swift) (for Act 1) so each beat in the screenplay has both:
+1. `source_scene_image_path`: Clean `1080x1080` B&W storyline coloring page (`output/Blends/illustrations/act<N>_scene<M>_<word>_flow_bw.png`).
+2. `colored_scene_image_path`: `1080x1080` storybook-colored keyframe (`output/Blends/illustrations/act<N>_scene<M>_<word>_flow_color.png`) painted via connected-component flood-fill inside the exact black ink outlines of `source_scene_image_path` using the locked Google Flow Character DNA palette.
 
 ```bash
 swift -module-cache-path /tmp/swift_cache \
-  .agents/skills/story-video-generator/scripts/colorize_flow_act1_scenes.swift
+  /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/story-video-generator/scripts/prepare_storyline_keyframes.swift \
+  <raw_bw.png> <out_flow_bw.png> <out_flow_color.png> woods
 ```
 
-### Step 2B: Synthesize Engaging Multi-Character Human Voice Narration
-Run [`scripts/synthesize_human_narration.py`](scripts/synthesize_human_narration.py) to generate 44.1 kHz stereo PCM `.wav` files and a frame-accurate timing manifest (`output/audio/act1_human_vo/manifest.json`) for every narrator and character line in the screenplay:
+### Step 2B: Single-Command Master Orchestrator (Voice Synthesis + Rendering + Size Optimization)
+To run hands-free without multiple terminal prompts, invoke [`scripts/generate_video_from_screenplay.py`](scripts/generate_video_from_screenplay.py) as a **single prefix-matchable command** (which internally runs [`scripts/synthesize_human_narration.py`](scripts/synthesize_human_narration.py) with WAV caching, [`scripts/render_screenplay_video.swift`](scripts/render_screenplay_video.swift), and [`scripts/mux_narration_into_mp4.swift`](scripts/mux_narration_into_mp4.swift)):
 
 ```bash
-python3 .agents/skills/story-video-generator/scripts/synthesize_human_narration.py \
-  --screenplay output/screenplays/act1_in_the_garden_screenplay.json \
-  --out-dir output/audio/act1_human_vo
+python3 /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/story-video-generator/scripts/generate_video_from_screenplay.py \
+  --screenplay /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act2_into_the_woods_screenplay.json \
+  --out-mp4 /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Animation.mp4 \
+  --copy-mp4 /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/videos/act2_into_the_woods_animation.mp4
 ```
 
 > [!IMPORTANT]
 > **Critical Safeguards in `synthesize_human_narration.py`**:
-> 1. **Workspace Output Directory (`output/audio/...`)**: Always write `.wav` files inside the workspace (`output/audio/act1_human_vo`) rather than `/tmp`. On macOS, files created in `/tmp` by an unsandboxed process (`BypassSandbox: true`) are blocked (`Operation not permitted` / `NSCocoaErrorDomain Code=257`) when read by a subsequent sandboxed Swift process.
+> 1. **Workspace Output Directory & WAV Caching (`output/audio/<act>_vo`)**: Always write `.wav` files inside the workspace (`output/audio/<act>_vo`) rather than `/tmp`, and automatically reuse existing `.wav` files on disk so re-runs require zero network calls.
 > 2. **Automatic UTC Clock-Skew Calibration**: Before connecting to the Edge Neural TTS WebSocket, `synthesize_human_narration.py` reads the live HTTP `Date` header from Microsoft/Bing/Google and sets `DRM.clock_skew_seconds` + overrides `edge_tts.communicate.date_to_string` so `Sec-MS-GEC` and `X-Timestamp` never fail even if the local machine clock is skewed.
-
-### Step 2C: Render the Animated 2D Storybook Video & Interleaved Master Audio
-Run the master orchestrator [`scripts/generate_video_from_screenplay.py`](scripts/generate_video_from_screenplay.py) (which validates all pre-flight gates and invokes [`scripts/render_screenplay_video.swift`](scripts/render_screenplay_video.swift)):
-
-```bash
-python3 .agents/skills/story-video-generator/scripts/generate_video_from_screenplay.py \
-  --screenplay output/screenplays/act1_in_the_garden_screenplay.json \
-  --vo-manifest output/audio/act1_human_vo/manifest.json \
-  --out-mp4 output/Blends/Act1_In_The_Garden_Animation.mp4 \
-  --copy-mp4 output/videos/act1_in_the_garden_animation.mp4
-```
 
 > [!IMPORTANT]
 > **Critical Safeguards in `render_screenplay_video.swift`**:
 > 1. **Lockstep Audio/Video Timestamp Interleaving (No `AVAssetWriter` Deadlocks)**: Never append all video frames before appending audio buffers on a single thread (which deadlocks `videoInput.isReadyForMoreMediaData` once `AVAssetWriter`'s internal interleaving queue fills). Always build `masterAudio` upfront and interleave video frames and audio sample buffers in presentation-timestamp (`CMTime`) order (`videoTime <= audioTime`) inside `autoreleasepool` blocks.
-> 2. **Strict WAV Validation (No Silent `try?` Fallbacks)**: `loadWavFile` throws a `fatalError` if any `.wav` file is unreadable or <= 44 bytes instead of silently returning empty sample arrays `[]`.
+> 2. **Strict WAV Validation & Dynamic Screenplay Anchors**: `loadWavFile` throws a `fatalError` if any `.wav` file is unreadable or <= 44 bytes, and `renderSceneFrame` reads `animation_anchors` (`clem_eyes`, `clem_mouth`, `plum_beak`, `plum_notes_origin`, `focus_prop`) and `target_word` dynamically from the screenplay JSON for any number of scenes.
 
-### Step 2D: Fast Lossless Audio Remuxing (Without Re-Rendering Video Frames)
+### Step 2C: Fast Lossless Audio Remuxing (Without Re-Rendering Video Frames)
 Whenever you need to update, re-balance, or replace the narration/music audio track on an already-rendered `.mp4` without regenerating the video frames, run [`scripts/mux_narration_into_mp4.swift`](scripts/mux_narration_into_mp4.swift):
 
 ```bash

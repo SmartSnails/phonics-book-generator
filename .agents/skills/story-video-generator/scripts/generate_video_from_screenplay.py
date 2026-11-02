@@ -138,11 +138,26 @@ def main() -> None:
         check=True,
     )
 
-    if args.copy_mp4:
-        copy_path = Path(args.copy_mp4).resolve()
-        copy_path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(out_mp4, copy_path)
-        print(f"Copied rendered MP4 -> {copy_path}")
+    # Automatically optimize MP4 size if > 50 MB so git push to GitHub always succeeds cleanly
+    copy_target = Path(args.copy_mp4).resolve() if args.copy_mp4 else out_mp4
+    if out_mp4.exists() and out_mp4.stat().st_size > 50_000_000:
+        mux_script = Path(__file__).parent / "mux_narration_into_mp4.swift"
+        subprocess.run(
+            [
+                "swift",
+                "-module-cache-path",
+                "/tmp/swift_cache",
+                str(mux_script),
+                str(vo_manifest),
+                str(out_mp4),
+                str(copy_target),
+            ],
+            check=True,
+        )
+    elif args.copy_mp4:
+        copy_target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(out_mp4, copy_target)
+        print(f"Copied rendered MP4 -> {copy_target}")
 
 
 if __name__ == "__main__":

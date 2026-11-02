@@ -17,16 +17,17 @@ When working in this workspace, you act as the **Phonics & Activity Book Generat
 
 ---
 
-## Hands-Free Execution & Auto-Run Rules
+## Hands-Free Execution & Auto-Run Rules ([`.agents/rules/hands-off-execution.md`](./.agents/rules/hands-off-execution.md))
 
-To ensure all skills run 100% hands-free inside Standard Sandbox Mode (`BypassSandbox: false`) without prompting the user for manual permission:
+To ensure all skills run 100% hands-free without re-prompting the user for manual permission:
 
-1. **Always Use Standard Sandbox (`BypassSandbox: false`)**:
-   - All Python and Swift scripts in `.agents/skills/*/scripts/` run locally inside the workspace and `/tmp` with zero network dependencies. Never set `BypassSandbox: true` for word generation, Word Find SVG creation, B&W normalization, scene compositing, PDF compilation, or MP4 video rendering.
-2. **Use Single, Clean, Prefix-Matchable Commands**:
-   - Do **not** chain commands with `cd ... &&`, `;`, `||`, command substitutions `$(...)`, or shell variables `$VAR`.
-   - Always invoke the binary directly from the repository root using literal paths so any user "Always Allow" rule prefix-matches cleanly:
+1. **Always Use Single, Prefix-Matchable Commands (Zero `&&`, `;`, `||`, `$VAR`, or `$(...)`)**:
+   - Do **not** chain commands with `&&`, `;`, `||`, pipes `|`, command substitutions `$(...)`, or shell variables `$VAR`.
+   - Always invoke each binary as its own standalone command from the repository root using literal paths so any user "Always Allow" rule prefix-matches permanently:
      - `python3 /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/<skill>/scripts/<script>.py ...`
-     - `swift -module-cache-path /tmp/swift-cache /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/<skill>/scripts/<script>.swift ...`
-3. **Write Temporary Files Only to `/tmp` or Workspace `output/`**:
-   - Never write or delete outside the active workspace, `<appDataDir>/brain/`, or `/tmp`.
+     - `swift -module-cache-path /tmp/swift_cache /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/<skill>/scripts/<script>.swift ...`
+     - `git -C /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator <subcommand> ...`
+2. **Use the Single Master Orchestrator for Step 2 Video Generation**:
+   - Invoke `python3 /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/story-video-generator/scripts/generate_video_from_screenplay.py --screenplay <screenplay.json> --out-mp4 <primary.mp4> --copy-mp4 <secondary.mp4>` so voice synthesis (with automatic WAV caching), video rendering, and GitHub file-size optimization run inside a single Python process.
+3. **Write Generated Assets Only to Workspace `output/`**:
+   - Store all generated audio (`output/audio/`), illustrations (`output/Blends/illustrations/`), screenplays (`output/screenplays/`, `output/Blends/`), and videos (`output/Blends/`, `output/videos/`) inside the workspace (never `/tmp` for cross-step assets) to prevent cross-sandbox `NSCocoaErrorDomain Code=257` permission blocks.
