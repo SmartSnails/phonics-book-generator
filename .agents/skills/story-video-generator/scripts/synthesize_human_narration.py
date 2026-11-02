@@ -256,7 +256,7 @@ async def run_synthesis(screenplay_path: Path, out_dir: Path) -> None:
     for beat in screenplay.get("beats", []):
         bnum = int(beat["beat_number"])
         target_word = beat["target_word"]
-        utterances = ACT1_SCENE_UTTERANCES.get(bnum, [])
+        utterances = beat.get("utterances") or ACT1_SCENE_UTTERANCES.get(bnum, [])
         if not utterances:
             utterances = [
                 {
@@ -303,6 +303,7 @@ async def run_synthesis(screenplay_path: Path, out_dir: Path) -> None:
                 "colored_scene_image_path": beat.get(
                     "colored_scene_image_path", beat["source_scene_image_path"]
                 ),
+                "animation_anchors": beat.get("animation_anchors", {}),
                 "utterances": beat_items,
             }
         )
@@ -324,9 +325,15 @@ async def run_synthesis(screenplay_path: Path, out_dir: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Synthesize human narration for screenplay.")
     parser.add_argument("--screenplay", required=True, help="Path to approved screenplay JSON.")
-    parser.add_argument("--out-dir", default="output/audio/act1_human_vo", help="Directory for WAV files and manifest.json.")
+    parser.add_argument("--out-dir", default=None, help="Directory for WAV files and manifest.json (defaults to output/audio/<screenplay_stem>_vo).")
     args = parser.parse_args()
-    asyncio.run(run_synthesis(Path(args.screenplay).resolve(), Path(args.out_dir).resolve()))
+    sp_path = Path(args.screenplay).resolve()
+    if args.out_dir:
+        out_dir = Path(args.out_dir).resolve()
+    else:
+        stem = sp_path.stem.replace("_screenplay", "")
+        out_dir = sp_path.parents[1] / "audio" / f"{stem}_vo"
+    asyncio.run(run_synthesis(sp_path, out_dir))
 
 
 if __name__ == "__main__":

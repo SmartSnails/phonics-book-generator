@@ -317,11 +317,27 @@ def evaluate_screenplay(data: dict) -> dict:
     text_file_exists = bool(text_screenplay_path and Path(text_screenplay_path).exists())
     in_blends_folder = "blends" in text_screenplay_path.lower()
 
+    # Verify per-beat utterances and animation_anchors for Step 2 single-source-of-truth execution
+    beats_with_utterances_and_anchors = 0
+    for b in beats:
+        utts = b.get("utterances", [])
+        anchors = b.get("animation_anchors", {})
+        if (
+            isinstance(utts, list)
+            and len(utts) > 0
+            and all(isinstance(u, dict) and u.get("speaker") and u.get("text") for u in utts)
+            and isinstance(anchors, dict)
+            and len(anchors) > 0
+        ):
+            beats_with_utterances_and_anchors += 1
+    step2_data_ready = (beats_with_utterances_and_anchors == len(beats) and len(beats) > 0)
+
     two_step_gate_ok = (
         workflow_step in ("STEP_1_AWAITING_HUMAN_APPROVAL", "STEP_2_APPROVED_FOR_VIDEO")
         and approval_status in ("PENDING_HUMAN_REVIEW", "APPROVED")
         and text_file_exists
         and in_blends_folder
+        and step2_data_ready
     )
 
     gate5_pass = (
@@ -345,9 +361,10 @@ def evaluate_screenplay(data: dict) -> dict:
         "human_approval_status": approval_status,
         "human_readable_screenplay_txt_path": text_screenplay_path,
         "text_screenplay_exists_in_blends": (text_file_exists and in_blends_folder),
+        "step2_utterances_and_anchors_ready": step2_data_ready,
         "notes": (
             f"Single-paragraph 6-pillar Flow prompt ({flow_word_count} words) verified; "
-            f"2-step human review gate active ({workflow_step} / {approval_status}) with text screenplay saved in Blends."
+            f"2-step human review gate active ({workflow_step} / {approval_status}) with text screenplay saved in Blends and all {beats_with_utterances_and_anchors}/{len(beats)} beats containing Step 2 utterances & animation anchors."
         )
     }
 

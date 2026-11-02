@@ -38,13 +38,13 @@ Before writing a single line of the screenplay, read and extract:
      - **Clem (`@Clem`)**: Curious, joyful, cheerful, adventurous 5-year-old boy in white button-down shirt, blue denim overalls, and brown ankle boots; the hands-on *"doer"* who asks questions kids would ask, touches things, tries things, and gets a little muddy.
      - **Plum (`@Plum`)**: Small round sky-blue songbird with oversized head and speckled crown/breast feathers; cute, calm, slightly wiser gentle guide who notices things first, points with her wing, and nudges Clem toward each discovery.
 2. **Canonical Act Storyline Script (`Blends / Story draft and Prompts for 01 Animals & Nature.pdf`, Doc ID: `19JZC1N88zJilarY7d7cSt9x4lnuJwgib`)**:
-   - Extract the **exact storyline narration and character dialogue** for every phonics target word in the Act:
+   - Extract the **exact storyline narration and character dialogue** for every phonics target word in the Act (normalizing any legacy draft character names such as `"Milo"` $\rightarrow$ `"Clem"` and `"Coco"` $\rightarrow$ `"Plum"`):
      - **Act 1 (`In the Garden`)**: `crop`, `spud`, `grub`, `snag`
-     - **Act 2 (`Into the Woods`)**: `twig`, `stag`, `branch`, `moss`
-     - **Act 3 (`By the Pond`)**: `frog`, `crab`, `trout`, `swan`
+     - **Act 2 (`Into the Woods`)**: `stag`, `trot`, `twig`, `skin`, `flap`
+     - **Act 3 (`By the Pond`)**: `frog`, `drip`, `clam`, `crab`, `slug`, `snug`
 3. **Full-Page Storyline Coloring Book Illustrations (`Theme A Beginning Blend.pdf` / `Blends / illustrations`)**:
-   - Locate the exact coloring book scene illustration for each target word (e.g., `page-038.png` / `scene_1a_crop.png`, `page-043.png` / `scene_1b_spud.png`, `scene_1c_grub.png`, `scene_1d_snag.png`, `scene_1_conclusion.png`).
-   - Record the foreground, midground, and background landmarks of each illustration so the animation choreography matches the illustration 100%.
+   - Locate the exact coloring book scene illustration for each target word (or, when a source PDF page is a blank placeholder as in Act 2/3, generate the B&W storyline illustration using `@Clem` and `@Plum`'s Google Flow character sheet lock and deterministically flood-fill colorize it so the B&W and color keyframes match 100% pixel-for-pixel).
+   - Record the foreground, midground, and background landmarks plus the `1080x1080` top-down character coordinates (`animation_anchors`: `clem_eyes`, `clem_mouth`, `plum_beak`, `plum_notes_origin`, `focus_prop`) so Step 2 (`story-video-generator`) is 100% data-driven from the screenplay JSON.
 
 ### Step 2: Map Character Personality Traits & Backdrop to Physical Choreography
 For every scene in the Act, translate the static illustration and character personality traits into **3 contiguous timed animation beats** across an `~10.0s` (`8–10s`) clip:
@@ -92,8 +92,12 @@ Save two synchronized files:
      - **Section 3**: Engaging Human Voice & Audio Direction (`allow_basic_os_tts: false`)
      - **Section 4**: Scene-by-Scene Master Screenplay (Target Duration, Locked Google Flow Assets, Setting & Backdrop Enhancement, Verbatim Storyline Script & Dialogue, Timed 3-Beat Visual Choreography, and Compiled Google Flow `Veo 3.1` Prompt)
      - **Section 5**: 5-Gate Evaluation Scorecard & Human Approval Sign-Off Checklist
-2. **Structured JSON Manifest**:
+2. **Structured JSON Manifest (Single Source of Truth for Step 2)**:
    - Path: `/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act<N>_<act_name>_screenplay.json`
+   - Every beat in `beats[]` MUST include:
+     - `source_scene_image_path` (B&W coloring page PNG) and `colored_scene_image_path` (100% line-art-preserving colored keyframe PNG)
+     - `utterances`: ordered list of `{"speaker": "Narrator"|"Plum"|"Clem", "text": "...", "pause_after": 0.2}` combining the verbatim story text with interactive Clem & Plum phonics sound-out dialogue for the target word
+     - `animation_anchors`: `{"clem_eyes": [[x1, y1], [x2, y2]], "clem_mouth": [x, y], "plum_beak": [x, y], "plum_notes_origin": [x, y], "focus_prop": [x, y]}` in `1080x1080` top-down coordinates so Step 2 scripts require zero hardcoded paths or coordinates.
 
 ### Step 6: Run the Deterministic 5-Gate Evaluator & STOP for Human Review
 Run [`scripts/evaluate_screenplay.py`](./scripts/evaluate_screenplay.py) to verify all 5 gates pass (`exit code 0`):

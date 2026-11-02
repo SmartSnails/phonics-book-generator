@@ -26,6 +26,16 @@ struct UtteranceManifest: Decodable {
     let duration_sec: Double
 }
 
+struct AnimationAnchors: Decodable {
+    let clem_eyes: [[CGFloat]]?
+    let clem_mouth: [CGFloat]?
+    let clem_mouth_scale: CGFloat?
+    let plum_beak: [CGFloat]?
+    let plum_beak_scale: CGFloat?
+    let plum_notes_origin: [CGFloat]?
+    let focus_prop: [CGFloat]?
+}
+
 struct SceneManifest: Decodable {
     let beat_number: Int
     let target_word: String
@@ -34,6 +44,7 @@ struct SceneManifest: Decodable {
     let scene_duration_sec: Double
     let source_scene_image_path: String
     let colored_scene_image_path: String
+    let animation_anchors: AnimationAnchors?
     let utterances: [UtteranceManifest]
 }
 
@@ -315,16 +326,18 @@ func sceneMotionEnvelope(t: Double, duration: Double) -> CGFloat {
     return 1.0
 }
 
-// Render a single 1080x1080 frame for Beat 1..4 at local time t
+// Render a single 1080x1080 frame for any SceneManifest beat at local time t
 func renderSceneFrame(
     ctx: CGContext,
-    beatNumber: Int,
+    scene: SceneManifest,
     t: Double,
     duration: Double,
     bwImage: CGImage,
     colorImage: CGImage,
     utterances: [LoadedUtterance]
 ) {
+    let beatNumber = scene.beat_number
+    let targetWord = scene.target_word.lowercased()
     let canvasRect = CGRect(x: 0, y: 0, width: 1080, height: 1080)
     ctx.setFillColor(CGColor(red: 1, green: 1, blue: 1, alpha: 1))
     ctx.fill(canvasRect)
@@ -406,46 +419,49 @@ func renderSceneFrame(
         ctx.restoreGState()
     }
 
-    // 3. Scene-Specific Verified Character Lip-Sync, Eye Blinks & Environmental Motion
-    switch beatNumber {
-    case 1:
-        // SCENE 1 (CROP — page-038.png):
-        // Verified coordinates:
-        // - Clem eyes: (540, 368), (624, 358); Clem mouth: (576, 418)
-        // - Plum beak: (802, 366)
-        let plumSpeaking = (speech.speaker == "Plum")
-        let clemSpeaking = (speech.speaker == "Clem")
+    // 3. Data-Driven Character Lip-Sync & Eye Blinks (from scene.animation_anchors) + Word-Specific Environmental Motion
+    let plumSpeaking = (speech.speaker == "Plum")
+    let clemSpeaking = (speech.speaker == "Clem")
 
-        if isBlinking {
-            drawEyeBlink(
-                ctx: ctx,
-                eyesTopDown: [(540, 368), (624, 358)],
-                radius: 16,
-                skinColor: clemSkinCG
-            )
+    if let anchors = scene.animation_anchors {
+        if isBlinking, let eyePairs = anchors.clem_eyes {
+            let pts: [(CGFloat, CGFloat)] = eyePairs.compactMap { pair in
+                guard pair.count >= 2 else { return nil }
+                return (pair[0], pair[1])
+            }
+            if !pts.isEmpty {
+                drawEyeBlink(ctx: ctx, eyesTopDown: pts, radius: 17, skinColor: clemSkinCG)
+            }
         }
-        if clemSpeaking {
+        if clemSpeaking, let cm = anchors.clem_mouth, cm.count >= 2 {
             drawLipSyncOverlay(
                 ctx: ctx,
-                cx: 576,
-                cyTopDown: 418,
-                mouthOpen: speech.mouthOpen * env,
+                cx: cm[0],
+                cyTopDown: cm[1],
+                mouthOpen: max(targetWord == "snag" ? 0.32 : 0.18, speech.mouthOpen) * env,
                 isBeak: false,
-                scale: 1.0
+                scale: anchors.clem_mouth_scale ?? 1.0
             )
         }
-        if plumSpeaking {
+        if plumSpeaking, let pb = anchors.plum_beak, pb.count >= 2 {
             drawLipSyncOverlay(
                 ctx: ctx,
-                cx: 802,
-                cyTopDown: 366,
+                cx: pb[0],
+                cyTopDown: pb[1],
                 mouthOpen: speech.mouthOpen * env,
                 isBeak: true,
-                scale: 0.90
+                scale: anchors.plum_beak_scale ?? 0.90
             )
-            drawPlumChirpNotes(bx: 790, byTopDown: 350)
+            let notesXY = anchors.plum_notes_origin ?? [pb[0] - 12.0, pb[1] - 25.0]
+            if notesXY.count >= 2 {
+                drawPlumChirpNotes(bx: notesXY[0], byTopDown: notesXY[1])
+            }
         }
-        // Soft golden sunlight motes drifting over the green spinach crop rows on left
+    }
+
+    switch targetWord {
+    case "crop", "stag", "trot":
+        // Soft golden sunlight motes drifting through the garden crop / woodland trees
         ctx.saveGState()
         for i in 0..<6 {
             let mx = 95.0 + CGFloat(i * 52) + CGFloat(sin(t * 1.6 + Double(i))) * 14.0
@@ -456,44 +472,8 @@ func renderSceneFrame(
         }
         ctx.restoreGState()
 
-    case 2:
-        // SCENE 2 (SPUD — page-043.png):
-        // Verified coordinates:
-        // - Clem eyes: (670, 574), (755, 574); Clem mouth: (702, 618)
-        // - Plum beak: (358, 784)
-        let plumSpeaking = (speech.speaker == "Plum")
-        let clemSpeaking = (speech.speaker == "Clem")
-
-        if isBlinking {
-            drawEyeBlink(
-                ctx: ctx,
-                eyesTopDown: [(670, 574), (755, 574)],
-                radius: 17,
-                skinColor: clemSkinCG
-            )
-        }
-        if clemSpeaking {
-            drawLipSyncOverlay(
-                ctx: ctx,
-                cx: 702,
-                cyTopDown: 618,
-                mouthOpen: speech.mouthOpen * env,
-                isBeak: false,
-                scale: 1.0
-            )
-        }
-        if plumSpeaking {
-            drawLipSyncOverlay(
-                ctx: ctx,
-                cx: 358,
-                cyTopDown: 784,
-                mouthOpen: speech.mouthOpen * env,
-                isBeak: true,
-                scale: 0.90
-            )
-            drawPlumChirpNotes(bx: 375, byTopDown: 760)
-        }
-        // Falling soil crumbs under the 4 freshly pulled golden spuds
+    case "spud":
+        // Falling soil crumbs under the freshly pulled golden spuds
         ctx.saveGState()
         ctx.setFillColor(CGColor(red: 168.0/255.0, green: 124.0/255.0, blue: 82.0/255.0, alpha: 0.85 * env))
         for i in 0..<6 {
@@ -503,81 +483,34 @@ func renderSceneFrame(
         }
         ctx.restoreGState()
 
-    case 3:
-        // SCENE 3 (GRUB — act1_scene3_grub_flow_color.png):
-        // Verified coordinates:
-        // - Clem eyes: (590, 492), (668, 526)
-        // - Plum beak: (746, 700)
-        // - Cute pink grub in dirt hole: (688, 882)
-        let plumSpeaking = (speech.speaker == "Plum")
-
-        if isBlinking {
-            drawEyeBlink(
-                ctx: ctx,
-                eyesTopDown: [(590, 492), (668, 526)],
-                radius: 17,
-                skinColor: clemSkinCG
-            )
-        }
-        if plumSpeaking {
-            drawLipSyncOverlay(
-                ctx: ctx,
-                cx: 746,
-                cyTopDown: 700,
-                mouthOpen: speech.mouthOpen * env,
-                isBeak: true,
-                scale: 0.85
-            )
-            drawPlumChirpNotes(bx: 740, byTopDown: 665)
-        }
-        // Animated wiggle motion arcs around the baby grub in the hole (688, 882)
+    case "grub", "skin":
+        // Animated wiggle / rustle motion arcs around the focus prop
+        let propXY = scene.animation_anchors?.focus_prop ?? [688.0, 882.0]
+        let gx = propXY.count >= 2 ? propXY[0] : 688.0
+        let gy = 1080.0 - (propXY.count >= 2 ? propXY[1] : 882.0)
         ctx.saveGState()
         let wigglePulse = (0.4 + 0.6 * abs(CGFloat(sin(t * 6.5)))) * env
         ctx.setStrokeColor(CGColor(red: 0.88, green: 0.38, blue: 0.54, alpha: wigglePulse))
         ctx.setLineWidth(3.5)
         ctx.setLineCap(.round)
-        let gy = 1080.0 - 882.0
         let off = CGFloat(sin(t * 8.0)) * 3.0
-        ctx.move(to: CGPoint(x: 625 - off, y: gy - 14))
-        ctx.addQuadCurve(to: CGPoint(x: 625 - off, y: gy + 16), control: CGPoint(x: 613 - off, y: gy + 1))
-        ctx.move(to: CGPoint(x: 742 + off, y: gy - 14))
-        ctx.addQuadCurve(to: CGPoint(x: 742 + off, y: gy + 16), control: CGPoint(x: 754 + off, y: gy + 1))
+        ctx.move(to: CGPoint(x: gx - 63.0 - off, y: gy - 14))
+        ctx.addQuadCurve(to: CGPoint(x: gx - 63.0 - off, y: gy + 16), control: CGPoint(x: gx - 75.0 - off, y: gy + 1))
+        ctx.move(to: CGPoint(x: gx + 54.0 + off, y: gy - 14))
+        ctx.addQuadCurve(to: CGPoint(x: gx + 54.0 + off, y: gy + 16), control: CGPoint(x: gx + 66.0 + off, y: gy + 1))
         ctx.strokePath()
         ctx.restoreGState()
 
     default:
-        // SCENE 4 (SNAG — act1_scene4_snag_flow_color.png):
-        // Verified coordinates:
-        // - Clem eyes: (600, 446), (684, 428); Clem mouth: (654, 494)
-        // - Caught sleeve snag point on thorny branch: (535, 555)
-        let clemSpeaking = (speech.speaker == "Clem")
-
-        if isBlinking {
-            drawEyeBlink(
-                ctx: ctx,
-                eyesTopDown: [(600, 446), (684, 428)],
-                radius: 17,
-                skinColor: clemSkinCG
-            )
-        }
-        if clemSpeaking {
-            drawLipSyncOverlay(
-                ctx: ctx,
-                cx: 654,
-                cyTopDown: 494,
-                mouthOpen: max(0.32, speech.mouthOpen) * env,
-                isBeak: false,
-                scale: 1.0
-            )
-        }
-        // Animated "snag / tug" comic action lines radiating around the caught sleeve (535, 555)
+        // Animated comic action lines ("snag", "twig", "flap") around the focus prop
+        let propXY = scene.animation_anchors?.focus_prop ?? [535.0, 555.0]
+        let sx: CGFloat = propXY.count >= 2 ? propXY[0] : 535.0
+        let sy: CGFloat = 1080.0 - (propXY.count >= 2 ? propXY[1] : 555.0)
         ctx.saveGState()
         let tugPulse = abs(CGFloat(sin(t * 6.0))) * env
         ctx.setStrokeColor(CGColor(red: 0.92, green: 0.36, blue: 0.22, alpha: 0.85 * tugPulse))
         ctx.setLineWidth(3.5)
         ctx.setLineCap(.round)
-        let sx: CGFloat = 535.0
-        let sy: CGFloat = 1080.0 - 555.0
         for aDeg in [-45.0, -15.0, 20.0, 55.0] {
             let rad = CGFloat(aDeg * .pi / 180.0)
             let r1: CGFloat = 24.0 + tugPulse * 4.0
@@ -598,12 +531,8 @@ func renderSceneFrame(
     ctx.stroke(CGRect(x: 26, y: 26, width: 1028, height: 1028))
     ctx.restoreGState()
 
-    switch beatNumber {
-    case 1: drawPhonicsWordCard(ctx: ctx, word: "crop", blendPrefix: "cr", alpha: wordAlpha)
-    case 2: drawPhonicsWordCard(ctx: ctx, word: "spud", blendPrefix: "sp", alpha: wordAlpha)
-    case 3: drawPhonicsWordCard(ctx: ctx, word: "grub", blendPrefix: "gr", alpha: wordAlpha)
-    default: drawPhonicsWordCard(ctx: ctx, word: "snag", blendPrefix: "sn", alpha: wordAlpha)
-    }
+    let blendPrefix = String(targetWord.prefix(2))
+    drawPhonicsWordCard(ctx: ctx, word: targetWord, blendPrefix: blendPrefix, alpha: wordAlpha)
 }
 
 // Build complete 44.1kHz stereo master soundtrack combining:
@@ -833,7 +762,7 @@ func renderVideoFromManifest(manifestPath: String, outMp4Path: String) {
                         )!
                         renderSceneFrame(
                             ctx: ctx,
-                            beatNumber: sc.beat_number,
+                            scene: sc,
                             t: localT,
                             duration: sc.scene_duration_sec,
                             bwImage: bwImages[sIdx],

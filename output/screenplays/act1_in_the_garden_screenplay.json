@@ -80,6 +80,22 @@
       "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene1_crop_flow_bw.png",
       "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene1_crop_flow_color.png",
       "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [[540, 368], [624, 358]],
+        "clem_mouth": [576, 418],
+        "clem_mouth_scale": 1.0,
+        "plum_beak": [802, 366],
+        "plum_beak_scale": 0.9,
+        "plum_notes_origin": [790, 350]
+      },
+      "utterances": [
+        {"speaker": "Narrator", "text": "Plum fluttered down onto the garden fence.", "pause_after": 0.18},
+        {"speaker": "Plum", "text": "Follow me!", "pause_after": 0.18},
+        {"speaker": "Narrator", "text": "she chirped. Clem grinned and hopped over the gate.", "pause_after": 0.18},
+        {"speaker": "Clem", "text": "I'm right behind you!", "pause_after": 0.25},
+        {"speaker": "Narrator", "text": "Together they walked past rows of green plants, ready to see what the crop had grown this season.", "pause_after": 0.25},
+        {"speaker": "Plum", "text": "See all these matching spinach plants? When we grow a whole field of the exact same plant, that big group of plants is called a crop!", "pause_after": 0.65}
+      ],
       "verbatim_storyline_script": "Plum fluttered down onto the garden fence. \"Follow me!\" she chirped. Clem grinned and hopped over the gate. \"I'm right behind you!\" Together they walked past rows of green plants, ready to see what the crop had grown this season. Plum catches the question in Clem's mind and says: \"See all these matching spinach plants? When we grow a whole field of the exact same plant, that big group of plants is called a crop! Clem, you know we owe a big thanks to our farmers. They grow large batches of plants on purpose to be harvested for food or clothing. I like to eat sunflower seeds from the bird feeder. What is your favorite food? Strawberries? Carrots?\"",
       "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 1A / Page 38 illustration, Plum flutters down to perch on the rustic wooden garden fence and points her blue wing across the neat rows of green spinach crop while Clem hops over the gate, walks down the path, and tilts his head in curious wonder.",
       "facial_expression": "Plum chirps with a warm, pleased smile; Clem grins, blinks his big brown eyes, and nods with discovery.",
@@ -100,6 +116,22 @@
       "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene2_spud_flow_bw.png",
       "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene2_spud_flow_color.png",
       "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [[670, 574], [755, 574]],
+        "clem_mouth": [702, 618],
+        "clem_mouth_scale": 1.0,
+        "plum_beak": [358, 784],
+        "plum_beak_scale": 0.9,
+        "plum_notes_origin": [375, 760]
+      },
+      "utterances": [
+        {"speaker": "Narrator", "text": "Clem and Plum walk by the potato patch. Lovely green lush grown potato plants were swaying.", "pause_after": 0.22},
+        {"speaker": "Plum", "text": "A long time ago, gardeners used a little shovel called a spud to dig up treats from the ground. Because they used that shovel to find potatoes, people just started calling the potatoes spuds too!", "pause_after": 0.25},
+        {"speaker": "Clem", "text": "Look! Well, spud is just a secret, silly nickname for a potato!", "pause_after": 0.20},
+        {"speaker": "Narrator", "text": "said Clem, digging his hands into the soft dirt. Clem pulled out a round, dusty spud.", "pause_after": 0.18},
+        {"speaker": "Clem", "text": "Found one!", "pause_after": 0.22},
+        {"speaker": "Plum", "text": "Whenever you eat French fries or mashed potatoes, you are actually eating delicious spuds!", "pause_after": 0.65}
+      ],
       "verbatim_storyline_script": "Clem and Plum walk by the potato patch. Lovely green lush grown potato plants were swaying. Plum said, \"A long time ago, gardeners used a little shovel called a 'spud' to dig up treats from the ground. Because they used that shovel to find potatoes, people just started calling the potatoes 'spuds' too!\" \"Look! You know what a potato is, right? Well, 'spud' is just a secret, silly nickname for a potato! It's like how a dog is sometimes called a pup,\" said Clem, digging his hands into the soft dirt. Clem pulled out a round, dusty spud. \"Found one!\" Plum said, \"Whenever you eat French fries or mashed potatoes, you are actually eating delicious spuds!\"",
       "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 1B / Page 43 illustration in front of the cottage and wooden fence, Plum hops onto the soil mound on the left while Clem kneels on the ground, digs his hands into the soft dirt, and pulls up a leafy potato plant with round, dusty spuds clinging to the roots.",
       "facial_expression": "Clem grins with wide-eyed hands-on excitement as he shouts \"Found one!\"; Plum smiles and nods proudly.",
@@ -120,6 +152,21 @@
       "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene3_grub_flow_bw.png",
       "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene3_grub_flow_color.png",
       "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [[590, 492], [668, 526]],
+        "clem_mouth": [618, 558],
+        "clem_mouth_scale": 0.9,
+        "plum_beak": [746, 700],
+        "plum_beak_scale": 0.85,
+        "plum_notes_origin": [758, 650],
+        "focus_prop": [688, 882]
+      },
+      "utterances": [
+        {"speaker": "Narrator", "text": "Plum hopped closer and peeked into the hole. Something wiggled.", "pause_after": 0.22},
+        {"speaker": "Plum", "text": "A grub!", "pause_after": 0.18},
+        {"speaker": "Narrator", "text": "she said with a giggle.", "pause_after": 0.18},
+        {"speaker": "Plum", "text": "He's shy — say hello gently.", "pause_after": 0.70}
+      ],
       "verbatim_storyline_script": "Plum hopped closer and peeked into the hole. Something wiggled. \"A grub!\" she said with a giggle. \"He's shy — say hello gently.\"",
       "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 1C illustration, Plum hops closer to the edge of the scooped dirt hole and peeks inside as a cute curled segmented baby grub wiggles shyly, while Clem leans down on hands and knees and waves gently.",
       "facial_expression": "Plum giggles warmly with sparkling eyes; the cute little grub smiles shyly; Clem beams with gentle kindness.",
@@ -140,6 +187,21 @@
       "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene4_snag_flow_bw.png",
       "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act1_scene4_snag_flow_color.png",
       "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [[600, 446], [684, 428]],
+        "clem_mouth": [654, 494],
+        "clem_mouth_scale": 1.0,
+        "plum_beak": [758, 405],
+        "plum_beak_scale": 0.85,
+        "plum_notes_origin": [720, 355],
+        "focus_prop": [535, 555]
+      },
+      "utterances": [
+        {"speaker": "Narrator", "text": "Clem reached out to pet a leaf, but his sleeve caught on a thorny branch.", "pause_after": 0.22},
+        {"speaker": "Clem", "text": "Snag!", "pause_after": 0.18},
+        {"speaker": "Narrator", "text": "he laughed, tugging it free.", "pause_after": 0.18},
+        {"speaker": "Clem", "text": "Gotcha, you sneaky bush!", "pause_after": 0.85}
+      ],
       "verbatim_storyline_script": "Clem reached out to pet a leaf, but his sleeve caught on a thorny branch. The fabric of Clem's sleeve was caught, became tangled on the thorns of a bush. \"Snag!\" he laughed, tugging it free. \"Gotcha, you sneaky bush.\"",
       "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 1D illustration, Clem reaches out to pet a leaf beside the blooming rose bush near the wooden fence, pauses when his white shirt sleeve catches in a gentle fabric snag on a curved stem, laughs cheerfully as he tugs his sleeve free, and waves as Plum flutters her wings toward the woodland path.",
       "facial_expression": "Clem's eyes widen in a funny surprised pause before bursting into a bright, cheerful laugh; Plum smiles from the fencepost.",

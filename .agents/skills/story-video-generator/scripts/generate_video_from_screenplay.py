@@ -68,35 +68,48 @@ def verify_screenplay_ready_for_video(screenplay_path: Path) -> dict:
         if banned in active_engine:
             raise ValueError(f"Banned robotic TTS engine detected: {active_engine}")
 
-    # 5. Verify every beat's storyline B&W and colored keyframes exist on disk
+    # 5. Verify every beat's storyline B&W and colored keyframes, utterances, and animation_anchors exist
     for beat in sp.get("beats", []):
+        bnum = beat.get("beat_number")
         bw = Path(beat.get("source_scene_image_path", ""))
         col = Path(beat.get("colored_scene_image_path", str(bw)))
         if not bw.exists():
-            raise FileNotFoundError(f"Beat {beat.get('beat_number')} B&W keyframe missing: {bw}")
+            raise FileNotFoundError(f"Beat {bnum} B&W keyframe missing: {bw}")
         if not col.exists():
-            raise FileNotFoundError(f"Beat {beat.get('beat_number')} Colored keyframe missing: {col}")
+            raise FileNotFoundError(f"Beat {bnum} Colored keyframe missing: {col}")
         if beat.get("keyframe_lock_mode") != "start_and_end_exact_image":
             raise ValueError(
-                f"Beat {beat.get('beat_number')} must have keyframe_lock_mode='start_and_end_exact_image'"
+                f"Beat {bnum} must have keyframe_lock_mode='start_and_end_exact_image'"
+            )
+        if not beat.get("utterances"):
+            raise ValueError(
+                f"Beat {bnum} is missing 'utterances' array in screenplay JSON."
+            )
+        if not beat.get("animation_anchors"):
+            raise ValueError(
+                f"Beat {bnum} is missing 'animation_anchors' in screenplay JSON."
             )
 
-    print("[PASS] Pre-flight gate check: Screenplay is APPROVED and all Google Flow keyframes exist.")
+    print("[PASS] Pre-flight gate check: Screenplay is APPROVED and all Google Flow keyframes, utterances, and anchors exist.")
     return sp
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Convert approved screenplay to animated MP4 video.")
     parser.add_argument("--screenplay", required=True, help="Path to approved screenplay JSON.")
-    parser.add_argument("--vo-manifest", default="output/audio/act1_human_vo/manifest.json", help="Path to synthesized human voice manifest.json.")
-    parser.add_argument("--out-mp4", required=True, help="Primary output MP4 path (e.g. output/Blends/Act1_In_The_Garden_Animation.mp4).")
-    parser.add_argument("--copy-mp4", default=None, help="Optional secondary MP4 path (e.g. output/videos/act1_in_the_garden_animation.mp4).")
+    parser.add_argument("--vo-manifest", default=None, help="Path to synthesized human voice manifest.json (defaults to output/audio/<screenplay_stem>_vo/manifest.json).")
+    parser.add_argument("--out-mp4", required=True, help="Primary output MP4 path (e.g. output/Blends/Act2_Into_The_Woods_Animation.mp4).")
+    parser.add_argument("--copy-mp4", default=None, help="Optional secondary MP4 path (e.g. output/videos/act2_into_the_woods_animation.mp4).")
     args = parser.parse_args()
 
     screenplay_path = Path(args.screenplay).resolve()
     verify_screenplay_ready_for_video(screenplay_path)
 
-    vo_manifest = Path(args.vo_manifest).resolve()
+    if args.vo_manifest:
+        vo_manifest = Path(args.vo_manifest).resolve()
+    else:
+        stem = screenplay_path.stem.replace("_screenplay", "")
+        vo_manifest = screenplay_path.parents[1] / "audio" / f"{stem}_vo" / "manifest.json"
     if not vo_manifest.exists():
         synth_script = Path(__file__).parent / "synthesize_human_narration.py"
         subprocess.run(
