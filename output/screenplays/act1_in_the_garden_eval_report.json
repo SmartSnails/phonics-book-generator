@@ -1,5 +1,7 @@
 {
-  "screenplay_title": "Act 1: In the Garden \u2014 Clem & Plum Discover the Crop and Spuds",
+  "screenplay_title": "Act 1: In the Garden \u2014 Clem & Plum (crop, spud, grub, snag)",
+  "workflow_step": "STEP_1_AWAITING_HUMAN_APPROVAL",
+  "human_approval_status": "PENDING_HUMAN_REVIEW",
   "overall_status": "PASS",
   "gates": {
     "gate_1_child_safe_and_flow_hygiene": {
@@ -9,41 +11,43 @@
       "slideshow_or_cut_tokens_found": [],
       "notes": "Zero unsafe terms, zero Flow minor-filter traps, and zero static/cut traps."
     },
-    "gate_2_child_friendly_and_pacing": {
+    "gate_2_storyline_script_and_human_voice_fidelity": {
       "status": "PASS",
-      "target_duration_sec": 10.0,
-      "beat_count": 3,
-      "timeline_contiguous": true,
-      "total_spoken_words": 24,
-      "words_per_second": 2.4,
-      "notes": "3 contiguous timed beats across 10.0s with 24 spoken words (2.4 wps <= 2.4 wps)."
+      "beat_or_scene_count": 4,
+      "verified_storyline_script_phrases": 9,
+      "missing_storyline_script_phrases": [],
+      "has_engaging_human_voice_spec": true,
+      "allow_basic_os_tts": false,
+      "notes": "All 9 canonical Act storyline lines/teaching beats verified verbatim; engaging human voice casting specified with basic OS TTS strictly disabled."
     },
     "gate_3_entertaining_anti_slideshow": {
       "status": "PASS",
       "per_beat_vitality_ok": true,
       "per_beat_verb_counts": [
-        8,
-        8,
-        6
+        11,
+        7,
+        5,
+        7
       ],
       "articulated_motion_verbs": [
-        "blink",
-        "bounces",
+        "blinks",
         "chirps",
+        "digs",
         "flutters",
         "grins",
         "hops",
         "kneels",
         "laugh",
+        "laughs",
         "nods",
-        "nudges",
-        "perches",
-        "pointing",
+        "peeks",
+        "perch",
+        "points",
         "pulls",
+        "reaches",
         "smile",
         "smiles",
-        "smiling",
-        "tilting",
+        "tilts",
         "tugs",
         "walks",
         "waves",
@@ -54,70 +58,108 @@
         "clouds",
         "drift",
         "leaves",
-        "rustle",
         "sunbeams",
+        "sunlight",
         "sway"
       ],
       "flow_prompt_motion_verbs": [
         "bounce",
+        "bounces",
         "chirps",
+        "digs",
+        "fluttering",
         "flutters",
         "grin",
+        "grins",
         "hops",
+        "kneeling",
         "kneels",
-        "lifts",
+        "laughs",
+        "peeks",
+        "perches",
+        "pointing",
         "points",
+        "pull",
+        "pulling",
         "pulls",
+        "smile",
+        "smiles",
         "smiling",
+        "tilting",
+        "tilts",
+        "tug",
+        "tugs",
         "walks",
-        "wiggles"
+        "waves",
+        "wiggle",
+        "wiggles",
+        "wiggling"
       ],
       "flow_prompt_backdrop_terms": [
         "breeze",
         "clouds",
         "drift",
+        "fluttering",
+        "leaves",
+        "sunbeams",
         "sunlight",
+        "sway",
         "swaying"
       ],
-      "notes": "All 3 beats have active character/facial/backdrop motion; 21 beat verbs, 12 Flow prompt verbs, and 7 backdrop motion cues."
+      "notes": "All 4 scenes/beats have active character/facial/backdrop motion; 22 beat verbs, 31 Flow prompt verbs, and 7 backdrop motion cues."
     },
-    "gate_4_theme_and_phonics_fidelity": {
+    "gate_4_google_flow_assets_and_theme_fidelity": {
       "status": "PASS",
       "target_phonics_words": [
         "crop",
-        "spud"
+        "spud",
+        "grub",
+        "snag"
       ],
       "spoken_target_words": [
         "crop",
-        "spud"
+        "spud",
+        "grub",
+        "snag"
       ],
       "missing_in_beats": [],
-      "missing_in_flow_prompt": [],
-      "characters_verified": [
+      "missing_in_flow_prompts": [],
+      "characters_verified_with_flow_dna": [
         "Clem",
         "Plum"
       ],
-      "missing_chars_in_beats": [],
-      "missing_chars_in_flow": [],
       "incomplete_char_profiles": [],
       "required_backdrop_landmarks": [
         "cottage",
         "fence",
         "crop",
-        "spuds"
+        "spuds",
+        "grub",
+        "bush"
       ],
       "missing_backdrop_landmarks": [],
-      "notes": "All target phonics words, character traits/anchors, and backdrop landmarks verified in beats and Flow prompt."
+      "verified_storyline_scene_images": [
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1a_crop.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1b_spud.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1c_grub.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/scenes/scene_1d_snag.png"
+      ],
+      "missing_or_invalid_scene_images": [],
+      "notes": "All Google Flow defined character assets (Character DNA sheet + Flow ingredient IDs), target phonics words (crop, spud, grub, snag), and 100%-adherent storyline scene image locks verified."
     },
-    "gate_5_google_flow_well_formed": {
+    "gate_5_google_flow_and_two_step_human_gate": {
       "status": "PASS",
-      "flow_prompt_word_count": 138,
+      "flow_prompt_word_count": 142,
       "is_single_paragraph": true,
       "has_color_and_outline_anchor": true,
       "has_camera_anchor": true,
       "has_lighting_anchor": true,
       "has_audio_clause": true,
-      "notes": "Single-paragraph 6-pillar Flow prompt (138 words, required 90-145) with style/outline, camera, lighting, and Audio clause."
+      "workflow_step": "STEP_1_AWAITING_HUMAN_APPROVAL",
+      "human_approval_status": "PENDING_HUMAN_REVIEW",
+      "human_readable_screenplay_txt_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act1_In_The_Garden_Screenplay.txt",
+      "text_screenplay_exists_in_blends": true,
+      "notes": "Single-paragraph 6-pillar Flow prompt (142 words) verified; 2-step human review gate active (STEP_1_AWAITING_HUMAN_APPROVAL / PENDING_HUMAN_REVIEW) with text screenplay saved in Blends."
     }
   }
 }

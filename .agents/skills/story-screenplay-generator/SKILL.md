@@ -1,101 +1,106 @@
 ---
 name: story-screenplay-generator
 description: >-
-  Use this skill when transforming a story act or scene storyline, character
-  traits, and backdrop setting into an enhanced, time-coded ~10-second animated
-  screenplay, evaluating the draft across 5 mandatory quality gates (child-safe,
-  child-friendly, entertaining, true to theme, and Google Flow / Veo 3.1
-  ready), and compiling the approved screenplay into a Google Flow animation
-  prompt and multi-layer animation manifest.
+  Use this skill as Step 1 of the 2-step video generation workflow: transforms
+  an Act's exact storyline script, Google Flow Character/Asset definitions,
+  character personality traits, and storyline coloring book scene images into a
+  detailed, human-readable screenplay in text format (.txt / .md) plus a
+  structured JSON manifest, evaluates it across 5 mandatory gates (including
+  Google Flow asset linkage, verbatim Act script fidelity, engaging human voice
+  spec, and 100% storyline image lock), saves the screenplay to the Blends
+  folder, and STOPS to wait for explicit human approval before any video
+  generation is triggered.
 ---
 
-# Story Screenplay Generator & Evaluator (`story-screenplay-generator`)
+# Story Screenplay Generator & Evaluator (`story-screenplay-generator`) — Step 1 of 2
 
-Transforms a raw children's story beat, character bible, and backdrop setting into a **richly choreographed, ~10-second animated screenplay** and **Google Flow (`Veo 3.1`) animation prompt**, enforced by a deterministic **5-Gate Evaluation Rubric** and independent adversarial review.
-
-> **Anti-Slideshow Mandate**: A screenplay must NEVER describe a static picture with a camera pan. Every beat must choreograph **articulated character body motion** (walking, kneeling, reaching, wing-flapping, head-tilting), **facial animation** (blinking, grinning, talking/chirping), and **secondary environmental motion** (swaying crops, drifting clouds, fluttering leaves).
-
----
-
-## 1. Input & Output JSON Schema
-
-Provide (or extract from the project's Story Continuity Bible / story draft):
-1. **`title`, `act`, & `target_phonics_words`**: The narrative title and target phonics/vocabulary words (e.g., *Act 1: In the Garden* — `["crop", "spud"]`).
-2. **`characters`**: List of characters, each with:
-   - `name` (e.g., `Clem`, `Plum`)
-   - `visual_anchor` (physical appearance, clothing/colors, proportions)
-   - `personality_traits` (e.g., Clem: `["curious", "joyful", "hands-on doer"]`; Plum: `["calm", "observant", "gentle guide", "notices things first"]`)
-   - `trait_to_action_mapping` (explicit mapping of how their personality traits drive their physical actions in the scene)
-3. **`backdrop`**: Setting description (`background_top_third`, `midground`, `foreground`) plus `required_landmarks` (e.g., `["cottage", "fence", "crop"]`).
-4. **`target_duration_sec`**: Default `10.0` seconds (`8.0–12.0s` allowed).
-5. **`beats`**: Array of 3 contiguous timed beats (`0.0–3.2s`, `3.2–7.0s`, `7.0–10.0s`), each specifying `start_sec`, `end_sec`, `character_motion`, `facial_expression`, `backdrop_motion`, `camera_motion`, `narration_or_dialogue`, and `sfx_and_music`.
-6. **`google_flow_prompt`**: Single-paragraph `90–145` word natural prose prompt for Google Flow (`Veo 3.1`).
+Transforms an Act's storyline script, character sheet, Google Flow defined character/scene assets, and backdrop setting into a **detailed, human-reviewable text screenplay (`.txt` / `.md`)** and **Google Flow (`Veo 3.1`) animation specification**, enforced by a deterministic **5-Gate Evaluation Rubric**.
 
 ---
 
-## 2. Stage 1: Narration & Visual Choreography Enhancement
+## Mandatory 2-Step Human-in-the-Loop Process
 
-Enhance the raw storyline using two systematic mappings before drafting the screenplay:
-
-### A. Character-Trait-to-Action Mapper
-Every character trait must be expressed visually through **specific articulated physical actions**, not abstract adjectives:
-- *"Curious hands-on doer"* (e.g., Clem) $\rightarrow$ leans forward with wide sparkling eyes, kneels in the soft garden soil, reaches out with both hands to gently touch/lift the plant or spud, grins from ear to ear.
-- *"Calm, observant guide"* (e.g., Plum) $\rightarrow$ flutters down to perch on the rustic wooden fencepost, tilts head inquisitively, points with one stubby blue wing toward the discovery, hops closer with a cheerful chirp.
-
-### B. Backdrop Sensory & Secondary Motion Enricher
-Enrich the scene narration and visual background with **2–3 continuous secondary motions** that make the world feel alive:
-- **Flora & Props**: Rows of emerald-green spinach crops and leafy potato plants swaying in a gentle afternoon breeze.
-- **Atmosphere & Light**: Warm golden afternoon sunbeams, soft drifting clouds, and tiny golden pollen/dust motes floating in the air.
-- **Acoustic Ambience**: Gentle garden breeze, soft rustling leaves, cheerful bird chirps, and warm acoustic storybook instrumentation.
+> [!IMPORTANT]
+> **STRICT 2-STEP GATE — NEVER AUTO-TRIGGER VIDEO GENERATION**:
+> - **Step 1 (`story-screenplay-generator`)**: Generate the detailed screenplay in a human-readable text format (`.txt` and `.md`, plus companion `.json` manifest), run the 5-gate evaluator (`evaluate_screenplay.py`), save the screenplay in the `Blends` folder (parent of `illustrations`), and present it to the human reviewer. **STOP IMMEDIATELY after Step 1.**
+> - **Step 2 ([`story-video-generator`](../story-video-generator/SKILL.md))**: Only when the human explicitly approves the screenplay (`human_approval.status == "APPROVED"`), trigger video generation.
 
 ---
 
-## 3. Stage 2: The 3-Beat Time-Coded 10-Second Screenplay Structure
+## How to Generate the Screenplay (Step-by-Step Procedure)
 
-Structure every ~10-second animation into **3 distinct, continuous animated beats**:
+Follow these 6 steps whenever generating a screenplay for any Act (Act 1: *In the Garden*, Act 2: *Into the Woods*, Act 3: *By the Pond*):
 
-| Beat | Time Window | Narrative Function | Required Articulated Motion |
-| :--- | :--- | :--- | :--- |
-| **Beat 1: Establish & Hook** | `0.0s – 3.0s` (`3.0s`) | Set the living backdrop and initiate character movement/curiosity. | Character 1 (e.g., Plum) flutters/lands and gestures; Character 2 (e.g., Clem) walks/hops in looking around; backdrop foliage sways. |
-| **Beat 2: Core Discovery Action** | `3.0s – 7.0s` (`4.0s`) | Active physical interaction with the theme's core subject/word (`crop` / `spud`). | Hands-on physical action (e.g., kneeling, parting leaves, lifting a dusty spud or pointing across the matching spinach crop); clear lip-sync/chirp narration. |
-| **Beat 3: Joyful Reaction & Payoff** | `7.0s – 10.0s` (`3.0s`) | Emotional payoff, shared delight, and memorable phonetic word reinforcement. | Both characters react (happy bounce, wing-wave, bright laugh/giggle) as the camera settles on the discovery. |
+### Step 1: Ingest the 4 Required Source Inputs from `Blends`
+Before writing a single line of the screenplay, read and extract:
+1. **Google Flow Defined Character Assets & Character Sheet (`Blends / Character sheet`, Doc ID: `1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY`)**:
+   - Extract each character's **Google Flow Ingredient Name** (`@Clem`, `@Plum`), **Visual DNA** (hair, eyes, clothing, proportions), **Expression Sheet** (`Happy closed-mouth smile`, `Happy open-mouth laugh`, `Surprised O-mouth`, `Thinking/Curious`, `Proud/Confident`), and **Personality Traits**:
+     - **Clem (`@Clem`)**: Curious, joyful, cheerful, adventurous 5-year-old boy in white button-down shirt, blue denim overalls, and brown ankle boots; the hands-on *"doer"* who asks questions kids would ask, touches things, tries things, and gets a little muddy.
+     - **Plum (`@Plum`)**: Small round sky-blue songbird with oversized head and speckled crown/breast feathers; cute, calm, slightly wiser gentle guide who notices things first, points with her wing, and nudges Clem toward each discovery.
+2. **Canonical Act Storyline Script (`Blends / Story draft and Prompts for 01 Animals & Nature.pdf`, Doc ID: `19JZC1N88zJilarY7d7cSt9x4lnuJwgib`)**:
+   - Extract the **exact storyline narration and character dialogue** for every phonics target word in the Act:
+     - **Act 1 (`In the Garden`)**: `crop`, `spud`, `grub`, `snag`
+     - **Act 2 (`Into the Woods`)**: `twig`, `stag`, `branch`, `moss`
+     - **Act 3 (`By the Pond`)**: `frog`, `crab`, `trout`, `swan`
+3. **Full-Page Storyline Coloring Book Illustrations (`Theme A Beginning Blend.pdf` / `Blends / illustrations`)**:
+   - Locate the exact coloring book scene illustration for each target word (e.g., `page-038.png` / `scene_1a_crop.png`, `page-043.png` / `scene_1b_spud.png`, `scene_1c_grub.png`, `scene_1d_snag.png`, `scene_1_conclusion.png`).
+   - Record the foreground, midground, and background landmarks of each illustration so the animation choreography matches the illustration 100%.
 
----
+### Step 2: Map Character Personality Traits & Backdrop to Physical Choreography
+For every scene in the Act, translate the static illustration and character personality traits into **3 contiguous timed animation beats** across an `~10.0s` (`8–10s`) clip:
+- **Beat 1 (`0.0s – 3.0s` | Establish & Hook)**:
+  - Lock Frame 0 (`0.0s`) 100% to the storyline coloring book illustration.
+  - Choreograph the guide character (`@Plum`) noticing the landmark first (e.g., fluttering down onto the fencepost, hopping closer to the dirt hole, pointing her wing) and inviting `@Clem` in.
+- **Beat 2 (`3.0s – 7.0s` | Core Discovery Action on the Target Word)**:
+  - Choreograph `@Clem` acting as the hands-on *"doer"* (walking up to inspect the matching rows of `crop`, dropping to his knees in the soil to tug up a leafy potato plant with dangling `spuds`, leaning down on hands and knees to wave gently at the wiggling `grub`, or tugging his white sleeve free from the bush `snag` with a laugh).
+  - Add **secondary environmental motion** to the backdrop landmarks from the coloring page (swaying spinach/potato leaves, drifting fluffy clouds above the cottage, tumbling dirt specks, shimmering sunbeams).
+- **Beat 3 (`7.0s – 10.0s` | Joyful Reaction & Keyframe Lock)**:
+  - Choreograph a warm shared reaction (nodding, laughing, bouncing, waving) and settle at `10.0s` with **100% pixel/pose adherence** to the target storyline coloring book illustration.
 
-## 4. Stage 3: Mandatory 5-Gate Screenplay Evaluation Rubric
+### Step 3: Lock Verbatim Storyline Script & Engaging Human Voice Direction
+1. **Verbatim Script Rule**:
+   - Copy the Narrator, Plum, and Clem lines **verbatim** from the Act's storyline script into each scene's dialogue block. Never paraphrase or invent substitute lines.
+2. **Engaging Human Voice Casting Rule (`allow_basic_os_tts: false`)**:
+   - Strictly forbid basic robotic OS TTS (`/usr/bin/say`, `AVSpeechSynthesizer`, `Samantha`, `espeak`).
+   - Specify **Google Flow (`Veo 3.1`) Native Expressive Multi-Character Human Audio** or **Studio/Neural Expressive Human Voice Actors** with three distinct vocal profiles:
+     - **Narrator**: Warm, engaging human children's audiobook storyteller with a smiling cadence and natural emphasis on the phonics blend.
+     - **Plum**: Bright, musical, warm, and encouraging young female human character voice with a gentle lilt and soft bird chirps.
+     - **Clem**: Authentic, joyful, curious young child voice full of wonder and natural giggles.
 
-Run [`scripts/evaluate_screenplay.py`](./scripts/evaluate_screenplay.py) AND an independent adversarial review against these **5 mandatory gates**:
+### Step 4: Compile the 6-Pillar Google Flow (`Veo 3.1`) Prompt per Scene
+For each ~10-second scene (and the master Act overview), write a **single cohesive prose paragraph (`90–145` words)** with zero newlines, zero `[BRACKETS]`, zero hex codes, and zero raw filenames, combining all 6 mandatory pillars in order:
+1. **Pillar 1 — Visual Style & Keyframe Lock Anchor**:
+   `"Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration."`
+2. **Pillar 2 — Environment & Backdrop Motion**:
+   Describe the exact setting from the coloring page (`rustic wooden garden fence`, `cozy country cottage`, `two shade trees`) with active secondary motion (`swaying rows of emerald-green spinach crop`, `drifting fluffy clouds`, `shimmering sunbeams`).
+3. **Pillar 3 — Character 1 (`@Plum`) Articulated Action**:
+   Describe Plum's physical actions (`flutters her sky-blue wings`, `perches on the wooden fencepost`, `hops closer`, `points her wing`).
+4. **Pillar 4 — Character 2 (`@Clem`) Articulated Action (Policy-Safe Phrasing)**:
+   Refer to Clem by his Google Flow character name (`Clem, a cheerful garden explorer in a white shirt, blue denim overalls, and brown boots`) and describe his hands-on actions (`hops in`, `kneels in the soft brown soil`, `pulls up a leafy potato plant revealing round golden spuds`, `laughs and tugs his sleeve free from a bush snag`)—never using minor-filter trigger strings (`"5-year-old boy"`).
+5. **Pillar 5 — Camera & Lighting Choreography**:
+   Specify smooth storybook camera motion (`gentle storybook push-in`, `warm close-up framing`) that resolves cleanly onto the reference keyframe.
+6. **Pillar 6 — Expressive Human Voice `Audio:` Clause**:
+   End with `Audio: Engaging, warm human narration and expressive character voices saying "<verbatim storyline lines>", accompanied by <spot foley SFX> and <acoustic guitar / marimba score>.`
 
-1. **Gate 1 — Child Safety & Flow Policy Compliance (`child_safe`)**:
-   - Zero frightening imagery, violence, sharp hazards, or distress (e.g., if a sleeve snags on a bush, frame it as a gentle, funny tug with a smile—never a scratch or scare).
-   - **Flow Filter Hygiene**: When compiling the Google Flow (`Veo 3.1`) prompt, avoid words that trigger automated minor-safety filters (`"children"`, `"5-year-old boy"`, `"young kid"`); use Flow Character ingredient names (`Clem`) or storybook phrasing (`"cheerful little cartoon garden explorer in blue denim overalls"`).
-2. **Gate 2 — Child Friendliness & Pacing (`child_friendly`)**:
-   - Spoken dialogue/narration across the 10-second clip must be **$\le 24$ words total** ($\le 2.4$ words/sec) so young listeners ages 4–6 can easily absorb the target phonics word without rushed speech.
-   - Vocabulary is concrete, warm, and encouraging.
-3. **Gate 3 — Entertainment & Anti-Slideshow Vitality (`entertaining`)**:
-   - Verifies **per-beat vitality** (every single beat must contain non-empty `character_motion`, `facial_expression`, `backdrop_motion`, and $\ge 1$ articulated motion verb), at least **4 distinct articulated character movements** and **2 secondary environmental motions** across the 3 beats, plus $\ge 3$ articulated motion verbs and $\ge 2$ backdrop motion cues inside `google_flow_prompt`. Rejects any draft that relies solely on camera pans/zooms.
-4. **Gate 4 — Theme & Phonics Fidelity (`theme_true`)**:
-   - Explicitly showcases the target theme (`In the Garden`) and visibly + auditorily highlights the target phonics word(s) (`crop`, `spud`).
-5. **Gate 5 — Google Flow (`Veo 3.1`) Structural Readiness (`flow_well_formed`)**:
-   - Compiles into a **single-paragraph natural prose prompt (`90–145 words`)** containing all 6 Flow Animation Pillars:
-     1. *Full-Color 2D Storybook Animation Style Anchor* (preserving bold black ink outlines, zero uncolored B&W areas).
-     2. *Character Visual & Color Anchors + Articulated Motion*.
-     3. *Dynamic Backdrop & Secondary Environmental Motion*.
-     4. *Smooth Camera Choreography*.
-     5. *Warm Lighting & Palette*.
-     6. *Synchronized Audio Clause (`Audio: ...`)* specifying voice/chirp cues, foley SFX, and musical score.
-   - Zero `[BRACKETED HEADERS]`, zero raw hex codes (`#FFFFFF`), and zero file extensions (`.png`, `.pdf`) inside the compiled Flow prompt.
+### Step 5: Write the Human-Reviewable Text Screenplay to `Blends/` & JSON Manifest
+Save two synchronized files:
+1. **Plain-Text Screenplay in `Blends/` (parent of `illustrations`)**:
+   - Path: `/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act<N>_<Act_Name>_Screenplay.txt` (and upload to Google Drive `Blends` folder `1W7Ehm6Uj4lYzf2qDJzLWs7iLTzK31Dt-` when Drive OAuth is active).
+   - Must contain 5 structured sections:
+     - **Section 1**: Production Header & Workflow Status (`STEP 1 OF 2 — PENDING_HUMAN_REVIEW`)
+     - **Section 2**: Google Flow Defined Characters (`@Clem`, `@Plum`) & Storyline Keyframe Registry
+     - **Section 3**: Engaging Human Voice & Audio Direction (`allow_basic_os_tts: false`)
+     - **Section 4**: Scene-by-Scene Master Screenplay (Target Duration, Locked Google Flow Assets, Setting & Backdrop Enhancement, Verbatim Storyline Script & Dialogue, Timed 3-Beat Visual Choreography, and Compiled Google Flow `Veo 3.1` Prompt)
+     - **Section 5**: 5-Gate Evaluation Scorecard & Human Approval Sign-Off Checklist
+2. **Structured JSON Manifest**:
+   - Path: `/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act<N>_<act_name>_screenplay.json`
 
----
-
-## 5. Execution Commands
-
-### Step 1: Validate & Score a Draft Screenplay JSON
+### Step 6: Run the Deterministic 5-Gate Evaluator & STOP for Human Review
+Run [`scripts/evaluate_screenplay.py`](./scripts/evaluate_screenplay.py) to verify all 5 gates pass (`exit code 0`):
 ```bash
 python3 /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/.agents/skills/story-screenplay-generator/scripts/evaluate_screenplay.py \
-  --input output/screenplays/act1_in_the_garden_screenplay.json \
-  --output-report output/screenplays/act1_in_the_garden_eval_report.json
+  --input /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act1_in_the_garden_screenplay.json \
+  --output-report /Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act1_in_the_garden_eval_report.json
 ```
-
-### Step 2: Hand Off to `story-video-generator`
-Once all 5 gates return `PASS` and adversarial review findings are resolved, pass the approved screenplay JSON to [`story-video-generator`](../story-video-generator/SKILL.md) to render the full-fledged 10-second animation.
+- See [`references/screenplay-evaluation-rubric.md`](./references/screenplay-evaluation-rubric.md) for the complete 5-gate specification.
+- **Once all 5 gates return `"PASS"`, present the `.txt` screenplay to the human reviewer and STOP. Do not invoke `story-video-generator` until the user explicitly replies with approval.**

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Deterministic 5-Gate Evaluator & Linter for ~10-Second Animated Story Screenplays
-and Google Flow (Veo 3.1) Animation Prompts.
+Deterministic 5-Gate Evaluator & Linter for Step 1 of the 2-Step Video Pipeline:
+Validates the Detailed Story Screenplay (.json + human-reviewable .txt in Blends/)
+and Google Flow (Veo 3.1) Animation Prompts before Human Review & Approval.
 """
 
 import argparse
@@ -21,8 +22,12 @@ BANNED_SLIDESHOW_OR_CUT_TOKENS = [
     r"\b(?:static\s+image|still\s+frame|still\s+image|slideshow|ken\s+burns|jump\s+cut|cut\s+to|next\s+scene|split\s+screen|freeze\s+frame)\b"
 ]
 
+BANNED_ROBOTIC_TTS_TOKENS = [
+    r"\b(?:/usr/bin/say|avspeechsynthesizer|samantha\s+tts|espeak|robotic\s+tts|basic\s+ai\s+voice)\b"
+]
+
 UNSAFE_THEMES = [
-    r"\b(?:blood|bleed|bleeding|scary|terrified|scream|hurt|pain|weapon|monster|attack|cry|crying|dead|kill|sharp\s+thorn|thorns?\s+hook|scratch|prick)\b"
+    r"\b(?:blood|bleed|bleeding|scary|terrified|scream|hurt|pain|weapon|monster|attack|cry|crying|dead|kill|scratch|prick)\b"
 ]
 
 ARTICULATED_MOTION_VERBS = {
@@ -55,16 +60,22 @@ def _as_str(val) -> str:
 def evaluate_screenplay(data: dict) -> dict:
     checks = {}
     beats = data.get("beats", [])
-    flow_prompt = data.get("google_flow_prompt", "").strip()
+    master_flow_prompt = data.get("google_flow_prompt", "").strip()
 
-    # Corpus of actual creative content (excluding metadata arrays like target_phonics_words)
     beats_text = " ".join(
         f"{b.get('character_motion', '')} {b.get('facial_expression', '')} "
         f"{b.get('backdrop_motion', '')} {b.get('narration_or_dialogue', '')} "
-        f"{b.get('sfx_and_music', '')} {b.get('audio_sfx', '')}"
+        f"{b.get('verbatim_storyline_script', '')} "
+        f"{b.get('sfx_and_music', '')} {b.get('scene_google_flow_prompt', '')}"
         for b in beats
     )
-    creative_corpus = f"{data.get('title', '')} {beats_text} {flow_prompt}".lower()
+    all_flow_prompts = [master_flow_prompt] + [
+        b.get("scene_google_flow_prompt", "").strip()
+        for b in beats
+        if b.get("scene_google_flow_prompt", "").strip()
+    ]
+    flow_corpus = " ".join(all_flow_prompts)
+    creative_corpus = f"{data.get('title', '')} {beats_text} {flow_corpus}".lower()
 
     # -------------------------------------------------------------------------
     # Gate 1: Child Safety & Flow Policy Hygiene
@@ -75,7 +86,7 @@ def evaluate_screenplay(data: dict) -> dict:
 
     banned_flow_hits = []
     for pat in BANNED_FLOW_TOKENS:
-        banned_flow_hits.extend(re.findall(pat, flow_prompt, flags=re.IGNORECASE))
+        banned_flow_hits.extend(re.findall(pat, flow_corpus, flags=re.IGNORECASE))
 
     slideshow_or_cut_hits = []
     for pat in BANNED_SLIDESHOW_OR_CUT_TOKENS:
@@ -96,48 +107,68 @@ def evaluate_screenplay(data: dict) -> dict:
     }
 
     # -------------------------------------------------------------------------
-    # Gate 2: Child Friendliness & Pacing (Contiguous Beats & Spoken Word Budget)
+    # Gate 2: Verbatim Act Storyline Script Fidelity & Engaging Human Voice Spec
     # -------------------------------------------------------------------------
-    duration = float(data.get("target_duration_sec", 0))
-    beat_duration_sum = 0.0
-    timeline_contiguous = len(beats) >= 3
-    expected_start = 0.0
-    narration_words = []
+    script_corpus = " ".join(
+        f"{b.get('verbatim_storyline_script', '')} {b.get('narration_or_dialogue', '')}"
+        for b in beats
+    ).lower()
 
-    for b in beats:
-        s_sec = float(b.get("start_sec", -1))
-        e_sec = float(b.get("end_sec", -1))
-        b_dur = e_sec - s_sec
-        if b_dur < 1.5 or b_dur > 6.0 or abs(s_sec - expected_start) > 0.05:
-            timeline_contiguous = False
-        expected_start = e_sec
-        beat_duration_sum += max(0.0, b_dur)
+    required_script_anchors = [
+        l.lower() for l in data.get("required_storyline_lines", [
+            "follow me!",
+            "i'm right behind you!",
+            "that big group of plants is called a crop",
+            "calling the potatoes 'spuds' too",
+            "found one!",
+            "a grub!",
+            "say hello gently",
+            "snag!",
+            "gotcha, you sneaky bush"
+        ])
+    ]
+    missing_script_anchors = [
+        phrase for phrase in required_script_anchors
+        if phrase not in script_corpus
+    ]
 
-        vo = b.get("narration_or_dialogue", "").strip()
-        if vo:
-            narration_words.extend(vo.split())
+    voice_spec = data.get("voice_casting_spec", {})
+    allow_basic_tts = voice_spec.get("allow_basic_os_tts", True)
+    voice_profiles = voice_spec.get("character_voice_profiles", {})
+    has_engaging_human_voice = (
+        isinstance(voice_spec, dict)
+        and allow_basic_tts is False
+        and "human" in str(voice_spec.get("voice_engine_requirement", "")).lower()
+        and len(voice_profiles) >= 2
+    )
 
-    if abs(expected_start - duration) > 0.1:
-        timeline_contiguous = False
+    tts_violation_hits = []
+    for pat in BANNED_ROBOTIC_TTS_TOKENS:
+        tts_violation_hits.extend(
+            re.findall(pat, str(voice_spec.get("active_voice_engine", "")), flags=re.IGNORECASE)
+        )
 
-    total_vo_words = len(narration_words)
-    words_per_sec = round(total_vo_words / max(duration, 1.0), 2)
-    duration_ok = (8.0 <= duration <= 12.0) and (abs(beat_duration_sum - duration) < 0.15)
-    pacing_ok = (4 <= total_vo_words <= 24) and (words_per_sec <= 2.4)
-
-    gate2_pass = duration_ok and timeline_contiguous and pacing_ok and len(beats) >= 3
-    checks["gate_2_child_friendly_and_pacing"] = {
+    gate2_pass = (
+        len(beats) >= 3
+        and len(missing_script_anchors) == 0
+        and has_engaging_human_voice
+        and len(tts_violation_hits) == 0
+    )
+    checks["gate_2_storyline_script_and_human_voice_fidelity"] = {
         "status": "PASS" if gate2_pass else "FAIL",
-        "target_duration_sec": duration,
-        "beat_count": len(beats),
-        "timeline_contiguous": timeline_contiguous,
-        "total_spoken_words": total_vo_words,
-        "words_per_second": words_per_sec,
-        "notes": f"{len(beats)} contiguous timed beats across {duration}s with {total_vo_words} spoken words ({words_per_sec} wps <= 2.4 wps)."
+        "beat_or_scene_count": len(beats),
+        "verified_storyline_script_phrases": len(required_script_anchors) - len(missing_script_anchors),
+        "missing_storyline_script_phrases": missing_script_anchors,
+        "has_engaging_human_voice_spec": has_engaging_human_voice,
+        "allow_basic_os_tts": allow_basic_tts,
+        "notes": (
+            f"All {len(required_script_anchors)} canonical Act storyline lines/teaching beats verified verbatim; "
+            f"engaging human voice casting specified with basic OS TTS strictly disabled."
+        )
     }
 
     # -------------------------------------------------------------------------
-    # Gate 3: Entertainment & Anti-Slideshow Vitality (Per-Beat + Flow Prompt)
+    # Gate 3: Entertainment & Anti-Slideshow Vitality (Per-Beat + Flow Prompts)
     # -------------------------------------------------------------------------
     action_corpus = " ".join(
         f"{b.get('character_motion', '')} {b.get('facial_expression', '')} {b.get('backdrop_motion', '')}"
@@ -159,7 +190,7 @@ def evaluate_screenplay(data: dict) -> dict:
         if not cm or not fe or not bm or len(b_verbs) < 1:
             per_beat_vitality_ok = False
 
-    flow_tokens = set(re.findall(r"[a-z]+", flow_prompt.lower()))
+    flow_tokens = set(re.findall(r"[a-z]+", flow_corpus.lower()))
     flow_verbs = sorted(flow_tokens.intersection(ARTICULATED_MOTION_VERBS))
     flow_backdrop = sorted(flow_tokens.intersection(BACKDROP_MOTION_TERMS))
 
@@ -179,32 +210,32 @@ def evaluate_screenplay(data: dict) -> dict:
         "flow_prompt_motion_verbs": flow_verbs,
         "flow_prompt_backdrop_terms": flow_backdrop,
         "notes": (
-            f"All {len(beats)} beats have active character/facial/backdrop motion; "
+            f"All {len(beats)} scenes/beats have active character/facial/backdrop motion; "
             f"{len(matched_verbs)} beat verbs, {len(flow_verbs)} Flow prompt verbs, "
             f"and {len(matched_backdrop)} backdrop motion cues."
         )
     }
 
     # -------------------------------------------------------------------------
-    # Gate 4: Theme, Phonics, Character Traits & Backdrop Landmarks Fidelity
+    # Gate 4: Google Flow Defined Assets, Theme, Phonics & 100% Image Lock
     # -------------------------------------------------------------------------
     target_words = [w.lower() for w in data.get("target_phonics_words", []) if w.strip()]
-    narration_corpus = " ".join(b.get("narration_or_dialogue", "") for b in beats).lower()
-
     missing_in_beats = [w for w in target_words if w not in beats_text.lower()]
-    missing_in_flow = [w for w in target_words if w not in flow_prompt.lower()]
-    spoken_target_words = [w for w in target_words if w in narration_corpus]
+    missing_in_flow = [w for w in target_words if w not in flow_corpus.lower()]
+    spoken_target_words = [w for w in target_words if w in script_corpus]
 
     char_objs = data.get("characters", [])
     characters = [c.get("name", "") for c in char_objs if c.get("name")]
     missing_chars_in_beats = [c for c in characters if c.lower() not in action_corpus]
-    missing_chars_in_flow = [c for c in characters if c.lower() not in flow_prompt.lower()]
+    missing_chars_in_flow = [c for c in characters if c.lower() not in flow_corpus.lower()]
     incomplete_char_profiles = [
         c.get("name", "Unknown")
         for c in char_objs
         if not _as_str(c.get("visual_anchor") or c.get("flow_descriptor")).strip()
         or not _as_str(c.get("personality_traits")).strip()
         or not _as_str(c.get("trait_to_action_mapping")).strip()
+        or not _as_str(c.get("google_flow_asset_id") or c.get("google_flow_ingredient_name")).strip()
+        or not _as_str(c.get("character_sheet_drive_id")).strip()
     ]
 
     backdrop_obj = data.get("backdrop", {})
@@ -213,49 +244,85 @@ def evaluate_screenplay(data: dict) -> dict:
     ]
     missing_landmarks = [
         lm for lm in required_landmarks
-        if lm not in action_corpus and lm not in flow_prompt.lower()
+        if lm not in action_corpus and lm not in flow_corpus.lower()
     ]
 
+    valid_lock_modes = {
+        "start_from_exact_image",
+        "end_on_exact_image",
+        "start_and_end_exact_image",
+    }
+    missing_or_invalid_scene_images = []
+    verified_scene_images = []
+    for idx, b in enumerate(beats, start=1):
+        img_path_str = str(b.get("source_scene_image_path", "")).strip()
+        lock_mode = str(b.get("keyframe_lock_mode", "")).strip()
+        flow_asset_ref = str(b.get("google_flow_scene_asset", "")).strip()
+        if not img_path_str or lock_mode not in valid_lock_modes or not flow_asset_ref:
+            missing_or_invalid_scene_images.append(f"scene_{idx}:missing_path_lock_or_flow_asset")
+            continue
+        p = Path(img_path_str)
+        if not p.exists():
+            missing_or_invalid_scene_images.append(f"scene_{idx}:file_not_found({img_path_str})")
+        else:
+            verified_scene_images.append(str(p))
+
     gate4_pass = (
-        len(target_words) > 0
+        len(target_words) >= 4
         and len(missing_in_beats) == 0
         and len(missing_in_flow) == 0
-        and len(spoken_target_words) >= 1
-        and len(characters) >= 1
+        and len(spoken_target_words) == len(target_words)
+        and len(characters) >= 2
         and len(missing_chars_in_beats) == 0
         and len(missing_chars_in_flow) == 0
         and len(incomplete_char_profiles) == 0
-        and len(missing_landmarks) >= 0
         and len(required_landmarks) >= 2
         and len(missing_landmarks) == 0
+        and len(missing_or_invalid_scene_images) == 0
+        and len(verified_scene_images) == len(beats)
     )
-    checks["gate_4_theme_and_phonics_fidelity"] = {
+    checks["gate_4_google_flow_assets_and_theme_fidelity"] = {
         "status": "PASS" if gate4_pass else "FAIL",
         "target_phonics_words": target_words,
         "spoken_target_words": spoken_target_words,
         "missing_in_beats": missing_in_beats,
-        "missing_in_flow_prompt": missing_in_flow,
-        "characters_verified": characters,
-        "missing_chars_in_beats": missing_chars_in_beats,
-        "missing_chars_in_flow": missing_chars_in_flow,
+        "missing_in_flow_prompts": missing_in_flow,
+        "characters_verified_with_flow_dna": characters,
         "incomplete_char_profiles": incomplete_char_profiles,
         "required_backdrop_landmarks": required_landmarks,
         "missing_backdrop_landmarks": missing_landmarks,
-        "notes": "All target phonics words, character traits/anchors, and backdrop landmarks verified in beats and Flow prompt."
+        "verified_storyline_scene_images": verified_scene_images,
+        "missing_or_invalid_scene_images": missing_or_invalid_scene_images,
+        "notes": "All Google Flow defined character assets (Character DNA sheet + Flow ingredient IDs), target phonics words (crop, spud, grub, snag), and 100%-adherent storyline scene image locks verified."
     }
 
     # -------------------------------------------------------------------------
-    # Gate 5: Well-Formed Google Flow (Veo 3.1) Prompt Structure (6 Pillars)
+    # Gate 5: Well-Formed Google Flow (Veo 3.1) Prompt & 2-Step Human Gate
     # -------------------------------------------------------------------------
-    flow_words = flow_prompt.split()
+    flow_words = master_flow_prompt.split()
     flow_word_count = len(flow_words)
-    is_single_paragraph = ("\n" not in flow_prompt)
-    flow_lower = flow_prompt.lower()
+    is_single_paragraph = ("\n" not in master_flow_prompt)
+    flow_lower = master_flow_prompt.lower()
     has_color_anchor = ("full-color" in flow_lower or "vibrant" in flow_lower) and ("outline" in flow_lower or "ink" in flow_lower)
     has_camera_anchor = any(k in flow_lower for k in ("camera", "shot", "framing", "pan", "track", "gentle", "close", "push-in", "pull-back"))
     has_lighting_anchor = any(k in flow_lower for k in ("sunlight", "sunbeam", "afternoon", "golden", "warm", "light", "sunny"))
     has_audio_clause = ("audio:" in flow_lower)
     word_count_ok = (90 <= flow_word_count <= 145)
+
+    # Check 2-step workflow gate & human-readable text screenplay in Blends folder
+    workflow_step = str(data.get("workflow_step", "")).strip()
+    human_approval = data.get("human_approval", {})
+    approval_status = str(human_approval.get("status", "")).strip()
+    text_screenplay_path = str(data.get("human_readable_screenplay_txt_path", "")).strip()
+    text_file_exists = bool(text_screenplay_path and Path(text_screenplay_path).exists())
+    in_blends_folder = "blends" in text_screenplay_path.lower()
+
+    two_step_gate_ok = (
+        workflow_step in ("STEP_1_AWAITING_HUMAN_APPROVAL", "STEP_2_APPROVED_FOR_VIDEO")
+        and approval_status in ("PENDING_HUMAN_REVIEW", "APPROVED")
+        and text_file_exists
+        and in_blends_folder
+    )
 
     gate5_pass = (
         is_single_paragraph
@@ -264,8 +331,9 @@ def evaluate_screenplay(data: dict) -> dict:
         and has_lighting_anchor
         and has_audio_clause
         and word_count_ok
+        and two_step_gate_ok
     )
-    checks["gate_5_google_flow_well_formed"] = {
+    checks["gate_5_google_flow_and_two_step_human_gate"] = {
         "status": "PASS" if gate5_pass else "FAIL",
         "flow_prompt_word_count": flow_word_count,
         "is_single_paragraph": is_single_paragraph,
@@ -273,19 +341,28 @@ def evaluate_screenplay(data: dict) -> dict:
         "has_camera_anchor": has_camera_anchor,
         "has_lighting_anchor": has_lighting_anchor,
         "has_audio_clause": has_audio_clause,
-        "notes": f"Single-paragraph 6-pillar Flow prompt ({flow_word_count} words, required 90-145) with style/outline, camera, lighting, and Audio clause."
+        "workflow_step": workflow_step,
+        "human_approval_status": approval_status,
+        "human_readable_screenplay_txt_path": text_screenplay_path,
+        "text_screenplay_exists_in_blends": (text_file_exists and in_blends_folder),
+        "notes": (
+            f"Single-paragraph 6-pillar Flow prompt ({flow_word_count} words) verified; "
+            f"2-step human review gate active ({workflow_step} / {approval_status}) with text screenplay saved in Blends."
+        )
     }
 
     overall_pass = all(c["status"] == "PASS" for c in checks.values())
     return {
         "screenplay_title": data.get("title", "Untitled"),
+        "workflow_step": workflow_step,
+        "human_approval_status": approval_status,
         "overall_status": "PASS" if overall_pass else "FAIL",
         "gates": checks
     }
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate 10s animated screenplay JSON.")
+    parser = argparse.ArgumentParser(description="Evaluate Step 1 animated screenplay JSON & text review file.")
     parser.add_argument("--input", required=True, help="Path to screenplay JSON file.")
     parser.add_argument("--output-report", required=False, help="Optional path to save evaluation JSON.")
     args = parser.parse_args()

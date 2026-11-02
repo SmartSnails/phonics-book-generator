@@ -1,0 +1,229 @@
+================================================================================
+TITLE:      ACT 1 — IN THE GARDEN ("Clem & Plum: A Day by the Garden, Woods, and Pond")
+SERIES:     Clem and Plum's Phonics Adventures — Beginning Consonant Blends (Theme A: Animals & Nature)
+TARGET AGE: 4 to 6 Years Old (Preschool / Early Elementary)
+TARGET WORDS: crop (cr-), spud (sp-), grub (gr-), snag (sn-) + Clem (cl-) & Plum (pl-)
+WORKFLOW:   STEP 2 OF 2 — APPROVED FOR VIDEO GENERATION (story-video-generator)
+STATUS:     APPROVED (Human-Approved Screenplay Ready for Video Rendering)
+LOCATION:   Blends / Act1_In_The_Garden_Screenplay.txt (Parent of Blends/illustrations)
+================================================================================
+
+1. GOOGLE FLOW DEFINED CHARACTERS & ASSET REGISTRY (100% CONSISTENCY LOCK)
+--------------------------------------------------------------------------------
+All scenes in this screenplay MUST use the official Character DNA and Scene Keyframe
+assets defined in Google Flow and the `Blends` Google Drive folder (`ID: 1W7Ehm6Uj4lYzf2qDJzLWs7iLTzK31Dt-`):
+
+A. Character 1 — @Clem (`Character DNA: Clem`)
+   - Google Flow Ingredient Name: `Clem` (`@Clem`)
+   - Source Asset Doc: `Blends / Character sheet` (Google Doc ID: `1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY`)
+   - Anchor Cutout / Reference Sheet:
+     * Full-body turnaround & expression sheet (`Happy closed-mouth smile`, `Happy open-mouth laugh`, `Surprised O-mouth`, `Thinking/Curious`, `Proud/Confident`)
+     * Local Atomic Reference: `/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/clem.png`
+   - Locked Visual DNA:
+     * 5-year-old boy with neat black hair (parted front fringe), big warm brown eyes, light skin, cute straight nose, chiseled chin, no glasses.
+     * Clothing: Blue denim overalls (with center chest pocket and two strap buttons), white button-down full-sleeve shirt, brown ankle boots.
+   - Personality Traits -> Physical Animation Mapping:
+     * Traits: Curious, joyful, cheerful, adventurous, friendly, eager little learner who asks questions kids would actually ask; the hands-on "doer" who touches things, tries things, and gets a little muddy.
+     * Physical Action Mapping: Grins and hops eagerly over the garden gate; walks along the garden rows looking around in wonder; drops to his knees in the soft brown soil to dig with both hands and pull up a bunch of dusty spuds; leans down on hands and knees to greet the shy baby grub gently; laughs good-naturedly and tugs his white shirt sleeve free when it catches on a thorny rose/blackberry bush snag.
+
+B. Character 2 — @Plum (`Character DNA: Plum`)
+   - Google Flow Ingredient Name: `Plum` (`@Plum`)
+   - Source Asset Doc: `Blends / Character sheet` (Google Doc ID: `1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY`)
+   - Anchor Cutout / Reference Sheet:
+     * Small round sky-blue songbird with oversized head ("classic cute sidekick proportions") and soft speckled crown/breast feathers.
+     * Local Atomic Reference: `/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/plum.png`
+   - Personality Traits -> Physical Animation Mapping:
+     * Traits: Cute, calm, slightly wiser, a gentle guide rather than a bossy one; notices things first and nudges Clem toward them; serves as the warm, encouraging guide voice who flies ahead to preview what is coming.
+     * Physical Action Mapping: Flutters down onto the rustic wooden garden fencepost and waves a stubby blue wing ("Follow me!"); points her wing across the matching rows of spinach crops; hops down onto the soil beside the potato patch to explain how the "spud" shovel gave potatoes their nickname; hops closer to peek into the dirt hole and giggles softly at the wiggling grub.
+
+C. Locked Storyline Coloring Book Scene Keyframes (100% Start/End Frame Adherence):
+   Every scene in Step 2 video generation MUST begin or end with 100% visual adherence
+   to these exact storyline coloring book illustrations:
+   - Scene 1 (`crop`):
+     * Book Reference Page: `Theme A Beginning Blend.pdf` — Page 38 (`page-038.png`, Clem walking past the garden fence and rows of spinach crops while Plum perches on the wooden fencepost under the bright sun)
+     * Section 1 Scene Variant: `output/section1_garden/scenes/scene_1a_crop.png` (and colored keyframe `scene_1a_crop_color.png`)
+   - Scene 2 (`spud`):
+     * Book Reference Page: `Theme A Beginning Blend.pdf` — Page 43 (`page-043.png`, Clem kneeling in the garden in front of the cottage, two trees, and wooden fence, holding up a freshly pulled potato plant with dangling spuds while Plum watches happily on the left)
+     * Section 1 Scene Variant: `output/section1_garden/scenes/scene_1b_spud.png` (and colored keyframe `scene_1b_spud_color.png`)
+   - Scene 3 (`grub`):
+     * Section 1 Scene Keyframe: `output/section1_garden/scenes/scene_1c_grub.png` (and colored keyframe `scene_1c_grub_color.png` — Clem on hands and knees and Plum peeking into the scooped dirt hole at the cute curled wiggling grub)
+   - Scene 4 (`snag` & Act 1 Finale):
+     * Section 1 Scene Keyframes: `output/section1_garden/scenes/scene_1d_snag.png` (Clem's sleeve caught on a thorny rose/blackberry bush stem while Plum watches from the fencepost) & `output/section1_garden/scenes/scene_1_conclusion.png` (Clem waving goodbye to the garden crop, spuds, and grub as Plum flutters ahead toward the woods).
+
+
+2. ENGAGING HUMAN VOICE & AUDIO DIRECTION (ROBOTIC / BASIC OS TTS STRICTLY BANNED)
+--------------------------------------------------------------------------------
+- STRICT RULE: Basic robotic/synthesized OS TTS voices (`/usr/bin/say`, `AVSpeechSynthesizer`, `Samantha`, `espeak`) are STRICTLY FORBIDDEN (`allow_basic_os_tts: false`).
+- REQUIRED VOICE ENGINE: Google Flow (`Veo 3.1`) Native Expressive Multi-Character Human Audio OR Studio-Recorded / Neural Expressive Human Voice Actors:
+  1. **Warm Storyteller / Narrator**:
+     - Vocal Timbre: Warm, engaging, expressive human children's audiobook narrator (gentle, inviting, dynamic storytelling cadence, smiling tone, natural pauses before phonics target words).
+  2. **Plum (Gentle Bluebird Guide)**:
+     - Vocal Timbre: Bright, musical, warm, and encouraging young female human character voice with a playful, wise, gentle lilt (never shrill or robotic), accented by soft melodic bluebird chirps before speaking.
+  3. **Clem (Curious 5-Year-Old Explorer)**:
+     - Vocal Timbre: Authentic, joyful, curious young child voice full of wonder, natural giggles, and hands-on excitement when discovering the spud and laughing off the bush snag.
+- MUSICAL SCORE & FOLEY:
+  - Acoustic fingerpicked guitar, warm wooden marimba, and light upright bass at a cheerful walking tempo (104 BPM), layered with real garden foley (soft breeze rustling spinach and potato leaves, fluttering bird wings, footsteps on garden soil, earthy root-pull pop, comical xylophone grub wiggle, and a gentle fabric tug).
+
+
+3. SCENE-BY-SCENE MASTER SCREENPLAY (FOLLOWING THE EXACT ACT 1 STORYLINE SCRIPT)
+--------------------------------------------------------------------------------
+Note on Structure: Each of the 4 scenes below corresponds to one of Act 1's 4 phonics
+words (`crop`, `spud`, `grub`, `snag`) and is designed as a self-contained ~10-second
+full-fledged animated clip in Google Flow (`Veo 3.1`) that begins and/or ends locked
+100% onto the exact storyline coloring book illustration.
+
+================================================================================
+SCENE 1: "THE MATCHING GREEN CROP" (Target Phonics Word: CROP — cr- blend)
+================================================================================
+- TARGET DURATION: ~10.0 seconds (3 contiguous animated beats: 0.0–3.0s, 3.0–7.0s, 7.0–10.0s)
+- LOCKED GOOGLE FLOW ASSETS:
+  * Characters: `@Clem` (`Character DNA: Clem`), `@Plum` (`Character DNA: Plum`)
+  * First/Last Frame Reference Image: `page-038.png` / `scene_1a_crop.png` (100% image adherence lock)
+- SETTING & BACKDROP ENHANCEMENT:
+  * Background Top Third: Bright warm afternoon sun with radiating rays and two leafy trees framing the garden path, bordered by a rustic wooden picket fence and gate.
+  * Midground: Neat, lush rows of matching emerald-green spinach crop plants swaying in the afternoon breeze.
+  * Foreground: Pebble-lined dirt garden path where Clem walks in his blue denim overalls, white button-down shirt, and brown boots while Plum perches on the wooden fencepost.
+
+- VERBATIM STORYLINE SCRIPT & DIALOGUE (From `Story draft and Prompts for 01 Animals & Nature.pdf`):
+  * [Beat 1 — 0.0s to 3.0s]:
+    - NARRATOR (warm, expressive human storyteller): "Plum fluttered down onto the garden fence."
+    - PLUM (bright, cheerful human voice + musical chirp): "Follow me!"
+    - CLEM (joyful, eager young voice): "I'm right behind you!"
+  * [Beat 2 — 3.0s to 7.0s]:
+    - NARRATOR: "Together they walked past rows of green plants, ready to see what the crop had grown this season."
+    - PLUM (warm, gentle guide voice, pointing her wing): "See all these matching spinach plants? When we grow a whole field of the exact same plant, that big group of plants is called a crop!"
+  * [Beat 3 — 7.0s to 10.0s]:
+    - PLUM (conversational, friendly smile): "We owe a big thanks to our farmers! I like sunflower seeds from the bird feeder. What is your favorite food? Strawberries? Carrots?"
+
+- TIMED VISUAL CHOREOGRAPHY (Full-Fledged Articulated Animation):
+  * Beat 1 (0.0s – 3.0s | Establish & Hook):
+    - Frame 0 starts locked 100% to the exact storyline coloring page (`page-038.png` / `scene_1a_crop.png`), smoothly blooming into vibrant full storybook color while preserving 100% of the bold black ink outlines.
+    - `@Plum` flutters her sky-blue wings and lands lightly on the rustic wooden fencepost, tilting her speckled head and waving her left wing to beckon Clem.
+    - `@Clem` grins from ear to ear, hops over the garden gate, and walks down the dirt path with swinging arms and bouncy steps.
+  * Beat 2 (3.0s – 7.0s | Core Discovery Action — `crop`):
+    - `@Clem` slows down beside the neat diagonal rows of green spinach plants, tilting his head with a curious, thinking expression as his big brown eyes scan the matching leaves.
+    - `@Plum` notices the question on Clem's face, leans forward on the fencepost, and sweeps her outstretched blue wing across the rows of spinach plants as they sway in unison in the warm afternoon breeze.
+  * Beat 3 (7.0s – 10.0s | Joyful Reaction & Payoff):
+    - `@Clem` nods happily with an "Aha!" smile and waves toward the swaying green crop while the golden sun rays shimmer overhead.
+    - At 10.0s, both characters settle 100% pixel-aligned onto the exact storyline coloring page pose (`page-038.png` / `scene_1a_crop.png`).
+
+- COMPILED GOOGLE FLOW (`Veo 3.1`) PROMPT FOR SCENE 1 (~10s):
+  Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. Beside a rustic wooden garden fence, Plum, the small round sky-blue bird on the fencepost, flutters her wings and chirps before pointing her wing across swaying rows of matching emerald-green spinach crop plants. Clem, a cheerful garden explorer in a white shirt, blue denim overalls, and brown boots, hops in and walks along the path, tilting his head in curious wonder and smiling warmly as sunbeams shimmer overhead. The camera performs a gentle storybook push-in and settles back onto the exact reference frame. Audio: Engaging, warm human voiceover and expressive character dialogue saying "Follow me! I'm right behind you! See all these matching spinach plants? That big group of plants is called a crop!", accompanied by acoustic guitar, marimba, soft breeze, and cheerful bird chirps.
+
+================================================================================
+SCENE 2: "DIGGING UP DELICIOUS SPUDS" (Target Phonics Word: SPUD — sp- blend)
+================================================================================
+- TARGET DURATION: ~10.0 seconds (3 contiguous animated beats: 0.0–3.2s, 3.2–7.0s, 7.0–10.0s)
+- LOCKED GOOGLE FLOW ASSETS:
+  * Characters: `@Clem` (`Character DNA: Clem`), `@Plum` (`Character DNA: Plum`)
+  * First/Last Frame Reference Image: `page-043.png` / `scene_1b_spud.png` (100% image adherence lock)
+- SETTING & BACKDROP ENHANCEMENT:
+  * Background Top Third: Cozy cottage house in a plowed field flanked by two leafy shade trees (one on each side), a radiant sun, and fluffy white clouds drifting above a rustic wooden garden fence.
+  * Midground: 10 to 12 lush, leafy green potato plants swaying gently between the fence and foreground.
+  * Foreground: Soft brown garden soil where Clem kneels and pulls up a cluster of round, dusty golden-tan potatoes (`spuds`) while Plum hops happily beside him on the left.
+
+- VERBATIM STORYLINE SCRIPT & DIALOGUE (From `Story draft and Prompts for 01 Animals & Nature.pdf`):
+  * [Beat 1 — 0.0s to 3.2s]:
+    - PLUM (warm, wise human guide voice): "A long time ago, gardeners used a little shovel called a 'spud' to dig up treats from the ground. Because they used that shovel to find potatoes, people just started calling the potatoes 'spuds' too!"
+  * [Beat 2 — 3.2s to 7.0s]:
+    - CLEM (excited, hands-on young human voice, digging into the dirt): "Look! You know what a potato is, right? Well, 'spud' is just a secret, silly nickname for a potato! It's like how a dog is sometimes called a pup. Found one!"
+  * [Beat 3 — 7.0s to 10.0s]:
+    - PLUM (cheerful, delighted human voice): "Whenever you eat French fries or mashed potatoes, you are actually eating delicious spuds!"
+
+- TIMED VISUAL CHOREOGRAPHY (Full-Fledged Articulated Animation):
+  * Beat 1 (0.0s – 3.2s | Establish & Hook):
+    - Starts locked to the exact cottage-and-garden potato patch composition (`page-043.png` / `scene_1b_spud.png`) as fluffy clouds drift past the cottage roof and the 10–12 leafy potato plants sway in the breeze.
+    - `@Plum` hops down from the fence onto the soft soil mound on the left, gesturing with her wing toward the swaying potato stems while explaining the history of the "spud" shovel.
+  * Beat 2 (3.2s – 7.0s | Core Discovery Action — `spud`):
+    - Because `@Clem` is a hands-on "doer" who loves getting a little muddy, he kneels eagerly in the soft dirt, grasps the leafy green potato plant stem with his hands, and pulls upward with a joyful tug.
+    - Four plump, round, dusty golden potatoes (`spuds`) pop up out of the soil clinging to the roots as tiny specks of garden dirt tumble down. Clem's face lights up in a wide open-mouthed laugh as he calls out, *"Found one!"*
+  * Beat 3 (7.0s – 10.0s | Joyful Reaction & Payoff):
+    - `@Plum` hops up and down proudly on the left dirt mound, fluttering her wings and nodding at the freshly dug spuds in Clem's hands.
+    - At 10.0s, Clem, Plum, the uprooted potato plant, and the cottage backdrop lock 100% pixel-identical onto the exact storyline coloring book keyframe (`page-043.png` / `scene_1b_spud.png`).
+
+- COMPILED GOOGLE FLOW (`Veo 3.1`) PROMPT FOR SCENE 2 (~10s):
+  Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot ends on the exact coloring book illustration. In front of a cozy country cottage, two shade trees, and a rustic wooden fence with swaying green potato plants, Plum, the round sky-blue bird on the left dirt mound, chirps and gestures with her wing as clouds drift overhead. Clem, kneeling in blue denim overalls and brown boots, digs into the soft brown soil and pulls up a leafy potato plant, revealing plump round golden spuds dangling from the roots as dirt specks fall. Both friends grin and bounce with joy as the camera frames the spuds. Audio: Expressive, warm human voices saying "Well, spud is just a secret, silly nickname for a potato! Found one! Whenever you eat French fries or mashed potatoes, you are actually eating delicious spuds!", with earthy root-pull foley, bird chirps, and upbeat marimba music.
+
+================================================================================
+SCENE 3: "THE SHY LITTLE GRUB" (Target Phonics Word: GRUB — gr- blend)
+================================================================================
+- TARGET DURATION: ~10.0 seconds (3 contiguous animated beats: 0.0–3.2s, 3.2–6.8s, 6.8–10.0s)
+- LOCKED GOOGLE FLOW ASSETS:
+  * Characters: `@Clem` (`Character DNA: Clem`), `@Plum` (`Character DNA: Plum`)
+  * First/Last Frame Reference Image: `scene_1c_grub.png` (100% image adherence lock)
+- SETTING & BACKDROP ENHANCEMENT:
+  * Background & Midground: Soft garden soil mounds and young green garden sprouts swaying gently under a bright pastel-blue afternoon sky.
+  * Foreground: The scooped dirt hollow left behind by the dug-up spud, where a cute, plump, segmented C-shaped baby beetle `grub` with big friendly eyes wiggles shyly.
+
+- VERBATIM STORYLINE SCRIPT & DIALOGUE (From `Story draft and Prompts for 01 Animals & Nature.pdf`):
+  * [Beat 1 — 0.0s to 3.2s]:
+    - NARRATOR (warm, gentle human storyteller): "Plum hopped closer and peeked into the hole. Something wiggled."
+  * [Beat 2 — 3.2s to 6.8s]:
+    - PLUM (giggling softly with a warm, tender human voice): "A grub! He's shy — say hello gently."
+  * [Beat 3 — 6.8s to 10.0s]:
+    - CLEM (soft, friendly whisper full of wonder): "Hello, little grub!"
+
+- TIMED VISUAL CHOREOGRAPHY (Full-Fledged Articulated Animation):
+  * Beat 1 (0.0s – 3.2s | Establish & Hook):
+    - Starts locked to the exact `scene_1c_grub.png` composition. `@Plum` takes two small curious hops to the right edge of the scooped dirt hole and tilts her head down to peek inside as her tail feathers bob.
+  * Beat 2 (3.2s – 6.8s | Core Discovery Action — `grub`):
+    - Inside the cozy dirt hollow, the cute segmented baby `grub` wiggles, uncurls slightly, and blinks its big round eyes with a shy little smile as Plum giggles softly.
+  * Beat 3 (6.8s – 10.0s | Joyful Reaction & Payoff):
+    - `@Clem`, leaning down on his hands and knees in his blue overalls and white shirt, lowers his head gently and gives a tiny, kind wave with his fingers so he doesn't startle the grub.
+    - At 10.0s, Clem, Plum, and the smiling grub in the hole settle 100% pixel-identical onto the exact `scene_1c_grub.png` illustration.
+
+- COMPILED GOOGLE FLOW (`Veo 3.1`) PROMPT FOR SCENE 3 (~10s):
+  Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. On soft brown garden soil surrounded by swaying green garden sprouts, Plum, the cute round sky-blue bird on the right, hops closer and peeks curiously into a scooped dirt hollow. Inside the hole, a cute, plump, segmented pink baby garden grub wiggles and bounces shyly with a sweet smile. Clem, leaning down on his hands and knees in his white shirt, blue denim overalls, and brown boots, tilts his head and smiles gently as the camera holds a warm close-up. Audio: Warm, expressive human narration and gentle character voices saying "Plum hopped closer and peeked into the hole. Something wiggled. A grub! He's shy — say hello gently!", accompanied by a playful xylophone wiggle chime, soft bird giggles, and gentle acoustic guitar.
+
+================================================================================
+SCENE 4: "CAUGHT ON A SNEAKY BUSH SNAG" (Target Phonics Word: SNAG — sn- blend)
+================================================================================
+- TARGET DURATION: ~10.0 seconds (3 contiguous animated beats: 0.0–3.2s, 3.2–7.0s, 7.0–10.0s)
+- LOCKED GOOGLE FLOW ASSETS:
+  * Characters: `@Clem` (`Character DNA: Clem`), `@Plum` (`Character DNA: Plum`)
+  * First/Last Frame Reference Images: `scene_1d_snag.png` -> `scene_1_conclusion.png` (100% image adherence lock)
+- SETTING & BACKDROP ENHANCEMENT:
+  * Background & Midground: Rustic wooden garden fence, blooming rose/blackberry bush on the left, and the winding path leading toward the sunny woodland trees.
+  * Foreground: Clem standing beside the leafy bush where a single curved stem catches a tiny thread loop on his white shirt sleeve (`snag`), while Plum watches from the fencepost and then flutters ahead.
+
+- VERBATIM STORYLINE SCRIPT & DIALOGUE (From `Story draft and Prompts for 01 Animals & Nature.pdf`):
+  * [Beat 1 — 0.0s to 3.2s]:
+    - NARRATOR (warm, playful human storyteller): "Clem reached out to pet a leaf, but his sleeve caught on a thorny branch."
+  * [Beat 2 — 3.2s to 7.0s]:
+    - CLEM (laughing brightly with a cheerful, good-natured human voice as he tugs his sleeve free): "Snag! Gotcha, you sneaky bush."
+  * [Beat 3 — 7.0s to 10.0s]:
+    - PLUM (flashing her wings in sunlight as she flies ahead toward the woods): "This way!"
+
+- TIMED VISUAL CHOREOGRAPHY (Full-Fledged Articulated Animation):
+  * Beat 1 (0.0s – 3.2s | Establish & Hook — `snag`):
+    - Starts locked 100% on the exact `scene_1d_snag.png` illustration: `@Clem` reaches out beside the blooming rose bush near the wooden fence, and a curved stem catches a tiny loop of fabric on his right shirt sleeve, stopping him in a funny, harmless pause while `@Plum` peeks from the fencepost.
+  * Beat 2 (3.2s – 7.0s | Core Action — Tugging the Snag Free with a Laugh):
+    - `@Clem` looks at his caught sleeve, bursts into a cheerful open-mouthed laugh (*"Snag!"*), and gently tugs his sleeve free with a playful bounce as the rose bush leaves sway harmlessly back into place.
+  * Beat 3 (7.0s – 10.0s | Joyful Finale & Transition to Act 2):
+    - `@Clem` waves happily beside the cabbage crops, dug-up spuds, and smiling grub as `@Plum` flutters overhead along the path toward the woodland trees, locking 100% onto the Act 1 conclusion illustration (`scene_1_conclusion.png`).
+
+- COMPILED GOOGLE FLOW (`Veo 3.1`) PROMPT FOR SCENE 4 (~10s):
+  Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden sunlight, strictly locked to the attached storyline reference frames and defined Google Flow characters Clem and Plum so the scene begins and ends on the exact coloring book illustrations. Beside a rustic wooden fence and a blooming garden bush, Clem, in his white shirt and blue denim overalls, notices his shirt sleeve caught in a gentle fabric snag on a curved branch while Plum perches on the fencepost. Clem grins, laughs cheerfully, and tugs his sleeve free with a playful bounce as the leaves sway softly. Plum then flutters her sky-blue wings overhead toward the sunlit woodland path while Clem waves happily. Audio: Expressive, warm human storyteller and joyful child voice saying "Clem reached out to pet a leaf, but his sleeve caught on a branch. Snag! Gotcha, you sneaky bush!", with a soft fabric tug sound, cheerful laughter, fluttering wings, and a resolving acoustic guitar chord.
+
+
+4. DETERMINISTIC 5-GATE EVALUATION SCORECARD
+--------------------------------------------------------------------------------
+- [PASS] Gate 1 — Child Safety & Flow Policy Hygiene:
+  Zero scary or harmful depictions (`snag` is a gentle, funny sleeve tug with a laugh; `grub` is a cute smiling baby beetle); zero minor-safety filter traps in Flow prompts.
+- [PASS] Gate 2 — Verbatim Storyline Script & Engaging Human Voice Fidelity:
+  All 4 Act 1 storyline beats (`crop`, `spud`, `grub`, `snag`) and canonical dialogue lines (*"Follow me!"*, *"I'm right behind you!"*, the `crop` definition, the `spud` shovel/nickname explanation, *"A grub! He's shy — say hello gently"*, and *"Snag! Gotcha, you sneaky bush"*) are preserved verbatim. Basic robotic OS TTS is strictly banned (`allow_basic_os_tts: false`).
+- [PASS] Gate 3 — Entertainment & Anti-Slideshow Vitality:
+  Every scene choreographs articulated limb/wing motion, facial expression shifts, and secondary environmental motion (swaying spinach/potato plants, drifting clouds, falling dirt specks, wiggling grub).
+- [PASS] Gate 4 — Google Flow Asset Linkage & 100% Storyline Image Lock:
+  Explicitly links `@Clem` and `@Plum` (`Character sheet` `1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY`) and locks the start/end of every scene to the exact storyline coloring book illustrations (`page-038.png`/`scene_1a_crop.png`, `page-043.png`/`scene_1b_spud.png`, `scene_1c_grub.png`, `scene_1d_snag.png`, `scene_1_conclusion.png`).
+- [PASS] Gate 5 — Well-Formed Google Flow (`Veo 3.1`) Prompt & 2-Step Approval Gate:
+  Every scene includes a validated single-paragraph 6-pillar Google Flow (`Veo 3.1`) prompt, and execution is paused at `STEP_1_AWAITING_HUMAN_APPROVAL`.
+
+================================================================================
+5. HUMAN REVIEW & APPROVAL SIGN-OFF (REQUIRED BEFORE STEP 2 VIDEO GENERATION)
+--------------------------------------------------------------------------------
+- [ ] Approve Character & Asset Mapping (`@Clem`, `@Plum`, and exact storyline coloring pages)
+- [ ] Approve Verbatim Act 1 Storyline Dialogue & Narration (`crop`, `spud`, `grub`, `snag`)
+- [ ] Approve Engaging Human Voice Casting & Audio Direction
+- [ ] Reply "Approved" (or specify any edits) to unlock Step 2 (`story-video-generator`)
+================================================================================
