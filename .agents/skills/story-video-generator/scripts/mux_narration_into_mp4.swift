@@ -311,7 +311,7 @@ func remuxVideoWithNewAudio(videoMp4Path: String, audioM4APath: String, outMp4Pa
     try? FileManager.default.removeItem(at: tmpOutURL)
 
     let srcSize = (try? FileManager.default.attributesOfItem(atPath: videoMp4Path)[.size] as? Int) ?? 0
-    let preset = (srcSize > 50_000_000) ? AVAssetExportPresetHEVCHighestQuality : AVAssetExportPresetPassthrough
+    let preset = (srcSize > 90_000_000) ? AVAssetExportPreset1920x1080 : AVAssetExportPresetPassthrough
     guard let exporter = AVAssetExportSession(asset: comp, presetName: preset) else {
         fatalError("Could not create AVAssetExportSession")
     }
@@ -339,7 +339,13 @@ let manifestPath = args[1]
 let primaryMp4 = args[2]
 let secondaryMp4 = args[3]
 
-let m4aPath = "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act1_master_narration.m4a"
+let m4aPath: String = {
+    if manifestPath.hasSuffix(".m4a") {
+        return manifestPath
+    }
+    let dir = URL(fileURLWithPath: manifestPath).deletingLastPathComponent().path
+    return "\(dir)/master_narration.m4a"
+}()
 if FileManager.default.fileExists(atPath: manifestPath) && manifestPath.hasSuffix(".json") {
     let manifestData = try! Data(contentsOf: URL(fileURLWithPath: manifestPath))
     let manifest = try! JSONDecoder().decode(NarrationManifest.self, from: manifestData)

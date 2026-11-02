@@ -1,0 +1,459 @@
+{
+  "title": "Act 2: Into the Woods \u2014 Clem & Plum (stag, trot, twig, skin, flap)",
+  "act": "Act 2 - Into the Woods",
+  "series": "Clem and Plum: A Day by the Garden, Woods, and Pond \u2014 Beginning Consonant Blends",
+  "theme": "Theme A: Animals & Nature \u2014 Into the Woods (Beginning Blends: st-, tr-, tw-, sk-, fl-)",
+  "target_age_band": "4-6",
+  "workflow_step": "STEP_2_APPROVED_FOR_VIDEO",
+  "human_approval": {
+    "status": "APPROVED",
+    "approved_by": "user",
+    "approved_at": "2026-11-01T22:58:06-08:00",
+    "notes": "Explicitly approved by user to generate all Act 2 artifacts end-to-end."
+  },
+  "blends_drive_folder_id": "1W7Ehm6Uj4lYzf2qDJzLWs7iLTzK31Dt-",
+  "illustrations_drive_folder_id": "1uNrkexEEsrtIoxd2RsUM5xnwbtOWWQnV",
+  "human_readable_screenplay_txt_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Screenplay.txt",
+  "target_duration_sec": 10.0,
+  "aspect_ratio": "1:1",
+  "target_phonics_words": [
+    "stag",
+    "trot",
+    "twig",
+    "skin",
+    "flap"
+  ],
+  "required_storyline_lines": [
+    "this way!",
+    "shh... look",
+    "a tall stag stepped out from behind the trees",
+    "as the stag began to trot away",
+    "stepped on a fallen twig",
+    "leaving behind a bit of old skin it had shed",
+    "nature is full of surprises",
+    "gave a big flap of its wings"
+  ],
+  "voice_casting_spec": {
+    "allow_basic_os_tts": false,
+    "banned_tts_engines": [
+      "/usr/bin/say",
+      "AVSpeechSynthesizer",
+      "Samantha",
+      "espeak"
+    ],
+    "voice_engine_requirement": "Engaging human voice narration only \u2014 Google Flow (Veo 3.1) Native Expressive Multi-Character Human Audio or Studio/Neural Expressive Human Voice Actors",
+    "active_voice_engine": "Microsoft Azure Neural Multi-Character Human Voices (edge-tts: en-US-AriaNeural, en-US-JennyNeural, en-US-AnaNeural)",
+    "character_voice_profiles": {
+      "Narrator": "Warm, expressive, inviting human children's audiobook storyteller with natural prosody and gentle pauses before target phonics words.",
+      "Plum": "Bright, musical, calm, and encouraging young female human character voice with a wise, gentle guide lilt, paired with melodic bluebird chirps.",
+      "Clem": "Authentic, joyful, curious 5-year-old child human voice full of hands-on excitement, wonder, and natural laughter."
+    }
+  },
+  "backdrop": {
+    "setting": "A sunlit woodland trail winding between tall oak and pine trees with golden sunbeams, forest ferns, mossy logs, smooth rocks, and leafy bushes",
+    "required_landmarks": [
+      "trees",
+      "path",
+      "branch",
+      "stag",
+      "twig",
+      "lizard",
+      "skin",
+      "bushes"
+    ],
+    "background_top_third": "Tall oak and pine tree trunks with lush green leafy canopies filtering warm golden afternoon sunbeams across the woodland trail.",
+    "midground": "A winding woodland dirt path bordered by green forest ferns, a mossy stump, low branches, and rounded woodland bushes where the proud antlered stag steps out and trots gracefully.",
+    "foreground": "The sunlit forest floor where Clem follows Plum down the trail, accidentally steps on a small fallen twig that snaps in two, crouches beside a smooth warm rock where a green lizard slips past its shed skin, and laughs as a woodland bird bursts up with a big wing flap."
+  },
+  "characters": [
+    {
+      "name": "Clem",
+      "google_flow_ingredient_name": "@Clem",
+      "google_flow_asset_id": "Character DNA: Clem",
+      "character_sheet_drive_id": "1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY",
+      "local_atomic_reference_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/clem.png",
+      "visual_anchor": "Clem (defined Google Flow Character: cheerful cartoon explorer with neat black hair, big warm brown eyes, light skin, white button-down full-sleeve shirt, blue denim overalls with center chest pocket, and brown boots)",
+      "personality_traits": [
+        "curious",
+        "joyful",
+        "cheerful",
+        "adventurous",
+        "friendly",
+        "eager learner",
+        "observant hands-on explorer"
+      ],
+      "trait_to_action_mapping": "Because Clem is an observant, curious woodland explorer, he follows Plum down the sunlit path, holds his breath in quiet wonder as the tall stag steps out and trots away, looks down in playful surprise when his boot snaps a fallen twig, crouches beside the rock whispering 'Wow, nature is full of surprises!' at the shed lizard skin, and raises his hands laughing at the flapping bird."
+    },
+    {
+      "name": "Plum",
+      "google_flow_ingredient_name": "@Plum",
+      "google_flow_asset_id": "Character DNA: Plum",
+      "character_sheet_drive_id": "1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY",
+      "local_atomic_reference_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/section1_garden/atomic/plum.png",
+      "visual_anchor": "Plum (defined Google Flow Character: cute small round sky-blue songbird with oversized head, speckled crown and breast feathers, expressive eyes, and stubby wings)",
+      "personality_traits": [
+        "calm",
+        "slightly wiser",
+        "gentle guide rather than bossy",
+        "notices things first and nudges Clem toward them"
+      ],
+      "trait_to_action_mapping": "Because Plum is a calm, wise gentle guide who notices things first, she flies ahead catching the sunlight ('This way!'), freezes on a low branch to whisper 'Shh... look' when the stag appears, explains each woodland beginning blend (st-, tr-, tw-, sk-, fl-), and shares a joyful chirp-laugh with the flapping forest bird."
+    }
+  ],
+  "beats": [
+    {
+      "beat_number": 1,
+      "beat_title": "Scene 1 \u2014 The Proud Forest Stag (Target Word: stag)",
+      "start_sec": 0.0,
+      "end_sec": 10.0,
+      "target_word": "stag",
+      "google_flow_scene_asset": "act2_scene1_stag_flow_bw.png & act2_scene1_stag_flow_color.png",
+      "pdf_reference_page_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_bw.png",
+      "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_bw.png",
+      "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_color.png",
+      "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [
+          [
+            245,
+            492
+          ],
+          [
+            326,
+            484
+          ]
+        ],
+        "clem_mouth": [
+          286,
+          532
+        ],
+        "clem_mouth_scale": 0.95,
+        "plum_beak": [
+          474,
+          392
+        ],
+        "plum_beak_scale": 0.85,
+        "plum_notes_origin": [
+          465,
+          345
+        ]
+      },
+      "utterances": [
+        {
+          "speaker": "Narrator",
+          "text": "Plum flew ahead, her wings catching the sunlight through the trees.",
+          "pause_after": 0.18
+        },
+        {
+          "speaker": "Plum",
+          "text": "This way!",
+          "pause_after": 0.2
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Clem followed the path, twigs crunching softly under his shoes. Suddenly, Plum froze on a branch.",
+          "pause_after": 0.2
+        },
+        {
+          "speaker": "Plum",
+          "text": "Shh... look,",
+          "pause_after": 0.22
+        },
+        {
+          "speaker": "Narrator",
+          "text": "she whispered. A tall stag stepped out from behind the trees, antlers proud and still.",
+          "pause_after": 0.25
+        },
+        {
+          "speaker": "Plum",
+          "text": "Do you see his big branching crown? A grown boy deer with grand antlers like that is called a stag! Listen to the beginning blend: S, T, A, G \u2014 stag!",
+          "pause_after": 0.65
+        }
+      ],
+      "verbatim_storyline_script": "Plum flew ahead, her wings catching the sunlight through the trees. \"This way!\" Clem followed the path, twigs crunching softly under his shoes. Suddenly, Plum froze on a branch. \"Shh... look,\" she whispered. A tall stag stepped out from behind the trees, antlers proud and still. \"Do you see his big branching crown? A grown boy deer with grand antlers like that is called a stag! Listen to the beginning blend: S, T, A, G \u2014 stag!\"",
+      "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 1 stag illustration, Plum flutters onto a low woodland branch and raises her wing gently to whisper while Clem walks along the forest path, pauses, and tilts his head as the tall stag steps out between the trees.",
+      "facial_expression": "Plum whispers with wide, attentive eyes; Clem blinks and smiles in quiet wonder at the proud antlered stag.",
+      "backdrop_motion": "Golden afternoon sunbeams shimmer through the swaying green oak and pine tree leaves overhead.",
+      "camera_motion": "Gentle establishing storybook push-in across the sunlit forest clearing, settling 100% onto the exact Scene 1 reference frame.",
+      "narration_or_dialogue": "Plum flew ahead: \"This way!\" Suddenly, Plum froze on a branch. \"Shh... look,\" she whispered. A tall stag stepped out from behind the trees, antlers proud and still.",
+      "sfx_and_music": "Engaging human narrator and character voices, soft footsteps on forest path, gentle bird chirp, shimmering woodland breeze, and warm acoustic guitar.",
+      "scene_google_flow_prompt": "Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight filtering through woodland trees, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. Along a sunlit forest path between sturdy oak trunks, Plum, the small round sky-blue bird perched on a low branch, flutters her wings and raises one wing gently to whisper as sunbeams shimmer overhead. Clem, a cheerful explorer in a white shirt, blue denim overalls, and brown boots, pauses on the trail and blinks in quiet wonder as a tall, friendly forest stag with proud rounded antlers steps out gracefully from behind the trees. The camera performs a gentle storybook push-in and settles back onto the exact reference frame. Audio: Engaging, warm human narration and whispered character voices saying \"This way! Shh... look! A tall stag stepped out from behind the trees, antlers proud and still!\", accompanied by soft woodland breeze, bird chirps, and gentle acoustic guitar music."
+    },
+    {
+      "beat_number": 2,
+      "beat_title": "Scene 2 \u2014 A Graceful Woodland Trot (Target Word: trot)",
+      "start_sec": 10.0,
+      "end_sec": 20.0,
+      "target_word": "trot",
+      "google_flow_scene_asset": "act2_scene2_trot_flow_bw.png & act2_scene2_trot_flow_color.png",
+      "pdf_reference_page_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_bw.png",
+      "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_bw.png",
+      "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_color.png",
+      "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [
+          [
+            276,
+            562
+          ],
+          [
+            358,
+            554
+          ]
+        ],
+        "clem_mouth": [
+          322,
+          602
+        ],
+        "clem_mouth_scale": 1.0,
+        "plum_beak": [
+          168,
+          700
+        ],
+        "plum_beak_scale": 0.85,
+        "plum_notes_origin": [
+          155,
+          650
+        ]
+      },
+      "utterances": [
+        {
+          "speaker": "Narrator",
+          "text": "Clem held his breath as the stag began to trot away, quiet and graceful between the trunks.",
+          "pause_after": 0.25
+        },
+        {
+          "speaker": "Clem",
+          "text": "Look how lightly he moves \u2014 not a slow walk and not a fast run, just a bouncy, graceful trot! T, R, O, T \u2014 trot!",
+          "pause_after": 0.25
+        },
+        {
+          "speaker": "Plum",
+          "text": "That's right, Clem! Hear how the T and R slide together at the start of trot!",
+          "pause_after": 0.65
+        }
+      ],
+      "verbatim_storyline_script": "Clem held his breath as the stag began to trot away, quiet and graceful between the trunks. \"Look how lightly he moves \u2014 not a slow walk and not a fast run, just a bouncy, graceful trot! T, R, O, T \u2014 trot!\" \"That's right, Clem! Hear how the T and R slide together at the start of trot!\"",
+      "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 2 trot illustration, Clem waves his hand and grins beside Plum perched on the mossy tree stump while the antlered stag lifts its hooves and trots gracefully along the forest trail.",
+      "facial_expression": "Clem beams with wide-eyed admiration; Plum nods and chirps happily from the tree stump.",
+      "backdrop_motion": "Green woodland ferns sway along the trail while golden sunlight motes drift between the tall tree trunks.",
+      "camera_motion": "Smooth medium storybook framing locked to Scene 2 and settling 100% onto the exact reference illustration.",
+      "narration_or_dialogue": "Clem held his breath as the stag began to trot away, quiet and graceful between the trunks.",
+      "sfx_and_music": "Engaging human narrator and character voices, rhythmic soft hoofbeat foley, rustling ferns, bird chirps, and upbeat marimba melody.",
+      "scene_google_flow_prompt": "Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. On a sunlit woodland trail bordered by tall tree trunks and swaying green ferns, Clem, in his white shirt, blue denim overalls, and brown boots, holds his breath and waves with admiration beside Plum, the round sky-blue bird perched on a mossy log. Between the tree trunks, the friendly antlered forest stag lifts its hooves in a quiet, graceful trot as golden light motes drift through the canopy. The camera tracks gently and settles onto the exact reference illustration. Audio: Warm, expressive human narration and joyful character voices saying \"Clem held his breath as the stag began to trot away, quiet and graceful between the trunks!\", with soft hoofbeat foley, rustling ferns, bird chirps, and marimba music."
+    },
+    {
+      "beat_number": 3,
+      "beat_title": "Scene 3 \u2014 Snap Goes the Fallen Twig (Target Word: twig)",
+      "start_sec": 20.0,
+      "end_sec": 30.0,
+      "target_word": "twig",
+      "google_flow_scene_asset": "act2_scene3_twig_flow_bw.png & act2_scene3_twig_flow_color.png",
+      "pdf_reference_page_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_bw.png",
+      "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_bw.png",
+      "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_color.png",
+      "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [
+          [
+            462,
+            354
+          ],
+          [
+            562,
+            348
+          ]
+        ],
+        "clem_mouth": [
+          514,
+          405
+        ],
+        "clem_mouth_scale": 0.95,
+        "plum_beak": [
+          266,
+          506
+        ],
+        "plum_beak_scale": 0.9,
+        "plum_notes_origin": [
+          255,
+          455
+        ],
+        "focus_prop": [
+          415,
+          865
+        ]
+      },
+      "utterances": [
+        {
+          "speaker": "Narrator",
+          "text": "Snap! Clem stepped on a fallen twig without meaning to. The stag paused \u2014 then kept walking, unbothered.",
+          "pause_after": 0.25
+        },
+        {
+          "speaker": "Clem",
+          "text": "Oops! That little dry stick on the path is a twig! T, W, I, G \u2014 twig!",
+          "pause_after": 0.22
+        },
+        {
+          "speaker": "Plum",
+          "text": "You found the T-W blend! Even when the twig went snap, the gentle stag stayed calm and unbothered.",
+          "pause_after": 0.65
+        }
+      ],
+      "verbatim_storyline_script": "Snap! Clem stepped on a fallen twig without meaning to. The stag paused \u2014 then kept walking, unbothered. \"Oops! That little dry stick on the path is a twig! T, W, I, G \u2014 twig!\" \"You found the T-W blend! Even when the twig went snap, the gentle stag stayed calm and unbothered.\"",
+      "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 3 twig illustration, Clem steps on a fallen wooden twig that snaps in two under his brown boot, pauses with a surprised O-mouth before smiling, while Plum chirps reassuringly from the low branch and the stag looks back calmly.",
+      "facial_expression": "Clem's eyes widen in cute surprise before smiling; Plum grins reassuringly from the branch.",
+      "backdrop_motion": "Woodland leaves and bushes sway softly in the afternoon breeze while comic snap lines pulse around the broken twig.",
+      "camera_motion": "Medium storybook framing locked 100% to the Scene 3 illustration.",
+      "narration_or_dialogue": "Snap! Clem stepped on a fallen twig without meaning to. The stag paused \u2014 then kept walking, unbothered.",
+      "sfx_and_music": "Engaging human narrator and character voices, crisp wooden twig snap foley, gentle bird chirp, and warm acoustic guitar.",
+      "scene_google_flow_prompt": "Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. On a sunlit woodland path, Clem, wearing his white shirt, blue denim overalls, and brown boots, looks down in playful surprise as his boot steps on a small fallen wooden twig that snaps in two while the antlered stag pauses calmly in the background. Perched on a low branch, Plum flutters her sky-blue wings with a reassuring smile and chirps warmly as leaves sway in the breeze. The camera holds a clear medium shot and settles onto the exact reference frame. Audio: Expressive human narration and character dialogue saying \"Snap! Clem stepped on a fallen twig without meaning to. The stag paused \u2014 then kept walking, unbothered!\", accompanied by a crisp wood-twig snap sound, gentle laughter, and acoustic guitar."
+    },
+    {
+      "beat_number": 4,
+      "beat_title": "Scene 4 \u2014 The Shed Lizard Skin (Target Word: skin)",
+      "start_sec": 30.0,
+      "end_sec": 40.0,
+      "target_word": "skin",
+      "google_flow_scene_asset": "act2_scene4_skin_flow_bw.png & act2_scene4_skin_flow_color.png",
+      "pdf_reference_page_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_bw.png",
+      "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_bw.png",
+      "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_color.png",
+      "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [
+          [
+            335,
+            304
+          ],
+          [
+            430,
+            315
+          ]
+        ],
+        "clem_mouth": [
+          372,
+          362
+        ],
+        "clem_mouth_scale": 0.95,
+        "plum_beak": [
+          654,
+          326
+        ],
+        "plum_beak_scale": 0.85,
+        "plum_notes_origin": [
+          645,
+          275
+        ],
+        "focus_prop": [
+          740,
+          745
+        ]
+      },
+      "utterances": [
+        {
+          "speaker": "Narrator",
+          "text": "Nearby, something rustled in the leaves. A little lizard slipped by, leaving behind a bit of old skin it had shed.",
+          "pause_after": 0.22
+        },
+        {
+          "speaker": "Clem",
+          "text": "Wow,",
+          "pause_after": 0.16
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Clem whispered.",
+          "pause_after": 0.16
+        },
+        {
+          "speaker": "Clem",
+          "text": "Nature is full of surprises.",
+          "pause_after": 0.24
+        },
+        {
+          "speaker": "Plum",
+          "text": "As little lizards grow bigger, they wiggle right out of their old outer layer of skin, just like outgrowing a jacket! Listen to the S-K blend: S, K, I, N \u2014 skin!",
+          "pause_after": 0.65
+        }
+      ],
+      "verbatim_storyline_script": "Nearby, something rustled in the leaves. A little lizard slipped by, leaving behind a bit of old skin it had shed. \"Wow,\" Clem whispered. \"Nature is full of surprises.\" \"As little lizards grow bigger, they wiggle right out of their old outer layer of skin, just like outgrowing a jacket! Listen to the S-K blend: S, K, I, N \u2014 skin!\"",
+      "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 4 skin illustration, Clem kneels on the forest path and points toward the flat rock as a friendly green lizard wiggles and slips past its translucent shed skin, while Plum peeks curiously from a mossy boulder.",
+      "facial_expression": "Clem whispers 'Wow' with a fascinated, gentle smile; Plum tilts her head with bright, curious eyes.",
+      "backdrop_motion": "Fallen forest leaves rustle softly around the warm rocks in the golden afternoon light.",
+      "camera_motion": "Warm close-up storybook framing locked 100% to the Scene 4 illustration.",
+      "narration_or_dialogue": "Nearby, something rustled in the leaves. A little lizard slipped by, leaving behind a bit of old skin it had shed. \"Wow,\" Clem whispered. \"Nature is full of surprises.\"",
+      "sfx_and_music": "Engaging human narrator and character voices, soft leaf rustle foley, playful xylophone shimmer, and gentle acoustic guitar.",
+      "scene_google_flow_prompt": "Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. Beside a flat sunlit rock surrounded by forest leaves, a cute friendly green woodland lizard slips happily past a neat translucent outline of its shed skin. Clem, crouching on one knee in his white shirt, blue denim overalls, and brown boots, points gently and whispers in wide-eyed wonder while Plum, the round sky-blue bird on a mossy stone, tilts her head and chirps. The camera performs a warm close-up focus and returns to the exact reference illustration. Audio: Warm, expressive human narration and gentle character voices saying \"Nearby, something rustled in the leaves. A little lizard slipped by, leaving behind a bit of old skin it had shed. Wow, nature is full of surprises!\", with soft leaf rustling, a playful xylophone shimmer, and acoustic guitar."
+    },
+    {
+      "beat_number": 5,
+      "beat_title": "Scene 5 \u2014 A Big Joyful Wing Flap (Target Word: flap)",
+      "start_sec": 40.0,
+      "end_sec": 50.0,
+      "target_word": "flap",
+      "google_flow_scene_asset": "act2_scene5_flap_flow_bw.png & act2_scene5_flap_flow_color.png",
+      "pdf_reference_page_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_bw.png",
+      "source_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_bw.png",
+      "colored_scene_image_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_color.png",
+      "keyframe_lock_mode": "start_and_end_exact_image",
+      "animation_anchors": {
+        "clem_eyes": [
+          [
+            224,
+            392
+          ],
+          [
+            312,
+            386
+          ]
+        ],
+        "clem_mouth": [
+          268,
+          444
+        ],
+        "clem_mouth_scale": 1.05,
+        "plum_beak": [
+          636,
+          298
+        ],
+        "plum_beak_scale": 0.85,
+        "plum_notes_origin": [
+          625,
+          245
+        ],
+        "focus_prop": [
+          685,
+          585
+        ]
+      },
+      "utterances": [
+        {
+          "speaker": "Narrator",
+          "text": "Just then, a bird burst up from the bushes and gave a big flap of its wings, startling them both \u2014 then laughing, well, chirping, about it with Plum.",
+          "pause_after": 0.24
+        },
+        {
+          "speaker": "Clem",
+          "text": "Whoa! Did you see those wings go up and down in a big flap? F, L, A, P \u2014 flap!",
+          "pause_after": 0.22
+        },
+        {
+          "speaker": "Plum",
+          "text": "Haha! F, L, A, P \u2014 flap! Come on, Clem, the sunlit pond is just ahead!",
+          "pause_after": 0.85
+        }
+      ],
+      "verbatim_storyline_script": "Just then, a bird burst up from the bushes and gave a big flap of its wings, startling them both \u2014 then laughing (well, chirping) about it with Plum. \"Whoa! Did you see those wings go up and down in a big flap? F, L, A, P \u2014 flap!\" \"Haha! F, L, A, P \u2014 flap! Come on, Clem, the sunlit pond is just ahead!\"",
+      "character_motion": "Using the defined Google Flow characters Clem and Plum locked to the Scene 5 flap illustration, a cheerful woodland bird bursts up from the leafy bushes giving a big flap of its wide wings while Clem raises both hands in playful surprise and laughs, and Plum flutters her wings chirping happily in midair.",
+      "facial_expression": "Clem grins and laughs with joyful surprise; Plum and the woodland bird chirp with happy, smiling eyes.",
+      "backdrop_motion": "Leafy green woodland bushes rustle and sway as sunbeams glow through the trees.",
+      "camera_motion": "Medium storybook framing locked to Scene 5 and resolving cleanly onto the exact reference illustration.",
+      "narration_or_dialogue": "Just then, a bird burst up from the bushes and gave a big flap of its wings, startling them both \u2014 then laughing (well, chirping) about it with Plum.",
+      "sfx_and_music": "Engaging human narrator and joyful character voices, fluttering wing flap whooshes, melodic bird chirps, happy laughter, and resolving acoustic guitar chord.",
+      "scene_google_flow_prompt": "Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. Along a sunlit woodland trail bordered by leafy bushes, a cheerful cartoon woodland bird bursts upward from the bush and gives a big, joyful flap of its wide feathered wings. Clem, in his white shirt, blue denim overalls, and brown boots, throws his hands up in playful surprise before bursting into a big happy laugh, while Plum flutters her sky-blue wings in midair and chirps cheerfully with the bird. The camera frames the joyful celebration and settles back onto the exact reference frame. Audio: Expressive, warm human narration and laughing character voices saying \"Just then, a bird burst up from the bushes and gave a big flap of its wings, startling them both \u2014 then chirping about it with Plum!\", with fluttering wing whooshes, melodic bird chirps, happy laughter, and a resolving acoustic guitar chord."
+    }
+  ],
+  "google_flow_prompt": "Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden sunlight, locked to the attached storyline keyframes and Google Flow characters Clem and Plum so each shot begins and ends on the exact illustrations. Along a sunlit woodland path between tall trees and swaying ferns, Plum, a round sky-blue bird on a branch, whispers and points her wing as Clem, a cheerful explorer in a white shirt, blue overalls, and brown boots, watches a tall antlered stag step out and trot gracefully away. Next, Clem steps on a fallen twig that snaps, kneels by a rock as a lizard slips past its shed skin, and laughs with Plum as a bird bursts from the bushes with a big wing flap. Audio: Engaging human narration and character voices with acoustic guitar, marimba, bird chirps, and happy laughter.",
+  "status": "APPROVED"
+}

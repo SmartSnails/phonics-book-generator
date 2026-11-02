@@ -1,0 +1,156 @@
+{
+  "screenplay_title": "Act 2: Into the Woods \u2014 Clem & Plum (stag, trot, twig, skin, flap)",
+  "workflow_step": "STEP_2_APPROVED_FOR_VIDEO",
+  "human_approval_status": "APPROVED",
+  "overall_status": "PASS",
+  "gates": {
+    "gate_1_child_safe_and_flow_hygiene": {
+      "status": "PASS",
+      "unsafe_terms_found": [],
+      "banned_flow_tokens_found": [],
+      "slideshow_or_cut_tokens_found": [],
+      "notes": "Zero unsafe terms, zero Flow minor-filter traps, and zero static/cut traps."
+    },
+    "gate_2_storyline_script_and_human_voice_fidelity": {
+      "status": "PASS",
+      "beat_or_scene_count": 5,
+      "verified_storyline_script_phrases": 8,
+      "missing_storyline_script_phrases": [],
+      "has_engaging_human_voice_spec": true,
+      "allow_basic_os_tts": false,
+      "notes": "All 8 canonical Act storyline lines/teaching beats verified verbatim; engaging human voice casting specified with basic OS TTS strictly disabled."
+    },
+    "gate_3_entertaining_anti_slideshow": {
+      "status": "PASS",
+      "per_beat_vitality_ok": true,
+      "per_beat_verb_counts": [
+        5,
+        5,
+        3,
+        6,
+        6
+      ],
+      "articulated_motion_verbs": [
+        "blinks",
+        "chirp",
+        "chirping",
+        "chirps",
+        "flutters",
+        "grins",
+        "kneels",
+        "laughs",
+        "lifts",
+        "nods",
+        "peeks",
+        "points",
+        "smile",
+        "smiles",
+        "smiling",
+        "tilts",
+        "walks",
+        "waves",
+        "wiggles"
+      ],
+      "backdrop_motion_terms": [
+        "breeze",
+        "drift",
+        "leaves",
+        "motes",
+        "rustle",
+        "sunbeams",
+        "sunlight",
+        "sway",
+        "swaying"
+      ],
+      "flow_prompt_motion_verbs": [
+        "blinks",
+        "chirping",
+        "chirps",
+        "fluttering",
+        "flutters",
+        "kneels",
+        "laugh",
+        "laughing",
+        "laughs",
+        "lifts",
+        "points",
+        "smile",
+        "tilts",
+        "walking",
+        "waves"
+      ],
+      "flow_prompt_backdrop_terms": [
+        "breeze",
+        "drift",
+        "fluttering",
+        "leaves",
+        "motes",
+        "rustling",
+        "sunbeams",
+        "sunlight",
+        "sway",
+        "swaying"
+      ],
+      "notes": "All 5 scenes/beats have active character/facial/backdrop motion; 19 beat verbs, 15 Flow prompt verbs, and 9 backdrop motion cues."
+    },
+    "gate_4_google_flow_assets_and_theme_fidelity": {
+      "status": "PASS",
+      "target_phonics_words": [
+        "stag",
+        "trot",
+        "twig",
+        "skin",
+        "flap"
+      ],
+      "spoken_target_words": [
+        "stag",
+        "trot",
+        "twig",
+        "skin",
+        "flap"
+      ],
+      "missing_in_beats": [],
+      "missing_in_flow_prompts": [],
+      "characters_verified_with_flow_dna": [
+        "Clem",
+        "Plum"
+      ],
+      "incomplete_char_profiles": [],
+      "required_backdrop_landmarks": [
+        "trees",
+        "path",
+        "branch",
+        "stag",
+        "twig",
+        "lizard",
+        "skin",
+        "bushes"
+      ],
+      "missing_backdrop_landmarks": [],
+      "verified_storyline_scene_images": [
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_bw.png"
+      ],
+      "missing_or_invalid_scene_images": [],
+      "notes": "All Google Flow defined character assets (Character DNA sheet + Flow ingredient IDs), target phonics words (crop, spud, grub, snag), and 100%-adherent storyline scene image locks verified."
+    },
+    "gate_5_google_flow_and_two_step_human_gate": {
+      "status": "PASS",
+      "flow_prompt_word_count": 141,
+      "is_single_paragraph": true,
+      "has_color_and_outline_anchor": true,
+      "has_camera_anchor": true,
+      "has_lighting_anchor": true,
+      "has_audio_clause": true,
+      "workflow_step": "STEP_2_APPROVED_FOR_VIDEO",
+      "human_approval_status": "APPROVED",
+      "human_readable_screenplay_txt_path": "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Screenplay.txt",
+      "text_screenplay_exists_in_blends": true,
+      "step2_utterances_and_anchors_ready": true,
+      "notes": "Single-paragraph 6-pillar Flow prompt (141 words) verified; 2-step human review gate active (STEP_2_APPROVED_FOR_VIDEO / APPROVED) with text screenplay saved in Blends and all 5/5 beats containing Step 2 utterances & animation anchors."
+    }
+  }
+}

@@ -662,7 +662,7 @@ func renderVideoFromManifest(manifestPath: String, outMp4Path: String) {
         AVVideoWidthKey: width,
         AVVideoHeightKey: height,
         AVVideoCompressionPropertiesKey: [
-            AVVideoAverageBitRateKey: 3_200_000,
+            AVVideoAverageBitRateKey: 2_200_000,
             AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel
         ]
     ]

@@ -1,0 +1,321 @@
+{
+  "act_slug": "act2_into_the_woods",
+  "act_title": "Act 2: Into the Woods",
+  "target_words": [
+    "stag",
+    "trot",
+    "twig",
+    "skin",
+    "flap"
+  ],
+  "current_stage": 5,
+  "overall_status": "COMPLETED",
+  "created_at": "2026-11-02T15:06:17.269920+00:00",
+  "updated_at": "2026-11-02T15:07:53.189320+00:00",
+  "stages": {
+    "1": {
+      "stage_number": 1,
+      "stage_name": "STAGE_1_STORY_WRITEUP",
+      "checkpoint_status": "APPROVED",
+      "validation_status": "PASS",
+      "revision_loop_count": 0,
+      "revision_history": [],
+      "tracked_files": [
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Story_Writeup.md"
+      ],
+      "last_snapshot": {
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Story_Writeup.md": {
+          "exists": true,
+          "sha256": "aa398bbe4a2cb802a676b9afbaff9b754182fe24d7e26dd91aed74bcaa1e49d1",
+          "size_bytes": 4449,
+          "mtime": 1793631999.8078253
+        }
+      },
+      "approved_at": "2026-11-02T15:06:47.483602+00:00"
+    },
+    "2": {
+      "stage_number": 2,
+      "stage_name": "STAGE_2_KEYFRAME_ILLUSTRATIONS",
+      "checkpoint_status": "APPROVED",
+      "validation_status": "PASS",
+      "revision_loop_count": 0,
+      "revision_history": [],
+      "tracked_files": [
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_color.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_color.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_color.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_color.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_bw.png",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_color.png"
+      ],
+      "last_snapshot": {
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_bw.png": {
+          "exists": true,
+          "sha256": "8fcbd5a27dafc427e141757ad032fcd7313deee5717e42510525c343d1f71b3b",
+          "size_bytes": 90938,
+          "mtime": 1793603036.7028809
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene1_stag_flow_color.png": {
+          "exists": true,
+          "sha256": "b823a025c0b35b317bf6372f4ee7a4ded271e365c7122d6f59744d720c5b4408",
+          "size_bytes": 297242,
+          "mtime": 1793603038.0964305
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_bw.png": {
+          "exists": true,
+          "sha256": "351fdb19db4d0983448ab16d55c5f9378f7c2f113ca4c106e1919ce82eb837a1",
+          "size_bytes": 118655,
+          "mtime": 1793603038.3202775
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene2_trot_flow_color.png": {
+          "exists": true,
+          "sha256": "42379b5893ebab2cff16d3892f60113412751a6e56ba2b5c8b19f83bf47c00cf",
+          "size_bytes": 415561,
+          "mtime": 1793603039.7054598
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_bw.png": {
+          "exists": true,
+          "sha256": "829f3d53e3cd3522e0a80d871a21ae9c1daf603b03544395119a8af6176529e0",
+          "size_bytes": 107015,
+          "mtime": 1793603039.93058
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene3_twig_flow_color.png": {
+          "exists": true,
+          "sha256": "c57abce7f7384638eb77bf4219e04b83f59e0fcc8c2f9dea54c03a7db49b4014",
+          "size_bytes": 352933,
+          "mtime": 1793603041.312054
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_bw.png": {
+          "exists": true,
+          "sha256": "7194ea44c2e088add68ca95bbf439de452a3e1324fc58b38fdf2c79eea817d41",
+          "size_bytes": 103550,
+          "mtime": 1793603041.5328155
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene4_skin_flow_color.png": {
+          "exists": true,
+          "sha256": "1652e817a9aa7d081e3f3969aa3e027024f308d10468b6e10cfcdacb32fc6527",
+          "size_bytes": 293070,
+          "mtime": 1793603042.9201062
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_bw.png": {
+          "exists": true,
+          "sha256": "3ec6c4ecc6c7c22106e261382b23b9560b07fa4ce5d292b8791f5ca1d8c02a77",
+          "size_bytes": 113529,
+          "mtime": 1793603043.1498885
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/illustrations/act2_scene5_flap_flow_color.png": {
+          "exists": true,
+          "sha256": "ee2aa222c5189828098bc726dc78b4fec85bb33c13e49c603f57029c8b5f97f6",
+          "size_bytes": 362059,
+          "mtime": 1793603044.5285213
+        }
+      },
+      "approved_at": "2026-11-02T15:06:54.841466+00:00"
+    },
+    "3": {
+      "stage_number": 3,
+      "stage_name": "STAGE_3_SCREENPLAY_AND_EVAL",
+      "checkpoint_status": "APPROVED",
+      "validation_status": "PASS",
+      "revision_loop_count": 0,
+      "revision_history": [],
+      "tracked_files": [
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Screenplay.txt",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act2_into_the_woods_screenplay.json",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act2_into_the_woods_eval_report.json"
+      ],
+      "last_snapshot": {
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Screenplay.txt": {
+          "exists": true,
+          "sha256": "ffb0e7d02b89ce0358f06c68811e9e931f5e08be695510f2c066c12b2bb7f40d",
+          "size_bytes": 16701,
+          "mtime": 1793602791.666299
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act2_into_the_woods_screenplay.json": {
+          "exists": true,
+          "sha256": "6e78efbb795228b1a09cd0da72491c8a45e07268d4bbab1772e2fe76d6b882fd",
+          "size_bytes": 29598,
+          "mtime": 1793632055.873674
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/screenplays/act2_into_the_woods_eval_report.json": {
+          "exists": true,
+          "sha256": "0a53a0363d93d89a934492ced0ee779d2595c17b56cd6d27275226a6dfd3203b",
+          "size_bytes": 5075,
+          "mtime": 1793632055.8676984
+        }
+      },
+      "approved_at": "2026-11-02T15:07:35.874247+00:00"
+    },
+    "4": {
+      "stage_number": 4,
+      "stage_name": "STAGE_4_VOICEOVER_AUDIO",
+      "checkpoint_status": "APPROVED",
+      "validation_status": "PASS",
+      "revision_loop_count": 0,
+      "revision_history": [],
+      "tracked_files": [
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/manifest.json"
+      ],
+      "last_snapshot": {
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/manifest.json": {
+          "exists": true,
+          "sha256": "e19c063c573724d38bf159e1a87404a2286d49e289aadf7f259880cf3c680678",
+          "size_bytes": 15085,
+          "mtime": 1793603394.914404
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene1_01_narrator.wav": {
+          "exists": true,
+          "sha256": "0f0d77bf82180c814f8be9ffa9a68925724af3f9b9f282325607bc3b19899ca2",
+          "size_bytes": 846580,
+          "mtime": 1793603367.7434697
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene1_02_plum.wav": {
+          "exists": true,
+          "sha256": "7e138bb404b055d6dffc369f130b4994c26ea1fe4bf01954d11d705d4ed9a518",
+          "size_bytes": 334316,
+          "mtime": 1793603368.7646582
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene1_03_narrator.wav": {
+          "exists": true,
+          "sha256": "c311742e01d8015f0566e65daeba84bf43b175dbf11fbf9b583cc0428fdc60fb",
+          "size_bytes": 1447752,
+          "mtime": 1793603370.160562
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene1_04_plum.wav": {
+          "exists": true,
+          "sha256": "03c93b2a09fc69ca4f0d9f1c2ac0c35a09e627365b2c98744289f052ce3588bf",
+          "size_bytes": 461324,
+          "mtime": 1793603371.2192268
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene1_05_narrator.wav": {
+          "exists": true,
+          "sha256": "9df747837b240c12826f588479ccbdc9d7be20ff178976bf3fea9fd0e94c237f",
+          "size_bytes": 1274176,
+          "mtime": 1793603372.365969
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene1_06_plum.wav": {
+          "exists": true,
+          "sha256": "a5ee426d29a97b01e250661d2abf6dfa94094861be0e78652879c7ed9dc61fd0",
+          "size_bytes": 2053156,
+          "mtime": 1793603374.3421795
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene2_01_narrator.wav": {
+          "exists": true,
+          "sha256": "a5c29f300dc361692748846fba3b3300643145a7e15d160e67c38a08b2fb35a7",
+          "size_bytes": 1130232,
+          "mtime": 1793603375.529458
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene2_02_clem.wav": {
+          "exists": true,
+          "sha256": "d1cd05720864912477d7a37f5a1712a6fe8491bf3fb3e093e858d648d4a736af",
+          "size_bytes": 1955784,
+          "mtime": 1793603377.9128165
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene2_03_plum.wav": {
+          "exists": true,
+          "sha256": "cef4474307461e5a9d8958d3707dbd5b789278870fdf917abeddf612dda49627",
+          "size_bytes": 1058260,
+          "mtime": 1793603379.1667635
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene3_01_narrator.wav": {
+          "exists": true,
+          "sha256": "b5fd290a048c27833a3586234a6106d38d485626471bc57dac2f67c6c48b8324",
+          "size_bytes": 1659432,
+          "mtime": 1793603380.8080704
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene3_02_clem.wav": {
+          "exists": true,
+          "sha256": "c2bb0128d425a2a52dcbe16f2c9a75258a725a1d3a3e3a563f1482290fd162cc",
+          "size_bytes": 1545124,
+          "mtime": 1793603382.2649639
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene3_03_plum.wav": {
+          "exists": true,
+          "sha256": "e3b08ce9dfcb78bda82577c10e760e285b4f694d18fc3a33840bfc43e3a1c7a9",
+          "size_bytes": 1269940,
+          "mtime": 1793603383.3762982
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene4_01_narrator.wav": {
+          "exists": true,
+          "sha256": "9e690d1ac6053650266a8b3b3e3c9defde648344b49cf389439e0d7fb6f6d8d2",
+          "size_bytes": 1502788,
+          "mtime": 1793603384.7132874
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene4_02_clem.wav": {
+          "exists": true,
+          "sha256": "30a6d40c5df32c78600f58e0374b7f28cb8181c37d7fe4ca7b062b7b4f8cfb37",
+          "size_bytes": 334316,
+          "mtime": 1793603385.6801684
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene4_03_narrator.wav": {
+          "exists": true,
+          "sha256": "e5a2dc4283f02ca810679fa25c77e78f5b2e17219efdbae9ed95bc3bd2f6ae09",
+          "size_bytes": 363952,
+          "mtime": 1793603386.6970117
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene4_04_clem.wav": {
+          "exists": true,
+          "sha256": "0670f2e8a7ee2529de70577408b7d6e9098fabc8ec9bda518891b16520e4c8a6",
+          "size_bytes": 524828,
+          "mtime": 1793603388.2116287
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene4_05_plum.wav": {
+          "exists": true,
+          "sha256": "e3a90d283e88a6b9fddec640d315eed33363189e410fd5eabab53173ba412b29",
+          "size_bytes": 2095492,
+          "mtime": 1793603389.4806683
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene5_01_narrator.wav": {
+          "exists": true,
+          "sha256": "631294b5a4b075c27231496b019e65466b77f0de138b906fcd7284decae7b9c3",
+          "size_bytes": 1722936,
+          "mtime": 1793603390.8898544
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene5_02_clem.wav": {
+          "exists": true,
+          "sha256": "86251d96b29d55db758f074f3f5d20cb542863de1eaf9ff7700eba240c3572df",
+          "size_bytes": 1540892,
+          "mtime": 1793603393.838195
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/audio/act2_into_the_woods_vo/scene5_03_plum.wav": {
+          "exists": true,
+          "sha256": "ce31bcbdf84969d126594acfee7bf2bbd528e5f7f7bc56171f3af68b255119a7",
+          "size_bytes": 1485856,
+          "mtime": 1793603394.9122796
+        }
+      },
+      "approved_at": "2026-11-02T15:07:42.417208+00:00"
+    },
+    "5": {
+      "stage_number": 5,
+      "stage_name": "STAGE_5_FINAL_VIDEO_AND_DELIVERABLES",
+      "checkpoint_status": "APPROVED",
+      "validation_status": "PASS",
+      "revision_loop_count": 0,
+      "revision_history": [],
+      "tracked_files": [
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Animation.mp4",
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/videos/act2_into_the_woods_animation.mp4"
+      ],
+      "last_snapshot": {
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/Blends/Act2_Into_The_Woods_Animation.mp4": {
+          "exists": true,
+          "sha256": "7c24f760560eccde9fe2a1b598f525e53599eae7f78ea110e71c3fcff6eb92c8",
+          "size_bytes": 46144835,
+          "mtime": 1793603544.9687643
+        },
+        "/Users/harshad/.gemini/antigravity/scratch/phonics-book-generator/output/videos/act2_into_the_woods_animation.mp4": {
+          "exists": true,
+          "sha256": "7c24f760560eccde9fe2a1b598f525e53599eae7f78ea110e71c3fcff6eb92c8",
+          "size_bytes": 46144835,
+          "mtime": 1793603544.9687643
+        }
+      },
+      "approved_at": "2026-11-02T15:07:53.188986+00:00"
+    }
+  }
+}

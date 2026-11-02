@@ -1,0 +1,143 @@
+================================================================================
+MASTER ANIMATION SCREENPLAY — ACT 2: INTO THE WOODS (CLEM & PLUM)
+================================================================================
+Series:             Clem and Plum's Phonics Adventures — Beginning Consonant Blends
+Theme:              Theme A: Animals & Nature — Act 2: Into the Woods (st-, tr-, tw-, sk-, fl-)
+Target Phonics:     stag (st-), trot (tr-), twig (tw-), skin (sk-), flap (fl-)
+Target Age Band:    4 to 6 years old (Kindergarten / Early Readers)
+Workflow Stage:     STEP 2 OF 2 — APPROVED FOR END-TO-END ARTIFACT & VIDEO GENERATION
+Aspect Ratio:       1:1 Square Storybook Frame (1080x1080, 30 fps)
+================================================================================
+
+--------------------------------------------------------------------------------
+SECTION 1: GOOGLE FLOW CHARACTER DNA & STORYLINE KEYFRAME REGISTRY
+--------------------------------------------------------------------------------
+1. @Clem (Character DNA Sheet ID: 1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY)
+   - Visual Anchor: Cheerful 5-year-old cartoon explorer with neat short black hair, warm brown eyes, light skin, white long-sleeve button-down shirt, blue denim overalls with center chest pocket, and brown ankle boots.
+   - Personality Traits: Curious, joyful, observant hands-on doer who follows Plum down the forest trail, holds his breath in wonder at wildlife, reacts with playful surprise when a twig snaps or a bird flaps up, and whispers in awe at nature's surprises.
+
+2. @Plum (Character DNA Sheet ID: 1sfRUqjoxulOZhvXRqiIQPWVQ1qrBEk4w3Zt-u01YXlY)
+   - Visual Anchor: Cute, small round sky-blue songbird with an oversized head, speckled crown and breast feathers, expressive dark eyes, golden-orange beak, and stubby wings.
+   - Personality Traits: Calm, slightly wiser gentle woodland guide who flies ahead through the sunbeams ("This way!"), freezes on a branch to whisper "Shh... look," explains each woodland discovery and consonant blend, and shares a joyful chirp-laugh with the forest bird.
+
+3. Locked Storyline Coloring Book Scene Keyframes (100% Start & End Frame Lock):
+   - Scene 1 (stag): output/Blends/illustrations/act2_scene1_stag_flow_bw.png | _color.png
+   - Scene 2 (trot): output/Blends/illustrations/act2_scene2_trot_flow_bw.png | _color.png
+   - Scene 3 (twig): output/Blends/illustrations/act2_scene3_twig_flow_bw.png | _color.png
+   - Scene 4 (skin): output/Blends/illustrations/act2_scene4_skin_flow_bw.png | _color.png
+   - Scene 5 (flap): output/Blends/illustrations/act2_scene5_flap_flow_bw.png | _color.png
+
+--------------------------------------------------------------------------------
+SECTION 2: ENGAGING HUMAN VOICE & AUDIO DIRECTION (NO ROBOTIC OS TTS)
+--------------------------------------------------------------------------------
+- Basic Robotic OS TTS (/usr/bin/say, AVSpeechSynthesizer, Samantha, espeak): STRICTLY FORBIDDEN
+- Active Voice Engine: Microsoft Azure Neural Multi-Character Human Voices (edge-tts)
+  * Narrator (en-US-AriaNeural): Warm, expressive children's storybook narrator.
+  * Plum     (en-US-JennyNeural): Bright, musical, gentle guide voice with soft bird chirps.
+  * Clem     (en-US-AnaNeural): Authentic, curious, enthusiastic young child voice.
+- Musical Score: Gentle fingerpicked acoustic guitar & woodland marimba score, automatically ducked (-9.5 dB) under all spoken dialogue.
+
+--------------------------------------------------------------------------------
+SECTION 3: SCENE-BY-SCENE MASTER SCREENPLAY & CHOREOGRAPHY
+--------------------------------------------------------------------------------
+
+================================================================================
+SCENE 1 — THE PROUD FOREST STAG (Target Word: STAG | Blend: st-)
+================================================================================
+Locked Keyframes:   act2_scene1_stag_flow_bw.png -> act2_scene1_stag_flow_color.png
+Backdrop & Setting: Sunlit woodland clearing framed by sturdy oak and pine tree trunks, dappled golden sunbeams filtering through the leafy canopy, and a winding dirt trail.
+
+Verbatim Storyline & Phonics Dialogue:
+  [NARRATOR]: Plum flew ahead, her wings catching the sunlight through the trees.
+  [PLUM]:     "This way!"
+  [NARRATOR]: Clem followed the path, twigs crunching softly under his shoes. Suddenly, Plum froze on a branch.
+  [PLUM]:     "Shh... look,"
+  [NARRATOR]: she whispered. A tall stag stepped out from behind the trees, antlers proud and still.
+  [PLUM]:     "Do you see his big branching crown? A grown boy deer with grand antlers like that is called a stag! Listen to the beginning blend: S, T, A, G — stag!"
+
+Timed 3-Beat Visual Choreography:
+  - Beat 1 (Establish & Color Sweep): Frame 0 locks 100% to the B&W coloring page act2_scene1_stag_flow_bw.png, then sweeps magical storybook color across the sunlit forest clearing as golden sunbeams shimmer.
+  - Beat 2 (Discovery Action): Plum perches on the low branch raising one sky-blue wing to whisper "Shh... look," while Clem stands still in quiet wonder and the tall antlered stag stands proud and noble between the tree trunks.
+  - Beat 3 (Phonics Callout & Lock): The word card [st-ag | stag] pops in at the top while Plum explains the st- blend, resolving 100% onto the exact reference keyframe.
+
+Compiled Google Flow (Veo 3.1) Scene Prompt:
+Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight filtering through woodland trees, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. Along a sunlit forest path between sturdy oak trunks, Plum, the small round sky-blue bird perched on a low branch, flutters her wings and raises one wing gently to whisper as sunbeams shimmer overhead. Clem, a cheerful explorer in a white shirt, blue denim overalls, and brown boots, pauses on the trail and blinks in quiet wonder as a tall, friendly forest stag with proud rounded antlers steps out gracefully from behind the trees. The camera performs a gentle storybook push-in and settles back onto the exact reference frame. Audio: Engaging, warm human narration and whispered character voices saying "This way! Shh... look! A tall stag stepped out from behind the trees, antlers proud and still!", accompanied by soft woodland breeze, bird chirps, and gentle acoustic guitar music.
+
+================================================================================
+SCENE 2 — A GRACEFUL WOODLAND TROT (Target Word: TROT | Blend: tr-)
+================================================================================
+Locked Keyframes:   act2_scene2_trot_flow_bw.png -> act2_scene2_trot_flow_color.png
+Backdrop & Setting: Winding woodland dirt trail bordered by tall tree trunks, soft green forest ferns, and a mossy log.
+
+Verbatim Storyline & Phonics Dialogue:
+  [NARRATOR]: Clem held his breath as the stag began to trot away, quiet and graceful between the trunks.
+  [CLEM]:     "Look how lightly he moves — not a slow walk and not a fast run, just a bouncy, graceful trot! T, R, O, T — trot!"
+  [PLUM]:     "That's right, Clem! Hear how the T and R slide together at the start of trot!"
+
+Timed 3-Beat Visual Choreography:
+  - Beat 1 (Establish & Color Sweep): Starts locked 100% to act2_scene2_trot_flow_bw.png and sweeps full woodland color across the trail.
+  - Beat 2 (Discovery Action): Clem holds his breath and smiles warmly beside Plum on the mossy log as the antlered stag lifts its hooves in a graceful rhythmic trot between the tree trunks while forest ferns sway.
+  - Beat 3 (Phonics Callout & Lock): The word card [tr-ot | trot] highlights the tr- blend as Clem and Plum sound out "trot", settling 100% back onto the exact reference keyframe.
+
+Compiled Google Flow (Veo 3.1) Scene Prompt:
+Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. On a sunlit woodland trail bordered by tall tree trunks and swaying green ferns, Clem, in his white shirt, blue denim overalls, and brown boots, holds his breath and grins with admiration beside Plum, the round sky-blue bird perched on a mossy log. Between the tree trunks, the friendly antlered forest stag lifts its hooves in a quiet, graceful trot as golden light motes drift through the canopy. The camera tracks gently and settles onto the exact reference illustration. Audio: Warm, expressive human narration and joyful character voices saying "Clem held his breath as the stag began to trot away, quiet and graceful between the trunks!", with soft hoofbeat foley, rustling ferns, bird chirps, and marimba music.
+
+================================================================================
+SCENE 3 — SNAP GOES THE FALLEN TWIG (Target Word: TWIG | Blend: tw-)
+================================================================================
+Locked Keyframes:   act2_scene3_twig_flow_bw.png -> act2_scene3_twig_flow_color.png
+Backdrop & Setting: Sunlit forest floor with a small fallen dry branch/twig under Clem's boot, woodland bushes, and the calm stag looking back in the distance.
+
+Verbatim Storyline & Phonics Dialogue:
+  [NARRATOR]: Snap! Clem stepped on a fallen twig without meaning to. The stag paused — then kept walking, unbothered.
+  [CLEM]:     "Oops! That little dry stick on the path is a twig! T, W, I, G — twig!"
+  [PLUM]:     "You found the T-W blend! Even when the twig went snap, the gentle stag stayed calm and unbothered."
+
+Timed 3-Beat Visual Choreography:
+  - Beat 1 (Establish & Color Sweep): Locks 100% to act2_scene3_twig_flow_bw.png at Frame 0 before sweeping full woodland color across the path.
+  - Beat 2 (Discovery Action): Comic action lines radiate around the snapped twig under Clem's brown boot as Clem blinks in playful surprise, Plum chirps reassuringly from the low branch, and the stag pauses calmly in the background.
+  - Beat 3 (Phonics Callout & Lock): The word card [tw-ig | twig] displays the tw- blend and resolves 100% onto the exact reference keyframe.
+
+Compiled Google Flow (Veo 3.1) Scene Prompt:
+Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. On a sunlit woodland path, Clem, wearing his white shirt, blue denim overalls, and brown boots, looks down in playful surprise as his boot steps on a small fallen wooden twig that snaps in two while the antlered stag pauses calmly in the background. Perched on a low branch, Plum flutters her sky-blue wings with a reassuring smile and chirps warmly as leaves sway in the breeze. The camera holds a clear medium shot and settles onto the exact reference frame. Audio: Expressive human narration and character dialogue saying "Snap! Clem stepped on a fallen twig without meaning to. The stag paused — then kept walking, unbothered!", accompanied by a crisp wood-twig snap sound, gentle laughter, and acoustic guitar.
+
+================================================================================
+SCENE 4 — THE SHED LIZARD SKIN (Target Word: SKIN | Blend: sk-)
+================================================================================
+Locked Keyframes:   act2_scene4_skin_flow_bw.png -> act2_scene4_skin_flow_color.png
+Backdrop & Setting: Sunny woodland clearing with flat warm stones, fallen forest leaves, and a cute green lizard slipping past its translucent shed skin.
+
+Verbatim Storyline & Phonics Dialogue:
+  [NARRATOR]: Nearby, something rustled in the leaves. A little lizard slipped by, leaving behind a bit of old skin it had shed.
+  [CLEM]:     "Wow,"
+  [NARRATOR]: Clem whispered.
+  [CLEM]:     "Nature is full of surprises."
+  [PLUM]:     "As little lizards grow bigger, they wiggle right out of their old outer layer of skin, just like outgrowing a jacket! Listen to the S-K blend: S, K, I, N — skin!"
+
+Timed 3-Beat Visual Choreography:
+  - Beat 1 (Establish & Color Sweep): Locks 100% to act2_scene4_skin_flow_bw.png at Frame 0 before sweeping full color across the sunlit rocks and leaves.
+  - Beat 2 (Discovery Action): Gentle rustle/wiggle arcs animate around the little lizard and its shed skin on the rock as Clem crouches on one knee whispering "Wow!" and Plum peeks curiously from a mossy stone.
+  - Beat 3 (Phonics Callout & Lock): The word card [sk-in | skin] highlights the sk- blend and locks 100% back onto the exact reference keyframe.
+
+Compiled Google Flow (Veo 3.1) Scene Prompt:
+Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. Beside a flat sunlit rock surrounded by forest leaves, a cute friendly green woodland lizard slips happily past a neat translucent outline of its shed skin. Clem, crouching on one knee in his white shirt, blue denim overalls, and brown boots, points gently and whispers in wide-eyed wonder while Plum, the round sky-blue bird on a mossy stone, tilts her head and chirps. The camera performs a warm close-up focus and returns to the exact reference illustration. Audio: Warm, expressive human narration and gentle character voices saying "Nearby, something rustled in the leaves. A little lizard slipped by, leaving behind a bit of old skin it had shed. Wow, nature is full of surprises!", with soft leaf rustling, a playful xylophone shimmer, and acoustic guitar.
+
+================================================================================
+SCENE 5 — A BIG JOYFUL WING FLAP (Target Word: FLAP | Blend: fl-)
+================================================================================
+Locked Keyframes:   act2_scene5_flap_flow_bw.png -> act2_scene5_flap_flow_color.png
+Backdrop & Setting: Sunlit edge of the woods where the trail opens toward the pond, with rounded leafy bushes and a cheerful woodland bird bursting upward with wide flapping wings.
+
+Verbatim Storyline & Phonics Dialogue:
+  [NARRATOR]: Just then, a bird burst up from the bushes and gave a big flap of its wings, startling them both — then laughing, well, chirping, about it with Plum.
+  [CLEM]:     "Whoa! Did you see those wings go up and down in a big flap? F, L, A, P — flap!"
+  [PLUM]:     "Haha! F, L, A, P — flap! Come on, Clem, the sunlit pond is just ahead!"
+
+Timed 3-Beat Visual Choreography:
+  - Beat 1 (Establish & Color Sweep): Locks 100% to act2_scene5_flap_flow_bw.png at Frame 0 before sweeping full color across the woodland bushes.
+  - Beat 2 (Discovery Action): Motion arcs radiate around the woodland bird's wide-spread wings as it gives a big joyful flap above the bush; Clem raises his hands with a big laughing grin while Plum flutters and chirps musical notes beside her new feathered friend.
+  - Beat 3 (Phonics Callout & Lock): The word card [fl-ap | flap] highlights the fl- blend and resolves 100% onto the exact reference keyframe.
+
+Compiled Google Flow (Veo 3.1) Scene Prompt:
+Vibrant full-color 2D animated storybook cartoon movie with bold black ink outlines and warm golden afternoon sunlight, strictly locked to the attached storyline reference frame and defined Google Flow characters Clem and Plum so the shot begins and ends on the exact coloring book illustration. Along a sunlit woodland trail bordered by leafy bushes, a cheerful cartoon woodland bird bursts upward from the bush and gives a big, joyful flap of its wide feathered wings. Clem, in his white shirt, blue denim overalls, and brown boots, throws his hands up in playful surprise before bursting into a big happy laugh, while Plum flutters her sky-blue wings in midair and chirps cheerfully with the bird. The camera frames the joyful celebration and settles back onto the exact reference frame. Audio: Expressive, warm human narration and laughing character voices saying "Just then, a bird burst up from the bushes and gave a big flap of its wings, startling them both — then chirping about it with Plum!", with fluttering wing whooshes, melodic bird chirps, happy laughter, and a resolving acoustic guitar chord.
+================================================================================
